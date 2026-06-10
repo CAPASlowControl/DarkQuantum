@@ -1,0 +1,213 @@
+# ./testApp/Db/test.db
+# PROBES
+record(ai, "$(P):Tout") { 
+    field(DESC, "Tank Water Temp. Out")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlPr_256 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(PREC,2)
+    field(ASLO,0.1) # Int to Temp.
+    field(EGU,"ºC") 
+    field(PINI,"NO")
+}
+
+record(ai, "$(P):Tevap") {
+    field(DESC, "Evap. Water Temp. Out ")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlPr_256 2 1)MODBUS_DATA") 
+    field(PREC,2)
+    field(ASLO,0.1) # Int to Temp.
+    field(EGU,"ºC") 
+    field(PINI,"NO")
+}
+
+record(ai, "$(P):Pout") {
+    field(DESC, "Water Pressure.")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlPr_256 4 1)MODBUS_DATA") 
+    field(PREC,2)
+    field(ASLO,0.01) # Int to Pres
+    field(EGU,"Bar") 
+    field(PINI,"NO")
+}
+
+# EXPANSION VALVE PROBES
+
+record(ai, "$(P):TexpV") {
+    field(DESC, "Exp. Valve Temp")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlExpVPr_288 0 1)MODBUS_DATA") 
+    field(PREC,2)
+    field(ASLO,0.1) # Int to Temp.
+    field(EGU,"ºC") 
+    field(PINI,"NO")
+}
+
+
+
+record(ai, "$(P):PexpV") {
+    field(DESC, "Exp. Valve Pressure")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlExpVPr_288 4 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(PREC,2)
+    field(ASLO,0.01) # Int to Temp.
+    field(EGU,"Bar") 
+    field(PINI,"NO")
+}
+
+
+# Machine Status
+#
+
+record(mbbiDirect, "$(P):MachineStatus") {
+    field(DESC, "Machine Status")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlMachineStatus_1280 0 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+# SetPoint
+record(ai, "$(P):ChSetPoint") {
+    field(DESC, "Chiller Set Point")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlSetPoint_768 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(PREC,2)
+    field(ASLO,0.1) # Int to Temp.
+    field(EGU,"ºC") 
+    field(PINI,"NO")
+}
+
+record(ai, "$(P):HPSetPoint") {
+    field(DESC, "Heat Pump Set Point")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlSetPoint_768 3 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(PREC,2)
+    field(ASLO,0.1) # Int to Temp.
+    field(EGU,"ºC") 
+    field(PINI,"NO")
+}
+
+# Alarms
+record(mbbiDirect, "$(P):Alarm1") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 0 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm2") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 1 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm3") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 2 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm4") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 3 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm5") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 4 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm6") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 5 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm7") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 6 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm8") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 7 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm9") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 8 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+record(mbbiDirect, "$(P):Alarm10") {
+    field(DESC, "Alarm")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynUInt32Digital")
+    #field(INP,"@asyn(read_MachineStatus_1280 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(INP,"@asynMask(read_ChlAlarms_3328 9 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(PINI,"NO")
+}
+
+# Working Hours
+record(ai, "$(P):CompWH") {
+    field(DESC, "Compressor Working Hours")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlCompWH_3584 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(PREC,0)
+    field(ASLO,10) 
+    field(EGU,"h")
+    field(PINI,"NO")
+}
+
+record(ai, "$(P):EvapWH") {
+    field(DESC, "Evaporator/Fan Working Hours")
+    field(SCAN, "I/O Intr")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlEvapWH_3590 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+    field(PREC,0)
+    field(ASLO,10)
+    field(EGU,"h")
+    field(PINI,"NO")
+}
+
+
+

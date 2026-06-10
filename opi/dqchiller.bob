@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <macros>
+    <P>DQ:CHL</P>
+  </macros>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Water Chiller (MTA TAE 081)</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <y>330</y>
+    <width>180</width>
+    <height>100</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_15</name>
+      <text>Machine Status</text>
+      <x>20</x>
+      <width>160</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor</name>
+      <pv_name>$(P):MachineStatus</pv_name>
+      <y>20</y>
+      <width>20</width>
+      <height>80</height>
+      <numBits>4</numBits>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>Standby / On</text>
+      <x>40</x>
+      <y>20</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>DI Remote On /Off</text>
+      <x>40</x>
+      <y>40</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_12</name>
+      <text>Chiller Mode</text>
+      <x>40</x>
+      <y>60</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_13</name>
+      <text>Heat Pump Mode</text>
+      <x>40</x>
+      <y>80</y>
+      <width>140</width>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <y>170</y>
+    <width>190</width>
+    <height>90</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>TexpV</text>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>$(P):TexpV</pv_name>
+      <x>70</x>
+      <y>30</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>PexpV</text>
+      <y>60</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>$(P):PexpV</pv_name>
+      <x>70</x>
+      <y>60</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>Expansion Valve Probes</text>
+      <x>30</x>
+      <width>160</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <y>40</y>
+    <width>170</width>
+    <height>110</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Tout</text>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P):Tout</pv_name>
+      <x>70</x>
+      <y>30</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Tevap</text>
+      <y>60</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P):Tevap</pv_name>
+      <x>70</x>
+      <y>60</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Pout</text>
+      <y>90</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P):Pout</pv_name>
+      <x>70</x>
+      <y>90</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Probes</text>
+      <x>60</x>
+      <width>70</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+    </widget>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <x>50</x>
+    <y>580</y>
+    <width>10</width>
+    <height>0</height>
+  </widget>
+  <widget type="meter" version="3.0.0">
+    <name>Meter</name>
+    <x>210</x>
+    <y>300</y>
+    <width>10</width>
+    <height>0</height>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group_1</name>
+    <x>240</x>
+    <y>40</y>
+    <width>200</width>
+    <height>90</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_16</name>
+      <text>T Chiller</text>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>$(P):ChSetPoint</pv_name>
+      <x>90</x>
+      <y>30</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_17</name>
+      <text>T Heat Pump</text>
+      <y>60</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(P):HPSetPoint</pv_name>
+      <x>90</x>
+      <y>60</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_19</name>
+      <text>SetPoint</text>
+      <x>60</x>
+      <width>70</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_20</name>
+    <text>Alarms</text>
+    <x>320</x>
+    <y>330</y>
+    <width>160</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P):Alarm1</pv_name>
+    <x>319</x>
+    <y>360</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(P):Alarm2</pv_name>
+    <x>319</x>
+    <y>385</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>$(P):Alarm3</pv_name>
+    <x>319</x>
+    <y>409</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_3</name>
+    <pv_name>$(P):Alarm4</pv_name>
+    <x>319</x>
+    <y>434</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>$(P):Alarm5</pv_name>
+    <x>319</x>
+    <y>458</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>$(P):Alarm6</pv_name>
+    <x>319</x>
+    <y>483</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>$(P):Alarm7</pv_name>
+    <x>319</x>
+    <y>507</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_7</name>
+    <pv_name>$(P):Alarm8</pv_name>
+    <x>319</x>
+    <y>532</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_8</name>
+    <pv_name>$(P):Alarm9</pv_name>
+    <x>319</x>
+    <y>556</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_9</name>
+    <pv_name>$(P):Alarm10</pv_name>
+    <x>319</x>
+    <y>581</y>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group_3</name>
+    <x>240</x>
+    <y>150</y>
+    <width>200</width>
+    <height>90</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_25</name>
+      <text>Compressor</text>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>$(P):CompWH</pv_name>
+      <x>90</x>
+      <y>30</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_26</name>
+      <text>Evaporator</text>
+      <y>60</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_11</name>
+      <pv_name>$(P):EvapWH</pv_name>
+      <x>90</x>
+      <y>60</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_27</name>
+      <text>Working Hours</text>
+      <x>60</x>
+      <width>70</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+    </widget>
+  </widget>
+</display>
