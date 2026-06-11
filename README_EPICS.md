@@ -31,6 +31,7 @@ For installation of the EPICs install the following packages:
  sudo apt-get install libusb-dev
  sudo apt-get install maven
  sudo apt-get install openjdk-21-jdk 
+ sudo apt-get install postgresql-18
 
  sudt apt-get install python3-numpy
  sudo apt-get install python3-matplotlib

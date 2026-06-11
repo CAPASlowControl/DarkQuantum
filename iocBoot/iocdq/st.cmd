@@ -41,10 +41,17 @@ modbusInterposeConfig("CHILLERPORT",1,1000,5) # modbusInterposeConfig(portName,l
 drvModbusAsynConfigure("read_ChlPr_256", "CHILLERPORT", 1, 3, 256, 6, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlExpVPr_288", "CHILLERPORT", 1, 3, 288, 8, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlMachineStatus_1280", "CHILLERPORT", 1, 3, 1280, 1, 0, 5000, "read_Holding")
+drvModbusAsynConfigure("write_ChlMachineStatus_1280", "CHILLERPORT", 1, 6, 1280, 1, 0, 100, "write_Holding")
+
 drvModbusAsynConfigure("read_ChlSetPoint_768", "CHILLERPORT", 1, 3, 768, 6, 0, 5000, "read_Holding")
+drvModbusAsynConfigure("write_ChlSetPoint_768", "CHILLERPORT", 1, 6, 768, 1, 0, 5000, "write_Holding")
+
+drvModbusAsynConfigure("read_ChlRelayStatus_2048", "CHILLERPORT", 1, 3, 2048, 10, 0, 5000, "read_Holding")
+
 drvModbusAsynConfigure("read_ChlAlarms_3328", "CHILLERPORT", 1, 3, 3328, 10, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlCompWH_3584", "CHILLERPORT", 1, 3, 3584, 1, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlEvapWH_3590", "CHILLERPORT", 1, 3, 3590, 1, 0, 5000, "read_Holding")
+
 
 #Load Records
 dbLoadRecords("$(TOP)/dqApp/Db/chiller.db","P='DQ:CHL'")
