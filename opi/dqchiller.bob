@@ -82,53 +82,9 @@
   <widget type="group" version="3.0.0">
     <name>Group</name>
     <x>20</x>
-    <y>170</y>
-    <width>190</width>
-    <height>90</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_5</name>
-      <text>TexpV</text>
-      <y>30</y>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_3</name>
-      <pv_name>$(P):TexpV</pv_name>
-      <x>70</x>
-      <y>30</y>
-      <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_6</name>
-      <text>PexpV</text>
-      <y>60</y>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_4</name>
-      <pv_name>$(P):PexpV</pv_name>
-      <x>70</x>
-      <y>60</y>
-      <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_8</name>
-      <text>Expansion Valve Probes</text>
-      <x>10</x>
-      <width>180</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group</name>
-    <x>20</x>
     <y>31</y>
     <width>170</width>
-    <height>110</height>
+    <height>179</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
@@ -146,25 +102,25 @@
     <widget type="label" version="2.0.0">
       <name>Label_2</name>
       <text>Tevap</text>
-      <y>60</y>
+      <y>55</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_1</name>
       <pv_name>$(P):Tevap</pv_name>
       <x>70</x>
-      <y>60</y>
+      <y>55</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_3</name>
-      <text>Pout</text>
-      <y>90</y>
+      <text>Pref_hp</text>
+      <y>105</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_2</name>
-      <pv_name>$(P):Pout</pv_name>
+      <pv_name>$(P):Pref_hp</pv_name>
       <x>70</x>
-      <y>90</y>
+      <y>105</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
@@ -176,6 +132,30 @@
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>Pref_lp</text>
+      <y>130</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>$(P):Pref_lp</pv_name>
+      <x>70</x>
+      <y>130</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>$(P):TexpV</pv_name>
+      <x>70</x>
+      <y>80</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>TexpV</text>
+      <y>80</y>
     </widget>
   </widget>
   <widget type="meter" version="3.0.0">
@@ -190,7 +170,7 @@
     <x>240</x>
     <y>31</y>
     <width>190</width>
-    <height>129</height>
+    <height>90</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
@@ -203,18 +183,6 @@
       <pv_name>$(P):ChSetPointRB</pv_name>
       <x>90</x>
       <y>57</y>
-      <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_17</name>
-      <text>T Heat Pump</text>
-      <y>81</y>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_8</name>
-      <pv_name>$(P):HPSetPointRB</pv_name>
-      <x>90</x>
-      <y>81</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">

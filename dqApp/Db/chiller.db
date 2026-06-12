@@ -22,13 +22,13 @@ record(ai, "$(P):Tevap") {
     field(PINI,"NO")
 }
 
-record(ai, "$(P):Pout") {
-    field(DESC, "Water Pressure.")
+record(ai, "$(P):Pref_hp") {
+    field(DESC, "Refrigerant Circuit High Pressure")
     field(SCAN, "I/O Intr")
     field(DTYP,"asynInt32")
     field(INP,"@asyn(read_ChlPr_256 4 1)MODBUS_DATA") 
-    field(PREC,2)
-    field(ASLO,0.01) # Int to Pres
+    field(PREC,1)
+    field(ASLO,0.1) # Int to Pres
     field(EGU,"Bar") 
     field(PINI,"NO")
 }
@@ -48,13 +48,13 @@ record(ai, "$(P):TexpV") {
 
 
 
-record(ai, "$(P):PexpV") {
-    field(DESC, "Exp. Valve Pressure")
+record(ai, "$(P):Pref_lp") {
+    field(DESC, "Refrigerant Circuit Low Pressure")
     field(SCAN, "I/O Intr")
     field(DTYP,"asynInt32")
     field(INP,"@asyn(read_ChlExpVPr_288 4 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
-    field(PREC,2)
-    field(ASLO,0.01) # Int to Temp.
+    field(PREC,1)
+    field(ASLO,0.1) # Int to Temp.
     field(EGU,"Bar") 
     field(PINI,"NO")
 }
@@ -228,16 +228,16 @@ record(ao, "$(P):ChSetPoint") {
 
 
 
-record(ai, "$(P):HPSetPointRB") {
-    field(DESC, "Heat Pump Set Point")
-    field(SCAN, "I/O Intr")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn(read_ChlSetPoint_768 3 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
-    field(PREC,1)
-    field(ASLO,0.1) # Int to Temp.
-    field(EGU,"ºC") 
-    field(PINI,"NO")
-}
+#record(ai, "$(P):HPSetPointRB") {
+#    field(DESC, "Heat Pump Set Point")
+#    field(SCAN, "I/O Intr")
+#    field(DTYP,"asynInt32")
+#    field(INP,"@asyn(read_ChlSetPoint_768 3 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
+#    field(PREC,1)
+#    field(ASLO,0.1) # Int to Temp.
+#    field(EGU,"ºC") 
+#    field(PINI,"NO")
+#}
 
 # Alarms
 record(mbbiDirect, "$(P):Alarm1") {
