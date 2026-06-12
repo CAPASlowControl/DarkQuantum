@@ -220,8 +220,9 @@ record(ao, "$(P):ChSetPoint") {
     field(OUT,"@asyn(write_ChlSetPoint_768 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
     field(PREC,0)
     field(ASLO,0.1) # Int to Temp.
+    field(VAL,20)
     field(EGU,"ºC") 
-    field(PINI,"YES")
+    field(PINI,"NO")
     field(DRVL,"5")
     field(DRVH,"30")
 }
@@ -300,7 +301,7 @@ record(mbbiDirect, "$(P):Alarm8") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
     field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 7 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(INP,"@asynMask(read_ChlAlarms_3328 9 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
 }
 
@@ -308,7 +309,7 @@ record(mbbiDirect, "$(P):Alarm9") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
     field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 8 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(INP,"@asynMask(read_ChlAlarms_3328 10 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
 }
 
@@ -316,7 +317,7 @@ record(mbbiDirect, "$(P):Alarm10") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
     field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 9 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(INP,"@asynMask(read_ChlAlarms_3328 11 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
 }
 

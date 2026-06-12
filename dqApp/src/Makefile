@@ -29,6 +29,7 @@ dq_DBD += drvAsynIPPort.dbd
 dq_DBD += drvAsynSerialPort.dbd
 dq_DBD += stream.dbd
 dq_DBD += modbusSupport.dbd
+dq_DBD += opcua.dbd
 
 # Add all the support libraries needed by this IOC
 dq_LIBS += calc
@@ -39,6 +40,7 @@ dq_LIBS += sscan
 dq_LIBS += asyn
 dq_LIBS += stream
 dq_LIBS += modbus
+dq_LIBS += opcua
 
 
 # dq_registerRecordDeviceDriver.cpp derives from dq.dbd

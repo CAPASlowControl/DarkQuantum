@@ -48,7 +48,7 @@ drvModbusAsynConfigure("write_ChlSetPoint_768", "CHILLERPORT", 1, 6, 768, 1, 0, 
 
 drvModbusAsynConfigure("read_ChlRelayStatus_2048", "CHILLERPORT", 1, 3, 2048, 10, 0, 5000, "read_Holding")
 
-drvModbusAsynConfigure("read_ChlAlarms_3328", "CHILLERPORT", 1, 3, 3328, 10, 0, 5000, "read_Holding")
+drvModbusAsynConfigure("read_ChlAlarms_3328", "CHILLERPORT", 1, 3, 3328, 12, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlCompWH_3584", "CHILLERPORT", 1, 3, 3584, 1, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlEvapWH_3590", "CHILLERPORT", 1, 3, 3590, 1, 0, 5000, "read_Holding")
 
@@ -56,10 +56,17 @@ drvModbusAsynConfigure("read_ChlEvapWH_3590", "CHILLERPORT", 1, 3, 3590, 1, 0, 5
 #Load Records
 dbLoadRecords("$(TOP)/dqApp/Db/chiller.db","P='DQ:CHL'")
 
+# OPCUA Tests
+opcuaSession( "OPC1", "opc.tcp://localhost:53880/")
+# <name> <session> <interval ms> [options…]
+opcuaSubscription( "SUB1", "OPC1", "200")
 
+# Switch off security
+opcuaOptions( "OPC1", "sec-mode=None")
 
-## Load record instances
-#dbLoadRecords("db/dq.db","user=user")
+#Load Records
+dbLoadRecords("$(TOP)/dqApp/Db/opcua.db","P='OPC',SESS='OPC1',SUBS='SUB1'" )
+
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

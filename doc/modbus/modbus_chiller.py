@@ -17,7 +17,7 @@ client.connect()
 #print(registers)
 
 
-result = client.read_holding_registers(address=2304, count=6 )# , slave=1)
+result = client.read_holding_registers(address=3328, count=12 )# , slave=1)
 #result = client.read_holding_registers(address=3584, count=1 )# , slave=1)
 #print(result.isError())
 #print(result.registers)

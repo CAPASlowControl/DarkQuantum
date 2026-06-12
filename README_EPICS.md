@@ -32,6 +32,7 @@ For installation of the EPICs install the following packages:
  sudo apt-get install maven
  sudo apt-get install openjdk-21-jdk 
  sudo apt-get install postgresql-18
+ sudo apt-get install libxml2-dev
 
  sudt apt-get install python3-numpy
  sudo apt-get install python3-matplotlib
@@ -108,6 +109,41 @@ In ASYN it may necessary to uncomment `TIRP=YES` in `configure/CONFIG_SITE`
 
 For PCRE in STREAMDEVICE add pcre to RELEASE, `PCRE_INCLUDE=/usr/include/`and `PCRE_LIB=/usr/lib64` to the RELEASE.
 pcre (not pcre2) is usually a package in most distributions, if not it can be installed from source https://sourceforge.net/projects/pcre/
+
+
+## INSTALL OPCUA
+
+It requires also installation of Open62541 module https://github.com/open62541/open62541/issues/3248
+ - tag to vertion 3.1.17
+ - Clone submodules
+ - mkdir build
+ - cd build
+ - build two times for static and shared libraries
+ - cmake .. -DBUILD_SHARED_LIBS=ON \
+         -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+         -DUA_ENABLE_ENCRYPTION=OPENSSL
+ - make & sudo make install & rm -rf *
+ - cmake .. -DBUILD_SHARED_LIBS=OFF \
+         -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF \
+         -DUA_ENABLE_ENCRYPTION=OPENSSL
+ - make & sudo make install
+
+
+It is necessary to install the OPCUA moduoe https://github.com/epics-modules/opcua/
+ - In CONFIG_SITE:
+```
+# Path to the Open62541 installation
+OPEN62541 = /usr/local/
+
+OPEN62541_DEPLOY_MODE = PROVIDED
+#OPEN62541_LIB_DIR = $(OPEN62541)/lib
+#OPEN62541_SHRLIB_DIR = $(OPEN62541)/lib
+# How the Open62541 libraries were built
+OPEN62541_USE_CRYPTO = YES
+OPEN62541_USE_XMLPARSER = YES
+```
+Finally add EPICS_BASE to `configure/RELEASE` and `exampleTop/configure/RELEASE`
 
 ## Create App 
 

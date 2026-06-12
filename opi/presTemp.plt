@@ -5,7 +5,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-3 minutes -3.243 seconds</start>
+  <start>-26 minutes -9.557 seconds</start>
   <end>now</end>
   <archive_rescale>STAGGER</archive_rescale>
   <foreground>
@@ -34,8 +34,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>9.09</min>
-      <max>16.3</max>
+      <min>-36.7</min>
+      <max>31.1</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -45,14 +45,14 @@
       <name>Temp (deg)</name>
       <use_axis_name>true</use_axis_name>
       <use_trace_names>true</use_trace_names>
-      <right>false</right>
+      <right>true</right>
       <color>
         <red>0</red>
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>20.89</min>
-      <max>28.330000000000002</max>
+      <min>-2.6</min>
+      <max>59.800000000000004</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -170,6 +170,31 @@
         <red>0</red>
         <green>255</green>
         <blue>127</blue>
+      </color>
+      <trace_type>SINGLE_LINE</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>SOLID</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>5000</ring_size>
+      <request>OPTIMIZED</request>
+      <archive>
+        <name>Archiver</name>
+        <url>jdbc:postgresql://localhost:5432/archive</url>
+        <key>1</key>
+      </archive>
+    </pv>
+    <pv>
+      <display_name>DQ:CHL:ChSetPointRB</display_name>
+      <visible>true</visible>
+      <name>DQ:CHL:ChSetPointRB</name>
+      <axis>1</axis>
+      <color>
+        <red>127</red>
+        <green>0</green>
+        <blue>255</blue>
       </color>
       <trace_type>SINGLE_LINE</trace_type>
       <linewidth>2</linewidth>

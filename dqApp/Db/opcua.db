@@ -1,0 +1,10 @@
+record(longin, "$(P):li1") {
+    field(DTYP, "OPCUA")
+    field(INP,  "@$(SUBS) ns=1;s=test")
+    field(SCAN, "I/O Intr")
+}
+record(longout, "$(P):lo1") {
+    field(DTYP, "OPCUA")
+    field(OUT,  "@$(SUBS) ns=1;s=test")
+}
+
