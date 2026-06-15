@@ -68,8 +68,19 @@ record(mbbiDirect, "$(P):MachineStatus") {
     field(SCAN, "I/O Intr")
     field(DTYP,"asynUInt32Digital")
     field(INP,"@asynMask(read_ChlMachineStatus_1280 0 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(FLNK,"$(P):MachineStatus_Standby")
     field(PINI,"NO")
 }
+
+record(bi, "$(P):MachineStatus_Standby") {
+    field(DESC, "Machine Status")
+    field(SCAN, "Passive")
+    field(INP,"$(P):MachineStatus.B0")
+    field(ZNAM,"Standby")
+    field(ONAM,"On")
+    field(PINI,"NO")
+}
+
 
 record(mbboDirect, "$(P):MachineStatusSet") {
     field(DESC, "Machine Status")
@@ -98,6 +109,8 @@ record(bi, "$(P):RelayStatus1_Alarm") {
     field(INP,"$(P):RelayStatus1.B0")
     field(PINI,"NO")
     field(FLNK,"$(P):RelayStatus1_WaterPump")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
 }
 
 record(bi, "$(P):RelayStatus1_WaterPump") {
@@ -105,6 +118,8 @@ record(bi, "$(P):RelayStatus1_WaterPump") {
     field(SCAN, "Passive")
     field(INP,"$(P):RelayStatus1.B1")
     field(PINI,"NO")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
 }
 
 
@@ -122,6 +137,8 @@ record(bi, "$(P):RelayStatus2_CondensingFan") {
     field(SCAN, "Passive")
     field(INP,"$(P):RelayStatus2.B1")
     field(PINI,"NO")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
 }
 
 
@@ -172,6 +189,8 @@ record(bi, "$(P):RelayStatus7_Compressor") {
     field(SCAN, "Passive")
     field(INP,"$(P):RelayStatus7.B2")
     field(PINI,"NO")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
 }
 
 

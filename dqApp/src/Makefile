@@ -22,7 +22,7 @@ dq_DBD += base.dbd
 # Include dbd files from all support applications:
 dq_DBD += calcSupport.dbd
 dq_DBD += asSupport.dbd
-dq_DBD += busySupport.dbd
+#dq_DBD += busySupport.dbd
 dq_DBD += sscanSupport.dbd
 dq_DBD += asyn.dbd
 dq_DBD += drvAsynIPPort.dbd
@@ -34,7 +34,7 @@ dq_DBD += opcua.dbd
 # Add all the support libraries needed by this IOC
 dq_LIBS += calc
 dq_LIBS += autosave
-dq_LIBS += busy
+#dq_LIBS += busy
 dq_LIBS += seq
 dq_LIBS += sscan
 dq_LIBS += asyn

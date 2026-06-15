@@ -3,8 +3,8 @@
   <macros>
     <P>DQ:CHL</P>
   </macros>
-  <width>1000</width>
-  <height>800</height>
+  <width>950</width>
+  <height>850</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -24,54 +24,47 @@
     <transparent use_class="true">true</transparent>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>Group</name>
-    <x>20</x>
-    <y>280</y>
-    <width>180</width>
-    <height>100</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_15</name>
-      <text>Machine Status</text>
-      <x>20</x>
-      <width>160</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
+    <name>Machine Status</name>
+    <x>251</x>
+    <y>295</y>
+    <width>216</width>
+    <height>136</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
-    </widget>
+    </font>
+    <transparent>true</transparent>
     <widget type="label" version="2.0.0">
       <name>Label_10</name>
       <text>Standby / On</text>
       <x>30</x>
-      <y>20</y>
+      <y>8</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_11</name>
       <text>DI Remote On /Off</text>
       <x>30</x>
-      <y>40</y>
+      <y>28</y>
       <width>140</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_12</name>
       <text>Chiller Mode</text>
       <x>30</x>
-      <y>60</y>
+      <y>48</y>
       <width>140</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_13</name>
       <text>Heat Pump Mode</text>
       <x>30</x>
-      <y>80</y>
+      <y>68</y>
       <width>140</width>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor</name>
       <pv_name>$(P):MachineStatus</pv_name>
-      <y>20</y>
+      <y>8</y>
       <width>20</width>
       <height>80</height>
       <numBits>4</numBits>
@@ -80,171 +73,120 @@
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>Group</name>
-    <x>20</x>
+    <name>Probes</name>
     <y>31</y>
-    <width>170</width>
-    <height>179</height>
-    <style>3</style>
+    <width>238</width>
+    <height>197</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
       <name>Label_1</name>
       <text>Tout</text>
-      <y>30</y>
+      <y>11</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update</name>
       <pv_name>$(P):Tout</pv_name>
       <x>70</x>
-      <y>30</y>
+      <y>11</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_2</name>
       <text>Tevap</text>
-      <y>55</y>
+      <y>36</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_1</name>
       <pv_name>$(P):Tevap</pv_name>
       <x>70</x>
-      <y>55</y>
+      <y>36</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_3</name>
       <text>Pref_hp</text>
-      <y>105</y>
+      <y>100</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_2</name>
       <pv_name>$(P):Pref_hp</pv_name>
       <x>70</x>
-      <y>105</y>
+      <y>100</y>
       <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_4</name>
-      <text>Probes</text>
-      <x>60</x>
-      <width>70</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_6</name>
       <text>Pref_lp</text>
-      <y>130</y>
+      <y>125</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_4</name>
       <pv_name>$(P):Pref_lp</pv_name>
       <x>70</x>
-      <y>130</y>
+      <y>125</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_3</name>
       <pv_name>$(P):TexpV</pv_name>
       <x>70</x>
-      <y>80</y>
+      <y>61</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_5</name>
       <text>TexpV</text>
-      <y>80</y>
+      <y>61</y>
     </widget>
   </widget>
   <widget type="meter" version="3.0.0">
     <name>Meter</name>
-    <x>210</x>
-    <y>278</y>
+    <x>241</x>
+    <y>178</y>
     <width>10</width>
     <height>1</height>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>Group_1</name>
-    <x>240</x>
-    <y>31</y>
-    <width>190</width>
-    <height>90</height>
-    <style>3</style>
+    <name>SetPoint</name>
+    <x>2</x>
+    <y>228</y>
+    <width>236</width>
+    <height>88</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
       <name>Label_16</name>
       <text>T Chiller</text>
-      <y>30</y>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_7</name>
-      <pv_name>$(P):ChSetPointRB</pv_name>
-      <x>90</x>
-      <y>57</y>
-      <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_19</name>
-      <text>SetPoint</text>
-      <x>60</x>
-      <width>70</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry</name>
-      <pv_name>$(P):ChSetPoint</pv_name>
-      <x>90</x>
-      <y>30</y>
-      <horizontal_alignment>2</horizontal_alignment>
+      <y>9</y>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>Group_3</name>
-    <x>240</x>
-    <y>170</y>
-    <width>200</width>
-    <height>90</height>
-    <style>3</style>
+    <name>Working Hours</name>
+    <x>2</x>
+    <y>322</y>
+    <width>236</width>
+    <height>108</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
       <name>Label_25</name>
       <text>Compressor</text>
-      <y>30</y>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_10</name>
-      <pv_name>$(P):CompWH</pv_name>
-      <x>90</x>
-      <y>30</y>
-      <horizontal_alignment>1</horizontal_alignment>
+      <y>13</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_26</name>
       <text>Evaporator</text>
-      <y>60</y>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_11</name>
-      <pv_name>$(P):EvapWH</pv_name>
-      <x>90</x>
-      <y>60</y>
-      <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_27</name>
-      <text>Working Hours</text>
-      <x>20</x>
-      <width>150</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
+      <y>43</y>
     </widget>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -258,8 +200,8 @@
     </actions>
     <pv_name>$(P):MachineStatusSet</pv_name>
     <text>STOP</text>
-    <x>493</x>
-    <y>51</y>
+    <x>480</x>
+    <y>50</y>
     <width>93</width>
     <height>90</height>
     <font>
@@ -271,676 +213,36 @@
       </color>
     </background_color>
     <tooltip>$(actions)</tooltip>
+    <show_confirm_dialog>true</show_confirm_dialog>
   </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_18</name>
-    <text>Relay Status</text>
-    <x>181</x>
-    <y>440</y>
-    <width>160</width>
+  <widget type="group" version="3.0.0">
+    <name>Status Summary</name>
+    <x>251</x>
+    <y>31</y>
+    <width>216</width>
+    <height>149</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
     </font>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_21</name>
-    <text>Alarm</text>
-    <x>50</x>
-    <y>460</y>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_22</name>
-    <text>Water Pump</text>
-    <x>50</x>
-    <y>480</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_23</name>
-    <text>Supply Water Pump</text>
-    <x>50</x>
-    <y>500</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_24</name>
-    <text>Antifreeze Circuit 1</text>
-    <x>50</x>
-    <y>520</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_3</name>
-    <pv_name>$(P):RelayStatus1</pv_name>
-    <x>20</x>
-    <y>460</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_28</name>
-    <text>Antifreeze Circuit 2</text>
-    <x>50</x>
-    <y>540</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_29</name>
-    <text>Condenser Water Pump</text>
-    <x>50</x>
-    <y>560</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_30</name>
-    <text>Cond. Sup Water Pump</text>
-    <x>50</x>
-    <y>580</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_31</name>
-    <text>Reversing Valve 1</text>
-    <x>50</x>
-    <y>600</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_32</name>
-    <text>Reversing valve 2</text>
-    <x>241</x>
-    <y>463</y>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_33</name>
-    <text>Condensing fan 1 C1</text>
-    <x>241</x>
-    <y>483</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_34</name>
-    <text>Condensing fan 2 C1</text>
-    <x>241</x>
-    <y>503</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_35</name>
-    <text>Condensing fan 3 C1</text>
-    <x>241</x>
-    <y>523</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_4</name>
-    <pv_name>$(P):RelayStatus2</pv_name>
-    <x>211</x>
-    <y>463</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_36</name>
-    <text>Condensing fan 4 C1</text>
-    <x>241</x>
-    <y>543</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_37</name>
-    <text>Condensing fan 1 C2</text>
-    <x>241</x>
-    <y>563</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_38</name>
-    <text>Condensing fan 2 C2</text>
-    <x>241</x>
-    <y>583</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_39</name>
-    <text>Condensing fan 3 C2</text>
-    <x>241</x>
-    <y>603</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_40</name>
-    <text>Condensing fan 4 C2</text>
-    <x>417</x>
-    <y>460</y>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_41</name>
-    <text>Pump_down valve C1</text>
-    <x>417</x>
-    <y>480</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_42</name>
-    <text>Pump_down valve C2</text>
-    <x>417</x>
-    <y>500</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_43</name>
-    <text>Recovery valve C1</text>
-    <x>417</x>
-    <y>520</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_5</name>
-    <pv_name>$(P):RelayStatus3</pv_name>
-    <x>387</x>
-    <y>460</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_44</name>
-    <text>Recovery valve C2</text>
-    <x>417</x>
-    <y>540</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_45</name>
-    <text>Free cooling valve</text>
-    <x>417</x>
-    <y>560</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_46</name>
-    <text>Auxiliary output 1</text>
-    <x>417</x>
-    <y>580</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_47</name>
-    <text>Auxiliary output 2</text>
-    <x>417</x>
-    <y>600</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_48</name>
-    <text>Inter. valve comp. 1</text>
-    <x>601</x>
-    <y>463</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_49</name>
-    <text>Inter. valve comp. 2</text>
-    <x>601</x>
-    <y>483</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_50</name>
-    <text>Valve liq in comp 1</text>
-    <x>601</x>
-    <y>503</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_51</name>
-    <text>Valve liq in comp 2</text>
-    <x>601</x>
-    <y>523</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_6</name>
-    <pv_name>$(P):RelayStatus4</pv_name>
-    <x>571</x>
-    <y>463</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_52</name>
-    <text>Valve1 for sanitary</text>
-    <x>601</x>
-    <y>543</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_53</name>
-    <text>Valve2 for sanitary</text>
-    <x>601</x>
-    <y>563</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_54</name>
-    <text>Heater1 for sanitary</text>
-    <x>601</x>
-    <y>583</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_55</name>
-    <text>Heater2 for sanitary</text>
-    <x>601</x>
-    <y>603</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_56</name>
-    <text>Heater3 for sanitary</text>
-    <x>771</x>
-    <y>463</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_57</name>
-    <text>Solar panel w pump</text>
-    <x>771</x>
-    <y>483</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_58</name>
-    <text>Solar panel valve</text>
-    <x>771</x>
-    <y>503</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_59</name>
-    <text>Sanitary water pump</text>
-    <x>771</x>
-    <y>523</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_7</name>
-    <pv_name>$(P):RelayStatus5</pv_name>
-    <x>741</x>
-    <y>463</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_60</name>
-    <text>Hybrid exc 1 circuit 1</text>
-    <x>771</x>
-    <y>543</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_61</name>
-    <text>Hybrid exc 2 circuit 1</text>
-    <x>771</x>
-    <y>563</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_62</name>
-    <text>Hybrid exc 1 circuit 2</text>
-    <x>771</x>
-    <y>583</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_63</name>
-    <text>Hybrid exc 2 circuit 2</text>
-    <x>771</x>
-    <y>603</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_64</name>
-    <text>Compressor 1</text>
-    <x>241</x>
-    <y>683</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_65</name>
-    <text>Part-wind comp 1</text>
-    <x>241</x>
-    <y>703</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_8</name>
-    <pv_name>$(P):RelayStatus7</pv_name>
-    <x>211</x>
-    <y>643</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_66</name>
-    <text>CapStepV 1 Comp 1</text>
-    <x>241</x>
-    <y>723</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_67</name>
-    <text>CapStepV 2 Comp 1</text>
-    <x>241</x>
-    <y>743</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_68</name>
-    <text>CapStepV 3 Comp 1</text>
-    <x>241</x>
-    <y>763</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_69</name>
-    <text>By-pass V Comp 1</text>
-    <x>241</x>
-    <y>783</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_70</name>
-    <text>Compressor 2</text>
-    <x>417</x>
-    <y>640</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_71</name>
-    <text>Part-wind comp 2</text>
-    <x>417</x>
-    <y>660</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_72</name>
-    <text>CapStepV 1 Comp 2</text>
-    <x>417</x>
-    <y>680</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_73</name>
-    <text>CapStepV 2 Comp 2</text>
-    <x>417</x>
-    <y>700</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_9</name>
-    <pv_name>$(P):RelayStatus8</pv_name>
-    <x>387</x>
-    <y>640</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_74</name>
-    <text>CapStepV 3 Comp 2</text>
-    <x>417</x>
-    <y>720</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_75</name>
-    <text>By-pass V Comp 2</text>
-    <x>417</x>
-    <y>740</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_76</name>
-    <text>Compressor 2</text>
-    <x>417</x>
-    <y>760</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_77</name>
-    <text>Part-wind comp 3</text>
-    <x>417</x>
-    <y>780</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_78</name>
-    <text>CapStepV 1 Comp 3</text>
-    <x>601</x>
-    <y>643</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_79</name>
-    <text>CapStepV 2 Comp 3</text>
-    <x>601</x>
-    <y>663</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_80</name>
-    <text>CapStepV 3 Comp 3</text>
-    <x>601</x>
-    <y>683</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_81</name>
-    <text>By-pass V Comp 3</text>
-    <x>601</x>
-    <y>703</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_10</name>
-    <pv_name>$(P):RelayStatus9</pv_name>
-    <x>571</x>
-    <y>643</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_82</name>
-    <text>Compressor 4</text>
-    <x>601</x>
-    <y>723</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_83</name>
-    <text>Part-wind comp 4</text>
-    <x>601</x>
-    <y>743</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_84</name>
-    <text>CapStepV 1 Comp 4</text>
-    <x>601</x>
-    <y>763</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_85</name>
-    <text>CapStepV 2 Comp 4</text>
-    <x>601</x>
-    <y>783</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_86</name>
-    <text>CapStepV 3 Comp 4</text>
-    <x>771</x>
-    <y>643</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_87</name>
-    <text>By-pass V Comp 4</text>
-    <x>771</x>
-    <y>663</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_88</name>
-    <text>Laser Activation</text>
-    <x>771</x>
-    <y>683</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_11</name>
-    <pv_name>$(P):RelayStatus10</pv_name>
-    <x>741</x>
-    <y>643</y>
-    <width>20</width>
-    <height>160</height>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_94</name>
-    <text>Cooling/heating C1</text>
-    <x>50</x>
-    <y>640</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_95</name>
-    <text>Cooling/heating C2</text>
-    <x>50</x>
-    <y>660</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_96</name>
-    <text>Defrost C1</text>
-    <x>50</x>
-    <y>680</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_97</name>
-    <text>Defrost C2</text>
-    <x>50</x>
-    <y>700</y>
-    <width>140</width>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_12</name>
-    <pv_name>$(P):RelayStatus6</pv_name>
-    <x>20</x>
-    <y>640</y>
-    <width>20</width>
-    <height>160</height>
-    <numBits>6</numBits>
-    <bitReverse>true</bitReverse>
-    <horizontal>false</horizontal>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_98</name>
-    <text>Circuit 1 pow req</text>
-    <x>50</x>
-    <y>720</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_99</name>
-    <text>Circuit 2 pow req</text>
-    <x>50</x>
-    <y>740</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_100</name>
-    <text>Sanitary  pow req</text>
-    <x>50</x>
-    <y>760</y>
-    <width>140</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_101</name>
-    <text>Stand-by</text>
-    <x>50</x>
-    <y>780</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_102</name>
-    <text>Solenoid valve C1</text>
-    <x>241</x>
-    <y>643</y>
-    <width>132</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_103</name>
-    <text>Solenoid valve C2</text>
-    <x>241</x>
-    <y>663</y>
-    <width>140</width>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group</name>
-    <x>240</x>
-    <y>280</y>
-    <width>171</width>
-    <height>131</height>
-    <style>3</style>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
       <name>Label_89</name>
       <text>Alarm</text>
       <x>31</x>
-      <y>20</y>
+      <y>27</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_90</name>
       <text>Water Pump</text>
       <x>31</x>
-      <y>40</y>
+      <y>47</y>
       <width>140</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_91</name>
-      <text>Relay Status Summary</text>
-      <x>10</x>
-      <width>160</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_10</name>
       <pv_name>$(P):RelayStatus1_Alarm</pv_name>
-      <y>20</y>
+      <y>27</y>
       <on_color>
         <color name="MAJOR" red="255" green="0" blue="0">
         </color>
@@ -949,45 +251,59 @@
     <widget type="led" version="2.0.0">
       <name>LED_11</name>
       <pv_name>$(P):RelayStatus1_WaterPump</pv_name>
-      <y>40</y>
+      <y>47</y>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_12</name>
       <pv_name>$(P):RelayStatus2_CondensingFan</pv_name>
-      <y>60</y>
+      <y>67</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_92</name>
       <text>Condensing Fan</text>
       <x>31</x>
-      <y>60</y>
+      <y>67</y>
       <width>140</width>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_13</name>
       <pv_name>$(P):RelayStatus7_Compressor</pv_name>
-      <y>80</y>
+      <y>87</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_93</name>
       <text>Compressor</text>
       <x>31</x>
-      <y>80</y>
+      <y>87</y>
       <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_14</name>
+      <text>Standby / On</text>
+      <x>31</x>
+      <y>9</y>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_15</name>
+      <pv_name>$(P):MachineStatus_Standby</pv_name>
+      <y>9</y>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>Group</name>
-    <x>460</x>
-    <y>280</y>
-    <width>160</width>
-    <height>79</height>
-    <style>3</style>
+    <name>Alarms</name>
+    <x>251</x>
+    <y>180</y>
+    <width>216</width>
+    <height>115</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
     <transparent>true</transparent>
     <widget type="group" version="3.0.0">
       <name>Group</name>
-      <x>13</x>
-      <y>30</y>
+      <x>20</x>
+      <y>13</y>
       <width>134</width>
       <height>49</height>
       <style>3</style>
@@ -1086,15 +402,666 @@
         </on_color>
       </widget>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_20</name>
-      <text>Alarms</text>
-      <width>160</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Relay Status</name>
+    <x>2</x>
+    <y>428</y>
+    <width>927</width>
+    <height>390</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
-      <horizontal_alignment>1</horizontal_alignment>
+    </font>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_59</name>
+      <text>Sanitary water pump</text>
+      <x>751</x>
+      <y>68</y>
+      <width>140</width>
     </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_7</name>
+      <pv_name>$(P):RelayStatus5</pv_name>
+      <x>721</x>
+      <y>8</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_60</name>
+      <text>Hybrid exc 1 circuit 1</text>
+      <x>751</x>
+      <y>88</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_61</name>
+      <text>Hybrid exc 2 circuit 1</text>
+      <x>751</x>
+      <y>108</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_62</name>
+      <text>Hybrid exc 1 circuit 2</text>
+      <x>751</x>
+      <y>128</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_63</name>
+      <text>Hybrid exc 2 circuit 2</text>
+      <x>751</x>
+      <y>148</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_64</name>
+      <text>Compressor 1</text>
+      <x>221</x>
+      <y>228</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_65</name>
+      <text>Part-wind comp 1</text>
+      <x>221</x>
+      <y>248</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_8</name>
+      <pv_name>$(P):RelayStatus7</pv_name>
+      <x>191</x>
+      <y>188</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_66</name>
+      <text>CapStepV 1 Comp 1</text>
+      <x>221</x>
+      <y>268</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_67</name>
+      <text>CapStepV 2 Comp 1</text>
+      <x>221</x>
+      <y>288</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_68</name>
+      <text>CapStepV 3 Comp 1</text>
+      <x>221</x>
+      <y>308</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_69</name>
+      <text>By-pass V Comp 1</text>
+      <x>221</x>
+      <y>328</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_70</name>
+      <text>Compressor 2</text>
+      <x>397</x>
+      <y>185</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_71</name>
+      <text>Part-wind comp 2</text>
+      <x>397</x>
+      <y>205</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_72</name>
+      <text>CapStepV 1 Comp 2</text>
+      <x>397</x>
+      <y>225</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_73</name>
+      <text>CapStepV 2 Comp 2</text>
+      <x>397</x>
+      <y>245</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_9</name>
+      <pv_name>$(P):RelayStatus8</pv_name>
+      <x>367</x>
+      <y>185</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_74</name>
+      <text>CapStepV 3 Comp 2</text>
+      <x>397</x>
+      <y>265</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_75</name>
+      <text>By-pass V Comp 2</text>
+      <x>397</x>
+      <y>285</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_76</name>
+      <text>Compressor 2</text>
+      <x>397</x>
+      <y>305</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_77</name>
+      <text>Part-wind comp 3</text>
+      <x>397</x>
+      <y>325</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_78</name>
+      <text>CapStepV 1 Comp 3</text>
+      <x>581</x>
+      <y>188</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_79</name>
+      <text>CapStepV 2 Comp 3</text>
+      <x>581</x>
+      <y>208</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_80</name>
+      <text>CapStepV 3 Comp 3</text>
+      <x>581</x>
+      <y>228</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_81</name>
+      <text>By-pass V Comp 3</text>
+      <x>581</x>
+      <y>248</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_10</name>
+      <pv_name>$(P):RelayStatus9</pv_name>
+      <x>551</x>
+      <y>188</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_82</name>
+      <text>Compressor 4</text>
+      <x>581</x>
+      <y>268</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_83</name>
+      <text>Part-wind comp 4</text>
+      <x>581</x>
+      <y>288</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_84</name>
+      <text>CapStepV 1 Comp 4</text>
+      <x>581</x>
+      <y>308</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_85</name>
+      <text>CapStepV 2 Comp 4</text>
+      <x>581</x>
+      <y>328</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_86</name>
+      <text>CapStepV 3 Comp 4</text>
+      <x>751</x>
+      <y>188</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_87</name>
+      <text>By-pass V Comp 4</text>
+      <x>751</x>
+      <y>208</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_88</name>
+      <text>Laser Activation</text>
+      <x>751</x>
+      <y>228</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_11</name>
+      <pv_name>$(P):RelayStatus10</pv_name>
+      <x>721</x>
+      <y>188</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_94</name>
+      <text>Cooling/heating C1</text>
+      <x>30</x>
+      <y>185</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_95</name>
+      <text>Cooling/heating C2</text>
+      <x>30</x>
+      <y>205</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_96</name>
+      <text>Defrost C1</text>
+      <x>30</x>
+      <y>225</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_97</name>
+      <text>Defrost C2</text>
+      <x>30</x>
+      <y>245</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_12</name>
+      <pv_name>$(P):RelayStatus6</pv_name>
+      <y>185</y>
+      <width>20</width>
+      <height>160</height>
+      <numBits>6</numBits>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_98</name>
+      <text>Circuit 1 pow req</text>
+      <x>30</x>
+      <y>265</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_99</name>
+      <text>Circuit 2 pow req</text>
+      <x>30</x>
+      <y>285</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_100</name>
+      <text>Sanitary  pow req</text>
+      <x>30</x>
+      <y>305</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_101</name>
+      <text>Stand-by</text>
+      <x>30</x>
+      <y>325</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_102</name>
+      <text>Solenoid valve C1</text>
+      <x>221</x>
+      <y>188</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_103</name>
+      <text>Solenoid valve C2</text>
+      <x>221</x>
+      <y>208</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_21</name>
+      <text>Alarm</text>
+      <x>30</x>
+      <y>5</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_22</name>
+      <text>Water Pump</text>
+      <x>30</x>
+      <y>25</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_23</name>
+      <text>Supply Water Pump</text>
+      <x>30</x>
+      <y>45</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_24</name>
+      <text>Antifreeze Circuit 1</text>
+      <x>30</x>
+      <y>65</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_3</name>
+      <pv_name>$(P):RelayStatus1</pv_name>
+      <y>5</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Antifreeze Circuit 2</text>
+      <x>30</x>
+      <y>85</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_29</name>
+      <text>Condenser Water Pump</text>
+      <x>30</x>
+      <y>105</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_30</name>
+      <text>Cond. Sup Water Pump</text>
+      <x>30</x>
+      <y>125</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_31</name>
+      <text>Reversing Valve 1</text>
+      <x>30</x>
+      <y>145</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_32</name>
+      <text>Reversing valve 2</text>
+      <x>221</x>
+      <y>8</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_33</name>
+      <text>Condensing fan 1 C1</text>
+      <x>221</x>
+      <y>28</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_34</name>
+      <text>Condensing fan 2 C1</text>
+      <x>221</x>
+      <y>48</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_35</name>
+      <text>Condensing fan 3 C1</text>
+      <x>221</x>
+      <y>68</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_4</name>
+      <pv_name>$(P):RelayStatus2</pv_name>
+      <x>191</x>
+      <y>8</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_36</name>
+      <text>Condensing fan 4 C1</text>
+      <x>221</x>
+      <y>88</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_37</name>
+      <text>Condensing fan 1 C2</text>
+      <x>221</x>
+      <y>108</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_38</name>
+      <text>Condensing fan 2 C2</text>
+      <x>221</x>
+      <y>128</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_39</name>
+      <text>Condensing fan 3 C2</text>
+      <x>221</x>
+      <y>148</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_40</name>
+      <text>Condensing fan 4 C2</text>
+      <x>397</x>
+      <y>5</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_41</name>
+      <text>Pump_down valve C1</text>
+      <x>397</x>
+      <y>25</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_42</name>
+      <text>Pump_down valve C2</text>
+      <x>397</x>
+      <y>45</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_43</name>
+      <text>Recovery valve C1</text>
+      <x>397</x>
+      <y>65</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_5</name>
+      <pv_name>$(P):RelayStatus3</pv_name>
+      <x>367</x>
+      <y>5</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_44</name>
+      <text>Recovery valve C2</text>
+      <x>397</x>
+      <y>85</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_45</name>
+      <text>Free cooling valve</text>
+      <x>397</x>
+      <y>105</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_46</name>
+      <text>Auxiliary output 1</text>
+      <x>397</x>
+      <y>125</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_47</name>
+      <text>Auxiliary output 2</text>
+      <x>397</x>
+      <y>145</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_48</name>
+      <text>Inter. valve comp. 1</text>
+      <x>581</x>
+      <y>8</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_49</name>
+      <text>Inter. valve comp. 2</text>
+      <x>581</x>
+      <y>28</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_50</name>
+      <text>Valve liq in comp 1</text>
+      <x>581</x>
+      <y>48</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_51</name>
+      <text>Valve liq in comp 2</text>
+      <x>581</x>
+      <y>68</y>
+      <width>140</width>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_6</name>
+      <pv_name>$(P):RelayStatus4</pv_name>
+      <x>551</x>
+      <y>8</y>
+      <width>20</width>
+      <height>160</height>
+      <bitReverse>true</bitReverse>
+      <horizontal>false</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_52</name>
+      <text>Valve1 for sanitary</text>
+      <x>581</x>
+      <y>88</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_53</name>
+      <text>Valve2 for sanitary</text>
+      <x>581</x>
+      <y>108</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_54</name>
+      <text>Heater1 for sanitary</text>
+      <x>581</x>
+      <y>128</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_55</name>
+      <text>Heater2 for sanitary</text>
+      <x>581</x>
+      <y>148</y>
+      <width>132</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_56</name>
+      <text>Heater3 for sanitary</text>
+      <x>751</x>
+      <y>8</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_57</name>
+      <text>Solar panel w pump</text>
+      <x>751</x>
+      <y>28</y>
+      <width>140</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_58</name>
+      <text>Solar panel valve</text>
+      <x>751</x>
+      <y>48</y>
+      <width>140</width>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(P):ChSetPointRB</pv_name>
+    <x>96</x>
+    <y>282</y>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P):ChSetPoint</pv_name>
+    <x>96</x>
+    <y>255</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P):CompWH</pv_name>
+    <x>88</x>
+    <y>353</y>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(P):EvapWH</pv_name>
+    <x>88</x>
+    <y>383</y>
+    <horizontal_alignment>1</horizontal_alignment>
   </widget>
 </display>

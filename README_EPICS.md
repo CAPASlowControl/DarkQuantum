@@ -6,16 +6,15 @@ EPICs Notes
 Next some notes and tips for epics installation and IOC preparation are given. 
 
 # EPICs Configuration
-## UBUNTU WSL
-This EPICs IOCs has been tested in a PC with WSL2 and Ubuntu 26.04 with the following credentials
- - user/password
+## PC 
+This EPICs IOCs has been tested in a PC with Debian (and WSL2 Ubuntu 26.04) with the following credentials
 
-Add user to dialout for device communication `sudo adduser <user>  dialout`
-For serial communication in WSL2 https://learn.microsoft.com/en-us/windows/wsl/connect-usb
+ - usuario/Bujaruelo21.
+
 
 
 ## Dependencies
-For installation of the EPICs install the following packages:
+For EPICs installation add the following packages:
 
 ```bash
  sudo apt-get install gcc
@@ -37,26 +36,20 @@ For installation of the EPICs install the following packages:
  sudt apt-get install python3-numpy
  sudo apt-get install python3-matplotlib
  sudo apt-get install python3-pyepics
- # Install uldaq https://github.com/mccdaq/uldaq/tree/master
- # Install pcre (for StreamDevice)
+
+ Install uldaq https://github.com/mccdaq/uldaq/tree/master
+ Install pcre (for StreamDevice)
+ Add user to dialout for device communication `sudo adduser <user>  dialout`
+
 ```
 
-## Download EPICs
+## Install EPICs
 
 Download or clone the [epics base](https://github.com/epics-base/epics-base) and support modules (most are in https://github.com/epics-modules/).
 
-For installation select a folder (typically /usr/local/epics/)
+For installation select a folder (typically `/usr/local/epics/`).
 
-Download epics and modules (asyn, stream), and unpack.
-```bash
-   tar -zxf ~/Downloads/baseR3.14.12.5.tar.gz -C /usr/local/epics/
-   tar -zxf ~/Downloads/asyn*tar.gz -C /usr/local/epics/support/
-   tar -zxf ~/Downloads/stream* -C /usr/local/epics/support/ 
-```
-
-## Bashrc
-
-Edit `bashrc`:
+Add Env variables in `/home/user/.bashrc`:
 
 ```bash
   export EPICS_ROOT=/usr/local/epics
@@ -76,18 +69,18 @@ Edit `bashrc`:
   export EPICS_CA_AUTO_ADDR_LIST=NO 
 ```
     
-## Install Base
+### Install Base
 
 ```bash
   cd /usr/local/epics/base/
   make
 ```
 
-## Install Modules
+### Install Modules
 
 Can be done downloading modules individually or with syncApps (https://github.com/EPICS-synApps/support/releases)
 
-Edit `configure/RELEASE` and `make release ` and `make` (remove other RELEASE files to avoid problems)
+For synApps, edit `configure/RELEASE` and then `make release ` and `make`.
 
 Try to use gcc-13 (apt-get install gcc-13/g++-13 and then update-alternatives). Compilation gives error with gcc14 or gcc15.
 It can be solved for some modules using USR_CFLAGS += -std=c17 and USR_CXXFLAGS += -std=c++17 to CONFIG_SITE. 
@@ -113,8 +106,9 @@ pcre (not pcre2) is usually a package in most distributions, if not it can be in
 
 ## INSTALL OPCUA
 
-It requires also installation of Open62541 module https://github.com/open62541/open62541/issues/3248
- - tag to vertion 3.1.17
+First requires also installation of Open62541 module https://github.com/open62541/open62541/issues/3248
+
+ - tag to version 3.1.17
  - Clone submodules
  - mkdir build
  - cd build
@@ -130,19 +124,20 @@ It requires also installation of Open62541 module https://github.com/open62541/o
  - make & sudo make install
 
 
-It is necessary to install the OPCUA moduoe https://github.com/epics-modules/opcua/
- - In CONFIG_SITE:
+For the OPCUA module https://github.com/epics-modules/opcua/, edit `configure/CONFIG_SITE`:
+ 
 ```
-# Path to the Open62541 installation
+\# Path to the Open62541 installation
 OPEN62541 = /usr/local/
 
 OPEN62541_DEPLOY_MODE = PROVIDED
-#OPEN62541_LIB_DIR = $(OPEN62541)/lib
-#OPEN62541_SHRLIB_DIR = $(OPEN62541)/lib
-# How the Open62541 libraries were built
+\#OPEN62541_LIB_DIR = $(OPEN62541)/lib
+\#OPEN62541_SHRLIB_DIR = $(OPEN62541)/lib
+\# How the Open62541 libraries were built
 OPEN62541_USE_CRYPTO = YES
 OPEN62541_USE_XMLPARSER = YES
 ```
+
 Finally add EPICS_BASE to `configure/RELEASE` and `exampleTop/configure/RELEASE`
 
 ## Create App 
@@ -204,51 +199,8 @@ Download/Clone from `https://github.com/ControlSystemStudio/phoebus/tags`.
 Install maven, java, etc.
 For Java it has been tested with openjdk21, be careful with newest versions e.g compilation with openjdk26 gives errors.
 
-If problems during compilation tests skip them wigh mvn -DskipTests.
-
-
-## Archiver Appliance
- 
-For the data archiving the [archiver appliance](https://slacmshankar.github.io/epicsarchiver_docs/) can be used.
-
-For its installation follow instructions in the [documentation](https://slacmshankar.github.io/epicsarchiver_docs/installguide.html). 
-
-The following packages are necessary:
-
-  - [Archiver Appliance](https://github.com/slacmshankar/epicsarchiverap/releases/download/1.1.0/archappl_v1.1.0.tar.gz)
-  - Java:
-    - Tested with OpenJDK21 (version +16 specified)
-  - Python2
-    - If there is no python2 modify python scripts to python3 compatibility. For it change `print ""` statement to `print("")` and `urlparse` to `urllib.parse` 
-  - Mysql
-      - Create a user and database for archiver
-      
-```bash
-      mysql --user=root --password=***** 
-      > CREATE DATABASE archappl; 
-      >CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
-      >GRANT ALL ON *.* TO 'user'@'localhost';
-      >FLUSH PRIVILEGES
-```
-
-  - Start myslqd `systemctl start mysqld`
-  - [Apache Tomcat](https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz)
-  - Mysql [Java connector](https://dev.mysql.com/downloads/connector/j/)
-      - Tested with `mysql-connector-j-8.2.0.jar` 
-
-Installation is done using `single_machine_install.sh` and then initialized archiver with `sampleStartup.sh start`.
-
-For start a service can be included using systemctl ad then `systemctl start archiver` or `systemctl enable archiver` for start at boot.
-
-Once the archiver is initialized open it in `http://<serverIP>:17665/mgmt/ui/index.html`.
-
-For integration in CSS `Edit/Preferences/CSS Applications/Trends/Data Browser/` and data retrieval as `pbraw://<ip>:17668/retrieval`.
-
-For Phoebus integration change `settings.ini`.
-
-Note1: for passing the JAVA_HOME during installation do `sudo JAVA_HOME=/usr/lib/jvm/java-21-openjdk single_machine_install.sh.
-
-Note2: For Java > 17 change `MaxPermSize=128M` to `MaxMetaspaceSize=128M` in `sampleStartup.sh`
+Follow installation instructions from ttps://github.com/ControlSystemStudio/phoebus/. 
+If there problems during compilation tests skip them wigh `mvn -DskipTests`.
 
 # RDB Archiver
 
@@ -281,45 +233,10 @@ The archiving properties are in `archive_preferences.properties`
 
  - write_period=30, max_repeats=60, etc 
 
-
-# RDB Timescale
-
-Install timescaledb:
-
- - `curl -s https://packagecloud.io/install/repositories/timescale/timescaledb/script.deb.sh | sudo bash`
-
-Check psql version (psql --version)
-
- - `sudo apt-get install timescaledb-2-2.15.3-postgresql-13`
-
-Add timescaledb to `/etc/postgresql/13/main/postgresql.conf`
-
- -  `shared_reload_libraries = 'timescaledb'`
-
-
-Run [setup.sql](https://github.com/ControlSystemStudio/phoebus/blob/master/app/databrowser-timescale/postgresqsl/setup.sql)
-
- - `psql -U postgres -f setup.sql`
- - Add PVs into setup.sql` or  in another script.
-
-Modify settings.ini for tsarch:
-
-```bash
- org.csstudio.archive/url=jdbc:postgresql://localhost:5432/tsarch
- org.csstudio.archive/user=tsarch
- org.csstudio.archive/password=$tsarch
-```
-
-Run archive service:
-
- - `archive-engine.sh -engine Demo -port 4812 -settings settings.ini`
-
-Configure css for timescale access:
-
- - `org.csstudio.trends.databrowser3/urls=ts:jdbc:postgresql://your_host:5432/tsarch|Timescale`
-
-
 # OTHER NOTES
 For running wsl in background:
+
  - wsl --exec dbus-launch true
  - Then it can only be stopped using wsl --shutdown
+
+For serial communication in WSL2 https://learn.microsoft.com/en-us/windows/wsl/connect-usb

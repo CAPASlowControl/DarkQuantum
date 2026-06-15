@@ -1,15 +1,16 @@
---INSERT INTO channel(channel_id, name) VALUES (1, 'uno:DHT_HT');
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:Tout',1,1,9999);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:ChSetPointRB',1,1,9999);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:PexpV',1,1,9999);
---INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:Pcir1',1,1,9999);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:Pref_hp',1,1,9999);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:Pref_lp',1,1,9999);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:Tevap',1,1,9999);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:TexpV',1,1,9999);
+--
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:RelayStatus1_Alarm',1,1,9999);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:RelayStatus1_WaterPump',1,1,9999);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:RelayStatus2_CondensingFan',1,1,9999);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:MachineStatus_Standby',1,1,9999,1);
 
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:RelayStatus1_Alarm',1,1,9999);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:RelayStatus1_WaterPump',1,1,9999);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:RelayStatus2_CondensingFan',1,1,9999);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:RelayStatus7_Compressor',1,1,9999);
 
 
 --UPDATE channel SET smpl_per=1 WHERE channel_id < 100;
