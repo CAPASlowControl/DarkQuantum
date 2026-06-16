@@ -7,4 +7,3 @@ record(longout, "$(P):lo1") {
     field(DTYP, "OPCUA")
     field(OUT,  "@$(SUBS) ns=1;s=test")
 }
-

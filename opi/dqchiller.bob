@@ -90,7 +90,7 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update</name>
       <pv_name>$(P):Tout</pv_name>
-      <x>70</x>
+      <x>99</x>
       <y>11</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
@@ -102,7 +102,7 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_1</name>
       <pv_name>$(P):Tevap</pv_name>
-      <x>70</x>
+      <x>99</x>
       <y>36</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
@@ -114,7 +114,7 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_2</name>
       <pv_name>$(P):Pref_hp</pv_name>
-      <x>70</x>
+      <x>99</x>
       <y>100</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
@@ -126,14 +126,14 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_4</name>
       <pv_name>$(P):Pref_lp</pv_name>
-      <x>70</x>
+      <x>99</x>
       <y>125</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_3</name>
       <pv_name>$(P):TexpV</pv_name>
-      <x>70</x>
+      <x>99</x>
       <y>61</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
@@ -181,12 +181,12 @@
     <widget type="label" version="2.0.0">
       <name>Label_25</name>
       <text>Compressor</text>
-      <y>13</y>
+      <y>26</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_26</name>
-      <text>Evaporator</text>
-      <y>43</y>
+      <text>Water Pump</text>
+      <y>5</y>
     </widget>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -1039,29 +1039,29 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_7</name>
     <pv_name>$(P):ChSetPointRB</pv_name>
-    <x>96</x>
+    <x>116</x>
     <y>282</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry</name>
     <pv_name>$(P):ChSetPoint</pv_name>
-    <x>96</x>
+    <x>116</x>
     <y>255</y>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Update_10</name>
-    <pv_name>$(P):CompWH</pv_name>
-    <x>88</x>
-    <y>353</y>
+    <name>Text Update_11</name>
+    <pv_name>$(P):WaterPumpWH</pv_name>
+    <x>116</x>
+    <y>345</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Update_11</name>
-    <pv_name>$(P):EvapWH</pv_name>
-    <x>88</x>
-    <y>383</y>
+    <name>Text Update_10</name>
+    <pv_name>$(P):CompWH</pv_name>
+    <x>116</x>
+    <y>366</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
 </display>

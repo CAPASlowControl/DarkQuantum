@@ -9,6 +9,14 @@ record(ai, "$(P):Tout") {
     field(ASLO,0.1) # Int to Temp.
     field(EGU,"ºC") 
     field(PINI,"NO")
+    field(HIHI,40) 
+    field(HIGH,35)
+    field(LOLO,5)
+    field(LOW,10)
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"MAJOR")
+    field(LSV,"MINOR")
 }
 
 record(ai, "$(P):Tevap") {
@@ -20,6 +28,14 @@ record(ai, "$(P):Tevap") {
     field(ASLO,0.1) # Int to Temp.
     field(EGU,"ºC") 
     field(PINI,"NO")
+    field(HIHI,40)
+    field(HIGH,35)
+    field(LOLO,5)
+    field(LOW,10)
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"MAJOR")
+    field(LSV,"MINOR")
 }
 
 record(ai, "$(P):Pref_hp") {
@@ -31,6 +47,10 @@ record(ai, "$(P):Pref_hp") {
     field(ASLO,0.1) # Int to Pres
     field(EGU,"Bar") 
     field(PINI,"NO")
+    field(HIHI,50) # Al09 value
+    field(LOLO,5)  # 
+    field(HHSV,"MAJOR")
+    field(LLSV,"MAJOR")
 }
 
 # EXPANSION VALVE PROBES
@@ -44,9 +64,15 @@ record(ai, "$(P):TexpV") {
     field(ASLO,0.1) # Int to Temp.
     field(EGU,"ºC") 
     field(PINI,"NO")
+    field(HIHI,40)
+    field(HIGH,35)
+    field(LOLO,5)
+    field(LOW,10)
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"MAJOR")
+    field(LSV,"MINOR")
 }
-
-
 
 record(ai, "$(P):Pref_lp") {
     field(DESC, "Refrigerant Circuit Low Pressure")
@@ -57,11 +83,14 @@ record(ai, "$(P):Pref_lp") {
     field(ASLO,0.1) # Int to Temp.
     field(EGU,"Bar") 
     field(PINI,"NO")
+    field(HIHI,30)
+    field(LOLO,3)
+    field(HHSV,"MAJOR")
+    field(LLSV,"MAJOR")
 }
 
 
 # Machine Status
-#
 
 record(mbbiDirect, "$(P):MachineStatus") {
     field(DESC, "Machine Status")
@@ -79,6 +108,8 @@ record(bi, "$(P):MachineStatus_Standby") {
     field(ZNAM,"Standby")
     field(ONAM,"On")
     field(PINI,"NO")
+    field(ZSV,"MINOR")
+    field(OSV,"NO_ALARM")
 }
 
 
@@ -111,6 +142,8 @@ record(bi, "$(P):RelayStatus1_Alarm") {
     field(FLNK,"$(P):RelayStatus1_WaterPump")
     field(ZNAM,"Off")
     field(ONAM,"On")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"MAJOR")
 }
 
 record(bi, "$(P):RelayStatus1_WaterPump") {
@@ -120,6 +153,8 @@ record(bi, "$(P):RelayStatus1_WaterPump") {
     field(PINI,"NO")
     field(ZNAM,"Off")
     field(ONAM,"On")
+    field(ZSV,"MINOR")
+    field(OSV,"NO_ALARM")
 }
 
 
@@ -140,8 +175,6 @@ record(bi, "$(P):RelayStatus2_CondensingFan") {
     field(ZNAM,"Off")
     field(ONAM,"On")
 }
-
-
 
 record(mbbiDirect, "$(P):RelayStatus3") {
     field(DESC, "Relay Status")
@@ -193,8 +226,6 @@ record(bi, "$(P):RelayStatus7_Compressor") {
     field(ONAM,"On")
 }
 
-
-
 record(mbbiDirect, "$(P):RelayStatus8") {
     field(DESC, "Relay Status")
     field(SCAN, "I/O Intr")
@@ -230,6 +261,14 @@ record(ai, "$(P):ChSetPointRB") {
     field(ASLO,0.1) # Int to Temp.
     field(EGU,"ºC") 
     field(PINI,"NO")
+    field(HIHI,"30")
+    field(HIGH,"23")
+    field(LOLO,"5")
+    field(LOW,"8")
+    field(HHSV,"MAJOR")
+    field(LLSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LSV,"MINOR")
 }
 
 record(ao, "$(P):ChSetPoint") {
@@ -243,10 +282,8 @@ record(ao, "$(P):ChSetPoint") {
     field(EGU,"ºC") 
     field(PINI,"NO")
     field(DRVL,"5")
-    field(DRVH,"30")
+    field(DRVH,"25")
 }
-
-
 
 #record(ai, "$(P):HPSetPointRB") {
 #    field(DESC, "Heat Pump Set Point")
@@ -341,27 +378,20 @@ record(mbbiDirect, "$(P):Alarm10") {
 }
 
 # Working Hours
-record(ai, "$(P):CompWH") {
+record(longin, "$(P):CompWH") {
     field(DESC, "Compressor Working Hours")
     field(SCAN, "I/O Intr")
     field(DTYP,"asynInt32")
     field(INP,"@asyn(read_ChlCompWH_3584 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
-    field(PREC,0)
-    field(ASLO,10) 
     field(EGU,"h")
     field(PINI,"NO")
 }
 
-record(ai, "$(P):EvapWH") {
-    field(DESC, "Evaporator/Fan Working Hours")
+record(longin, "$(P):WaterPumpWH") {
+    field(DESC, "Water Pump Working Hours")
     field(SCAN, "I/O Intr")
     field(DTYP,"asynInt32")
     field(INP,"@asyn(read_ChlEvapWH_3590 0 1)MODBUS_DATA") # @asyn(port offset timeout)drvUser
-    field(PREC,0)
-    field(ASLO,10)
     field(EGU,"h")
     field(PINI,"NO")
 }
-
-
-
