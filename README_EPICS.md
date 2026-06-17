@@ -233,6 +233,28 @@ The archiving properties are in `archive_preferences.properties`
 
  - write_period=30, max_repeats=60, etc 
 
+# Alarm Server
+
+Phoebues includes an alarm server based on kafka.
+
+For the alarms server start-up:
+ - `start_zookeeper.sh`
+	- settings in zookeeper.properties
+        - port 2181
+ - `start_kafka.sh`
+	- settings in server.properties	
+        - port 9092
+ - `start_alarm_server.sh`
+
+To keep record of the alarms and alarm logger is included based on elasticsearch.
+
+For the alarm logger start-up:
+ - `./elasticsearch` (disable security)
+   - Disable security in `elasticsearch.yml`
+   - Port 9200
+ - `alarm_logger.sh`
+   - Port 8080 (reconfigured in settings.in in settings.ini)
+
 # OTHER NOTES
 For running wsl in background:
 
@@ -240,3 +262,6 @@ For running wsl in background:
  - Then it can only be stopped using wsl --shutdown
 
 For serial communication in WSL2 https://learn.microsoft.com/en-us/windows/wsl/connect-usb
+
+
+

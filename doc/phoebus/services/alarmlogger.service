@@ -1,0 +1,34 @@
+# File /etc/systemd/system/alarm_server.service
+#
+# After changes
+#   sudo systemctl daemon-reload
+#
+# Start/status/stop
+#   sudo systemctl start alarm_server.service
+#   sudo systemctl status alarm_server.service
+#   sudo systemctl stop alarm_server.service
+#
+# Start when computer boots:
+#   sudo systemctl enable alarm_server.service
+#
+# Log file:
+#   less +GF /home/controls/css/phoebus-alarm-server/console.log
+#
+# Console:
+#   telnet localhost 4609
+
+[Unit]
+Description=Phoebus Alarm Logger
+#After=kafka.service
+
+[Service]
+User=usuario
+Group=usuario
+Environment=JAVA_HOME=/lib/jvm/java-17-openjdk-amd64/
+Environment=SERVER=/usr/local/epics/css/phoebus-5.0.2/services/alarm-logger/
+Environment=PORT=4612
+ExecStart=/usr/bin/procServ --foreground --noautorestart --name alarm-logger --chdir ${SERVER} --logfile ${SERVER}/console.log ${PORT} ./alarm-logger.sh 
+# Systemd stops alarm server by killing the process
+
+[Install]
+WantedBy=multi-user.target

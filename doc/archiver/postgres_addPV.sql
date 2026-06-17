@@ -11,17 +11,17 @@
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val) VALUES ( 'DQ:CHL:RelayStatus2_CondensingFan',1,1,9999);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:CompWH',1,1,9999,1);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:WaterPumpWH',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm1',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm2',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm3',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm4',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm5',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm6',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm7',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm8',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm9',2,1,9999,1);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm10',2,1,9999,1);
-
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm1',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm2',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm3',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm4',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm5',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm6',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm7',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm8',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm9',2,1,9999,1);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm10',2,1,9999,1);
+--
 
 
 --UPDATE channel SET smpl_per=1 WHERE channel_id < 100;

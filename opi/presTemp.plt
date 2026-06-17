@@ -5,7 +5,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-26 minutes -29.557 seconds</start>
+  <start>-4 hours -31 minutes -18.308 seconds</start>
   <end>now</end>
   <archive_rescale>STAGGER</archive_rescale>
   <foreground>
@@ -34,8 +34,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-19.6</min>
-      <max>32.800000000000004</max>
+      <min>-21.400000000000002</min>
+      <max>34.6</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -80,11 +80,6 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
-      <archive>
-        <name>Archiver</name>
-        <url>jdbc:postgresql://localhost:5432/archive</url>
-        <key>1</key>
-      </archive>
     </pv>
     <pv>
       <display_name>DQ:CHL:Pref_lp</display_name>

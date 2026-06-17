@@ -27,7 +27,7 @@ asynSetOption("CHILLERPORT",0,"stop","1")
 #asynSetOption("CHILLERPORT",-1,"crtscts","N")
 
 
-modbusInterposeConfig("CHILLERPORT",1,1000,5) # modbusInterposeConfig(portName,linkType,timeoutMsec, writeDelayMsec)
+modbusInterposeConfig("CHILLERPORT",1,100,5) # modbusInterposeConfig(portName,linkType,timeoutMsec, writeDelayMsec)
 
 # Modbus Port
 # drvModbusAsynConfigure("portName", "tcpPortName", slaveAddress, modbusFunction, modbusStartAddress, modbusLength, dataType, pollMsec, "plcType")
@@ -35,13 +35,10 @@ modbusInterposeConfig("CHILLERPORT",1,1000,5) # modbusInterposeConfig(portName,l
 # dataType: datatype when MODBUS_DATA specified. 0=UINT16 as default, it can be overseed also in the db file
 #           Other Datypes: 4: INT16, 5: INT32_LE, 7: FLOAT32_LE, 9: FLOAT32_LE, etc. (https://millenia.cars.aps.anl.gov/software/epics/modbusDoc.html)
 
-#drvModbusAsynConfigure("read_Input", "CHILLERPORT", 1, 4, 0, 2, 0, 1000, "read_Input")
-#drvModbusAsynConfigure("write_Holding", "CHILLERPORT", 1, 6, 0, 1, 0, 1000, "write_Holding")
-
 drvModbusAsynConfigure("read_ChlPr_256", "CHILLERPORT", 1, 3, 256, 6, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlExpVPr_288", "CHILLERPORT", 1, 3, 288, 8, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlMachineStatus_1280", "CHILLERPORT", 1, 3, 1280, 1, 0, 5000, "read_Holding")
-drvModbusAsynConfigure("write_ChlMachineStatus_1280", "CHILLERPORT", 1, 6, 1280, 1, 0, 100, "write_Holding")
+drvModbusAsynConfigure("write_ChlMachineStatus_1280", "CHILLERPORT", 1, 6, 1280, 1, 0, 5000, "write_Holding")
 
 drvModbusAsynConfigure("read_ChlSetPoint_768", "CHILLERPORT", 1, 3, 768, 6, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("write_ChlSetPoint_768", "CHILLERPORT", 1, 6, 768, 1, 0, 5000, "write_Holding")
@@ -51,7 +48,6 @@ drvModbusAsynConfigure("read_ChlRelayStatus_2048", "CHILLERPORT", 1, 3, 2048, 10
 drvModbusAsynConfigure("read_ChlAlarms_3328", "CHILLERPORT", 1, 3, 3328, 12, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlCompWH_3584", "CHILLERPORT", 1, 3, 3584, 1, 0, 5000, "read_Holding")
 drvModbusAsynConfigure("read_ChlEvapWH_3590", "CHILLERPORT", 1, 3, 3590, 1, 0, 5000, "read_Holding")
-
 
 #Load Records
 dbLoadRecords("$(TOP)/dqApp/Db/chiller.db","P='DQ:CHL'")
@@ -67,6 +63,8 @@ opcuaOptions( "OPC1", "sec-mode=None")
 #Load Records
 dbLoadRecords("$(TOP)/dqApp/Db/opcua.db","P='OPC',SESS='OPC1',SUBS='SUB1'" )
 
+#asynSetTraceMask("CHILLERPORT", -1, 2)
+#asynSetTraceIOMask("CHILLERPORT",-1,2)
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

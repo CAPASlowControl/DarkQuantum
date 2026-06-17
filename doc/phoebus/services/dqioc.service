@@ -1,0 +1,30 @@
+# File /etc/systemd/system/dqioc.service
+#
+# After changes
+#   sudo systemctl daemon-reload
+#
+# Start/status/stop
+#   sudo systemctl start alarm_server.service
+#   sudo systemctl status alarm_server.service
+#   sudo systemctl stop alarm_server.service
+#
+# Start when computer boots:
+#   sudo systemctl enable alarm_server.service
+#
+# Console:
+#   telnet localhost 4611
+
+[Unit]
+Description=DarkQuantum IOC
+#After=kafka.service
+
+[Service]
+User=usuario
+Group=usuario
+Environment=SERVER=/usr/local/epics/IOCs/DarkQuantum/iocBoot/iocdq/
+Environment=PORT=4611
+ExecStart=/usr/bin/procServ --foreground --noautorestart --name dqioc --chdir ${SERVER} --logfile ${SERVER}/console.log ${PORT} ./st.cmd
+# Systemd stops alarm server by killing the process
+
+[Install]
+WantedBy=multi-user.target

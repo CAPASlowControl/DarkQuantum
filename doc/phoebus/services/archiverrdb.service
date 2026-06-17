@@ -1,0 +1,30 @@
+# File /etc/systemd/system/archiverrdf.service
+#
+# After changes
+#   sudo systemctl daemon-reload
+#
+# Start/status/stop
+#   sudo systemctl start alarm_server.service
+#   sudo systemctl status alarm_server.service
+#   sudo systemctl stop alarm_server.service
+#
+# Start when computer boots:
+#   sudo systemctl enable alarm_server.service
+#
+# Console:
+#   telnet localhost 4610
+
+[Unit]
+Description=Phoebus Archiver RDB
+#After=kafka.service
+
+[Service]
+User=usuario
+Group=usuario
+Environment=SERVER=/usr/local/epics/css/phoebus-5.0.2/services/archive-engine
+Environment=PORT=4610
+ExecStart=/usr/bin/procServ --foreground --noautorestart --name archiverrdb --chdir ${SERVER} --logfile ${SERVER}/console.log ${PORT} ./archive-engine.sh -engine Demo -port 4812 -settings ${SERVER}/settings.ini
+# Systemd stops alarm server by killing the process
+
+[Install]
+WantedBy=multi-user.target

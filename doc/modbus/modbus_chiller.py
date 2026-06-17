@@ -16,13 +16,15 @@ client.connect()
 #registers= result.registers
 #print(registers)
 
-
-result = client.read_holding_registers(address=3328, count=12 )# , slave=1)
-#result = client.read_holding_registers(address=3584, count=1 )# , slave=1)
-#print(result.isError())
-#print(result.registers)
-registers= result.registers
-print(registers)
+while True:
+    result = client.read_holding_registers(address=256, count=1 )# , slave=1)
+    #result = client.read_holding_registers(address=3584, count=1 )# , slave=1)
+    #print(result.isError())
+    #print(result.registers)
+    registers= result.registers
+    print(registers)
+    time.sleep(0.1)
+#2hile
 
 #print("Binary: {:16b}".format(registers[0]) )
 #client.write_register(address=768, value=210 )# , slave=1)
