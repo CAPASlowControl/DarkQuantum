@@ -10,11 +10,12 @@
 < envPaths
 
 cd "${TOP}"
+epicsEnvSet(STREAM_PROTOCOL_PATH,"$(TOP)/dqApp/Db")
+
 
 ## Register all support components
 dbLoadDatabase "dbd/dq.dbd"
 dq_registerRecordDeviceDriver pdbbase
-
 
 # Serial Port
 drvAsynSerialPortConfigure("CHILLERPORT","/dev/ttyUSB0",0,0,0)
@@ -52,7 +53,14 @@ drvModbusAsynConfigure("read_ChlEvapWH_3590", "CHILLERPORT", 1, 3, 3590, 1, 0, 5
 #Load Records
 dbLoadRecords("$(TOP)/dqApp/Db/chiller.db","P='DQ:CHL'")
 
-# OPCUA Tests
+### SERVICES
+# Terminal
+drvAsynIPPortConfigure("terminal","localhost:4613",0,0,0)
+
+#Load Records
+dbLoadRecords("$(TOP)/dqApp/Db/services.db","P='DQ:SYS'")
+
+### OPCUA Tests
 opcuaSession( "OPC1", "opc.tcp://localhost:53880/")
 # <name> <session> <interval ms> [options…]
 opcuaSubscription( "SUB1", "OPC1", "200")

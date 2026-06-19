@@ -30,6 +30,7 @@ dq_DBD += drvAsynSerialPort.dbd
 dq_DBD += stream.dbd
 dq_DBD += modbusSupport.dbd
 dq_DBD += opcua.dbd
+dq_DBD += system.dbd
 
 # Add all the support libraries needed by this IOC
 dq_LIBS += calc

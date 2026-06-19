@@ -34,3 +34,5 @@ O.*/
 .DS_Store
 
 *.swp
+*.log
+*.backup

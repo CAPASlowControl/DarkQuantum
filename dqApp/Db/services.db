@@ -1,0 +1,82 @@
+record(bi,"$(P):Archiver"){
+	field(DESC,"Archiver Service Status")
+	field(DTYP,"stream")
+	#field(VAL,"systemctl is-active archiverrdb")
+	field(INP,'@services.proto command(systemctl is-active archiverrdb) terminal')
+	field(SCAN,"5 second")
+	field(ZNAM,"Inactive")
+	field(ONAM,"Active")
+	field(ZSV,"MINOR")
+}
+
+record(bi,"$(P):DQIOC"){
+	field(DESC,"Service Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto command(systemctl is-active dqioc) terminal')
+	field(SCAN,"5 second")
+	field(ZNAM,"Inactive")
+	field(ONAM,"Active")
+	field(ZSV,"MINOR")
+}
+
+record(bi,"$(P):AlarmServer"){
+	field(DESC,"Service Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto command(systemctl is-active alarm_server) terminal')
+	field(SCAN,"5 second")
+	field(ZNAM,"Inactive")
+	field(ONAM,"Active")
+	field(ZSV,"MINOR")
+}
+
+record(bi,"$(P):AlarmLogger"){
+	field(DESC,"Service Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto command(systemctl is-active alarmlogger) terminal')
+	field(SCAN,"5 second")
+	field(ZNAM,"Inactive")
+	field(ONAM,"Active")
+	field(ZSV,"MINOR")
+}
+
+record(bi,"$(P):ElasticSearch"){
+	field(DESC,"Service Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto command(systemctl is-active elasticsearch) terminal')
+	field(SCAN,"5 second")
+	field(ZNAM,"Inactive")
+	field(ONAM,"Active")
+	field(ZSV,"MINOR")
+}
+
+record(bi,"$(P):Kafka"){
+	field(DESC,"Service Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto command(systemctl is-active kafka) terminal')
+	field(SCAN,"5 second")
+	field(ZNAM,"Inactive")
+	field(ONAM,"Active")
+	field(ZSV,"MINOR")
+}
+
+
+record(bi,"$(P):ZooKeeper"){
+	field(DESC,"Service Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto command(systemctl is-active zookeeper) terminal')
+	field(SCAN,"5 second")
+	field(ZNAM,"Inactive")
+	field(ONAM,"Active")
+	field(ZSV,"MINOR")
+}
+
+record(bi,"$(P):Terminal"){
+	field(DESC,"Service Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto command(systemctl is-active terminal) terminal')
+	field(SCAN,"5 second")
+	field(ZNAM,"Inactive")
+	field(ONAM,"Active")
+	field(ZSV,"MINOR")
+}
+

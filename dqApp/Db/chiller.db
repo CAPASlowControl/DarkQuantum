@@ -104,7 +104,7 @@ record(mbbiDirect, "$(P):MachineStatus") {
 record(bi, "$(P):MachineStatus_Standby") {
     field(DESC, "Machine Status")
     field(SCAN, "Passive")
-    field(INP,"$(P):MachineStatus.B0")
+    field(INP,"$(P):MachineStatus.B0 MSI")
     field(ZNAM,"Standby")
     field(ONAM,"On")
     field(PINI,"NO")
@@ -113,11 +113,12 @@ record(bi, "$(P):MachineStatus_Standby") {
 }
 
 
-record(mbboDirect, "$(P):MachineStatusSet") {
+record(longout, "$(P):MachineStatusSet") {
     field(DESC, "Machine Status")
     #field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(OUT,"@asynMask(write_ChlMachineStatus_1280 0 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    #field(OUT,"@asynMask(write_ChlMachineStatus_1280 0 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(OUT,"@asyn(write_ChlMachineStatus_1280 0 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
 }
 
@@ -137,7 +138,7 @@ record(mbbiDirect, "$(P):RelayStatus1") {
 record(bi, "$(P):RelayStatus1_Alarm") {
     field(DESC, "Relay Status")
     field(SCAN, "Passive")
-    field(INP,"$(P):RelayStatus1.B0")
+    field(INP,"$(P):RelayStatus1.B0 MSI")
     field(PINI,"NO")
     field(FLNK,"$(P):RelayStatus1_WaterPump")
     field(ZNAM,"Off")
@@ -149,7 +150,7 @@ record(bi, "$(P):RelayStatus1_Alarm") {
 record(bi, "$(P):RelayStatus1_WaterPump") {
     field(DESC, "Relay Status")
     field(SCAN, "Passive")
-    field(INP,"$(P):RelayStatus1.B1")
+    field(INP,"$(P):RelayStatus1.B1 MSI")
     field(PINI,"NO")
     field(ZNAM,"Off")
     field(ONAM,"On")
@@ -170,7 +171,7 @@ record(mbbiDirect, "$(P):RelayStatus2") {
 record(bi, "$(P):RelayStatus2_CondensingFan") {
     field(DESC, "Relay Status")
     field(SCAN, "Passive")
-    field(INP,"$(P):RelayStatus2.B1")
+    field(INP,"$(P):RelayStatus2.B1 MSI")
     field(PINI,"NO")
     field(ZNAM,"Off")
     field(ONAM,"On")
@@ -220,7 +221,7 @@ record(mbbiDirect, "$(P):RelayStatus7") {
 record(bi, "$(P):RelayStatus7_Compressor") {
     field(DESC, "Relay Status")
     field(SCAN, "Passive")
-    field(INP,"$(P):RelayStatus7.B2")
+    field(INP,"$(P):RelayStatus7.B2 MSI")
     field(PINI,"NO")
     field(ZNAM,"Off")
     field(ONAM,"On")
@@ -297,84 +298,104 @@ record(ao, "$(P):ChSetPoint") {
 #}
 
 # Alarms
-record(mbbiDirect, "$(P):Alarm1") {
+record(longin, "$(P):Alarm1") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 0 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 0 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm2") {
+record(longin, "$(P):Alarm2") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 1 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 1 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm3") {
+record(longin, "$(P):Alarm3") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 2 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 2 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm4") {
+record(longin, "$(P):Alarm4") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 3 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 3 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm5") {
+record(longin, "$(P):Alarm5") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 4 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 4 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm6") {
+record(longin, "$(P):Alarm6") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 5 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 5 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm7") {
+record(longin, "$(P):Alarm7") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 6 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 6 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm8") {
+record(longin, "$(P):Alarm8") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 9 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 9 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm9") {
+record(longin, "$(P):Alarm9") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 10 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 10 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
-record(mbbiDirect, "$(P):Alarm10") {
+record(longin, "$(P):Alarm10") {
     field(DESC, "Alarm")
     field(SCAN, "I/O Intr")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask(read_ChlAlarms_3328 11 0xFFFF 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(read_ChlAlarms_3328 11 1)MODBUS_DATA") #  field(INP,"@asynMask(portName,offset,mask,timeout)drvUser")
     field(PINI,"NO")
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
 }
 
 # Working Hours

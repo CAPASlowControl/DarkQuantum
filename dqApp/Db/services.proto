@@ -1,0 +1,10 @@
+command {
+    InTerminator = "";
+    OutTerminator = LF;
+    extraInput = Ignore;
+    #exec 'system "systemctl is-active archiverrdb"';
+    out '\$1';
+    in '%*/\n/%{inactive|active}'
+    #exec "systemctl is-active archiverrdb";
+}
+
