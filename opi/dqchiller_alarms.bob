@@ -1085,10 +1085,4 @@
       <width>140</width>
     </widget>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>$(P):Archiver</pv_name>
-    <x>550</x>
-    <y>290</y>
-  </widget>
 </display>
