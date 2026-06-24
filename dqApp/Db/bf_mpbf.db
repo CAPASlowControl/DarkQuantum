@@ -1,0 +1,274 @@
+# Read Page
+record (bo, "$(P):read"){
+    field( SCAN, "1 second")
+    field (DTYP, "stream")
+    field (OUT,  "@bf.proto getPage(/values/mapper/bf/?fields=latest_value&key=a441a1c4-4771-4584-b14b-069dce30d0e7) $(PORT)")
+}
+
+# Pressures
+record (ai, "$(P):p1"){
+    field( SCAN, "I/O Intr")
+    #field( SCAN, "1 second")
+    field (DTYP, "stream")
+    #field (INP,  "@bf.proto testPage(/values/mapper/bf/?fields=latest_value, mapper\.bf\.pressures\.p1, %f) $(PORT)")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p1, %f) $(PORT)")
+    field( EGU, "Bar")
+    field(PREC,2)
+}
+
+record (ai, "$(P):p2"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p2, %f) $(PORT)")
+    field( EGU, "Bar")
+    field(PREC,2)
+}
+#
+record (ai, "$(P):p3"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p3, %f) $(PORT)")
+    field( EGU, "Bar")
+    field(PREC,2)
+}
+#
+record (ai, "$(P):p4"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p4, %f) $(PORT)")
+    field( EGU, "Bar")
+    field(PREC,2)
+}
+
+record (ai, "$(P):p5"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p5, %f) $(PORT)")
+    field( EGU, "Bar")
+    field(PREC,2)
+}
+
+record (ai, "$(P):p6"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p6, %f) $(PORT)")
+    field( EGU, "Bar")
+    field(PREC,2)
+}
+
+# Temperatures
+record (ai, "$(P):t50k"){
+    field( SCAN, "I/O Intr")
+    #field( SCAN, "1 second")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.temperatures\.t50k, %f) $(PORT)")
+    field( EGU, "K")
+    field(PREC,2)
+}
+
+record (ai, "$(P):t4k"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.temperatures\.t4k, %f) $(PORT)")
+    field( EGU, "K")
+    field(PREC,2)
+}
+#
+record (ai, "$(P):tstill"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.temperatures\.tstill, %f) $(PORT)")
+    field( EGU, "K")
+    field(PREC,2)
+}
+#
+record (ai, "$(P):tmixing"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.temperatures\.tmixing, %f) $(PORT)")
+    field( EGU, "K")
+    field(PREC,4)
+}
+
+
+
+# Valves
+record (bi, "$(P):v1"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v1, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v2"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v2, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+
+record (bi, "$(P):v3"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v3, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+
+record (bi, "$(P):v4"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v4, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+
+record (bi, "$(P):v5"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v5, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v6"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v6, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v7"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v7, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v8"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v8, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v9"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v9, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v10"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v10, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v11"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v11, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v12"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v12, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v13"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v13, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v14"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v14, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v15"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v15, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v16"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v16, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v17"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v17, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v18"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v18, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v19"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v19, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v20"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v20, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v21"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v21, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):v22"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.valves.v22, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+

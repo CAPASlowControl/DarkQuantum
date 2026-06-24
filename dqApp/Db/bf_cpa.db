@@ -1,0 +1,40 @@
+# Compressor
+
+record (bo, "$(P):read"){#Compressor
+    field( SCAN, "1 second")
+    field (DTYP, "stream")
+    field (OUT,  "@bf.proto getPage(/values/driver.cpa/?fields=latest_value&key=a441a1c4-4771-4584-b14b-069dce30d0e7) $(PORT)")
+}
+
+record (ai, "$(P):TcoolIn"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.coolant_in_temperature, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"K")
+}
+
+record (ai, "$(P):TcoolOut"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.coolant_out_temperature, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"K")
+}
+
+record (ai, "$(P):TOil"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.oil_temperature, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"K")
+}
+
+record (ai, "$(P):THe"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.helium_temperature, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"K")
+}
+

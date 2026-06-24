@@ -1,0 +1,31 @@
+ReadTimeout = 100;
+Reply = 100;
+InTerminator="}}}}";# Terminator to avoid segmentation fault when mismatch
+
+getPage{
+        #OutTerminator=CR LF CR LF;
+    extraInput=ignore;
+    out "GET \$1 HTTP/1.1"CR LF
+      "Host: 192.168.100.104:49098"CR LF 
+        #"Connection: keep-alive"CR LF
+      CR LF;
+}
+
+processPage{
+        #OutTerminator=CR LF CR LF;
+    extraInput=ignore;
+    in "%*/\"name\":\"\$1\"/%*/latest_value\":{\"value\":\"/\$2\"";
+    #@mismatch{ in "%*/\"name\":\"mapper\.bf\.pressures\.p2\"/%*/latest_value\":{\"value\":\"/%f"; } ;
+}
+
+testPage{
+        #OutTerminator=CR LF CR LF;
+    extraInput=ignore;
+    out "GET \$1 HTTP/1.1"CR LF
+      "Host: localhost:49098"CR LF 
+        #"Connection: keep-alive"CR LF
+      CR LF;
+    in "%*/\"name\":\"\$2\"/%*/latest_value\":{\"value\":\"/\$3\"" ;
+    @mismatch{ in "%*/\"name\":\"mapper\.bf\.pressures\.p2\"/%*/latest_value\":{\"value\":\"/%f\""; } ;
+}
+
