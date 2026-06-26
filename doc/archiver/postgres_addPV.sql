@@ -21,8 +21,43 @@
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm8',2,1,9999,1);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm9',2,1,9999,1);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:CHL:Alarm10',2,1,9999,1);
---
 
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:THe',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TOil',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TcoolIn',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TcoolOut',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:p1',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:p2',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:p3',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:p4',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:p5',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:p6',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:t4k',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:t50k',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:tmixing',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:tstill',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v1',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v10',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v11',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v12',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v13',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v14',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v15',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v16',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v17',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v18',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v19',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v2',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v20',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v21',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v22',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v3',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v4',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v5',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v6',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v7',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v8',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:v9',1,1,9999,10);
 
 --UPDATE channel SET smpl_per=1 WHERE channel_id < 100;
 --UPDATE channel SET smpl_mode_id=2 WHERE channel_id < 100;

@@ -2,10 +2,11 @@
 <databrowser>
   <title></title>
   <show_toolbar>true</show_toolbar>
+  <grid>true</grid>
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-55 minutes</start>
+  <start>-1 hours -6 minutes -41.348 seconds</start>
   <end>now</end>
   <archive_rescale>STAGGER</archive_rescale>
   <foreground>
@@ -34,9 +35,9 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-17.5</min>
-      <max>31.1</max>
-      <grid>false</grid>
+      <min>-2.0</min>
+      <max>22.8</max>
+      <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
     </axis>
@@ -51,8 +52,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-1.2595030632318434</min>
-      <max>69.90644893676816</max>
+      <min>15.3</min>
+      <max>42.1</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -78,7 +79,7 @@
       <point_size>2</point_size>
       <waveform_index>0</waveform_index>
       <period>0.0</period>
-      <ring_size>5000</ring_size>
+      <ring_size>500</ring_size>
       <request>OPTIMIZED</request>
       <archive>
         <name>Archiver</name>
@@ -103,7 +104,7 @@
       <point_size>2</point_size>
       <waveform_index>0</waveform_index>
       <period>0.0</period>
-      <ring_size>5000</ring_size>
+      <ring_size>500</ring_size>
       <request>OPTIMIZED</request>
       <archive>
         <name>Archiver</name>
@@ -128,7 +129,7 @@
       <point_size>2</point_size>
       <waveform_index>0</waveform_index>
       <period>0.0</period>
-      <ring_size>5000</ring_size>
+      <ring_size>500</ring_size>
       <request>OPTIMIZED</request>
       <archive>
         <name>Archiver</name>
@@ -153,7 +154,7 @@
       <point_size>2</point_size>
       <waveform_index>0</waveform_index>
       <period>0.0</period>
-      <ring_size>5000</ring_size>
+      <ring_size>500</ring_size>
       <request>OPTIMIZED</request>
       <archive>
         <name>Archiver</name>
@@ -178,7 +179,7 @@
       <point_size>2</point_size>
       <waveform_index>0</waveform_index>
       <period>0.0</period>
-      <ring_size>5000</ring_size>
+      <ring_size>500</ring_size>
       <request>OPTIMIZED</request>
       <archive>
         <name>Archiver</name>
@@ -203,8 +204,13 @@
       <point_size>2</point_size>
       <waveform_index>0</waveform_index>
       <period>0.0</period>
-      <ring_size>5000</ring_size>
+      <ring_size>500</ring_size>
       <request>OPTIMIZED</request>
+      <archive>
+        <name>Archiver</name>
+        <url>jdbc:postgresql://localhost:5432/archive</url>
+        <key>1</key>
+      </archive>
     </pv>
   </pvlist>
 </databrowser>

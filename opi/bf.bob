@@ -540,7 +540,7 @@ $(pv_value)
 $(actions)</tooltip>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>Temperatures (mapper/bf)_1</name>
+    <name>Temperatures (mapper/bf)</name>
     <macros>
       <P>DQ:BF:MPBF</P>
     </macros>

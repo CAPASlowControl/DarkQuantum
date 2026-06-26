@@ -11,8 +11,8 @@ record(ai, "$(P):Tout") {
     field(PINI,"NO")
     field(HIHI,40) 
     field(HIGH,35)
-    field(LOLO,5)
-    field(LOW,10)
+    field(LOLO,4.5)
+    field(LOW,6)
     field(HHSV,"MAJOR")
     field(HSV,"MINOR")
     field(LLSV,"MAJOR")
@@ -30,8 +30,8 @@ record(ai, "$(P):Tevap") {
     field(PINI,"NO")
     field(HIHI,40)
     field(HIGH,35)
-    field(LOLO,5)
-    field(LOW,10)
+    field(LOLO,4.5)
+    field(LOW,6)
     field(HHSV,"MAJOR")
     field(HSV,"MINOR")
     field(LLSV,"MAJOR")
@@ -47,7 +47,8 @@ record(ai, "$(P):Pref_hp") {
     field(ASLO,0.1) # Int to Pres
     field(EGU,"Bar") 
     field(PINI,"NO")
-    field(HIHI,50) # Al09 value
+    field(HIHI,38.5) # Al09 value: 38.8
+    field(HI,37.5) # 
     field(LOLO,5)  # 
     field(HHSV,"MAJOR")
     field(LLSV,"MAJOR")
@@ -84,9 +85,11 @@ record(ai, "$(P):Pref_lp") {
     field(EGU,"Bar") 
     field(PINI,"NO")
     field(HIHI,30)
-    field(LOLO,3)
+    field(LOW,3.5) # Al02 Value is 2
+    field(LOLO,2.5) # Al02 Value is 2
     field(HHSV,"MAJOR")
     field(LLSV,"MAJOR")
+    field(LSV,"MINOR")
 }
 
 

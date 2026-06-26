@@ -16,7 +16,7 @@
 
 [Unit]
 Description=Phoebus Archiver RDB
-#After=kafka.service
+After=postgresql.service
 
 [Service]
 User=usuario
