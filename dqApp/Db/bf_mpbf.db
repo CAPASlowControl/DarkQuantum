@@ -23,7 +23,7 @@ record (ai, "$(P):p2"){
     field( EGU, "Bar")
     field(PREC,2)
 }
-#
+
 record (ai, "$(P):p3"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
@@ -73,7 +73,7 @@ record (ai, "$(P):t4k"){
     field( EGU, "K")
     field(PREC,2)
 }
-#
+
 record (ai, "$(P):tstill"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
@@ -81,7 +81,7 @@ record (ai, "$(P):tstill"){
     field( EGU, "K")
     field(PREC,2)
 }
-#
+
 record (ai, "$(P):tmixing"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
@@ -89,8 +89,6 @@ record (ai, "$(P):tmixing"){
     field( EGU, "K")
     field(PREC,4)
 }
-
-
 
 # Valves
 record (bi, "$(P):v1"){
@@ -271,4 +269,55 @@ record (bi, "$(P):v22"){
     field(ZNAM,"Off")
     field(ONAM,"On")
 }
+
+# Pumps
+
+record (bi, "$(P):scroll1"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.pumps.scroll1, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):scroll2"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.pumps.scroll2, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):turbo1"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.pumps.turbo1, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):compressor"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.pumps.compressor, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+
+
+
+
+
+
+
+# Flow
+record (ai, "$(P):flow"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper\.bf\.flow, %f) $(PORT)")
+    field( EGU, "mmol/s")
+    field(PREC,4)
+}
+
 

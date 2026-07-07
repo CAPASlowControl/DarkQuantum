@@ -608,7 +608,7 @@ $(actions)</tooltip>
     <macros>
       <P>DQ:BF:TCCH</P>
     </macros>
-    <x>40</x>
+    <x>30</x>
     <y>448</y>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -665,6 +665,105 @@ $(actions)</tooltip>
       <x>100</x>
       <y>70</y>
       <width>160</width>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Flow (mapper/bf)</name>
+    <macros>
+      <P>DQ:BF:MPBF</P>
+    </macros>
+    <x>690</x>
+    <y>30</y>
+    <height>68</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <widget type="label" version="2.0.0">
+      <name>Label_43</name>
+      <text>FLow</text>
+      <x>10</x>
+      <y>10</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_19</name>
+      <pv_name>$(P):flow</pv_name>
+      <x>100</x>
+      <y>10</y>
+      <width>160</width>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Pumps (mapper/bf)</name>
+    <macros>
+      <P>DQ:BF:MPBF</P>
+    </macros>
+    <x>690</x>
+    <y>118</y>
+    <height>290</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <widget type="label" version="2.0.0">
+      <name>Label_48</name>
+      <text>Scroll 1</text>
+      <x>10</x>
+      <y>10</y>
+      <width>80</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_49</name>
+      <text>Scroll 2</text>
+      <x>10</x>
+      <y>30</y>
+      <width>80</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_50</name>
+      <text>Turbo 1</text>
+      <x>10</x>
+      <y>50</y>
+      <width>80</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_51</name>
+      <text>Compressor</text>
+      <x>10</x>
+      <y>70</y>
+      <width>80</width>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_22</name>
+      <pv_name>$(P):scroll1</pv_name>
+      <x>102</x>
+      <y>10</y>
+      <width>15</width>
+      <height>15</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_23</name>
+      <pv_name>$(P):scroll2</pv_name>
+      <x>102</x>
+      <y>30</y>
+      <width>15</width>
+      <height>15</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_24</name>
+      <pv_name>$(P):turbo1</pv_name>
+      <x>102</x>
+      <y>50</y>
+      <width>15</width>
+      <height>15</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_25</name>
+      <pv_name>$(P):compressor</pv_name>
+      <x>102</x>
+      <y>70</y>
+      <width>15</width>
+      <height>15</height>
     </widget>
   </widget>
 </display>
