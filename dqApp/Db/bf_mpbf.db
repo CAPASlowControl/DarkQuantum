@@ -305,12 +305,6 @@ record (bi, "$(P):compressor"){
 }
 
 
-
-
-
-
-
-
 # Flow
 record (ai, "$(P):flow"){
     field( SCAN, "I/O Intr")
@@ -320,4 +314,36 @@ record (ai, "$(P):flow"){
     field(PREC,4)
 }
 
+# Heat Switchs / Heaters
+record (bi, "$(P):hsStill"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.heaters.hs-still, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):hsMC"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.heaters.hs-mc, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):hsExt"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.heaters.ext, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):4kHeater"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.heaters.heater, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
 

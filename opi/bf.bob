@@ -40,7 +40,7 @@
       <pv_name>$(P):TcoolIn</pv_name>
       <x>100</x>
       <y>10</y>
-      <width>160</width>
+      <width>60</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_4</name>
@@ -53,7 +53,7 @@
       <pv_name>$(P):TcoolOut</pv_name>
       <x>100</x>
       <y>30</y>
-      <width>160</width>
+      <width>60</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_5</name>
@@ -66,7 +66,7 @@
       <pv_name>$(P):TOil</pv_name>
       <x>100</x>
       <y>50</y>
-      <width>160</width>
+      <width>60</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_6</name>
@@ -79,12 +79,66 @@
       <pv_name>$(P):THe</pv_name>
       <x>100</x>
       <y>70</y>
-      <width>160</width>
+      <width>60</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_24</name>
+      <pv_name>$(P):TcoolIn_C</pv_name>
+      <x>180</x>
+      <y>10</y>
+      <width>60</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_25</name>
+      <pv_name>$(P):TcoolOut_C</pv_name>
+      <x>180</x>
+      <y>30</y>
+      <width>60</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_26</name>
+      <pv_name>$(P):TOil_C</pv_name>
+      <x>180</x>
+      <y>50</y>
+      <width>60</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_27</name>
+      <pv_name>$(P):THe_C</pv_name>
+      <x>180</x>
+      <y>70</y>
+      <width>60</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_70</name>
+      <text>P low</text>
+      <x>10</x>
+      <y>100</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_28</name>
+      <pv_name>$(P):Plow</pv_name>
+      <x>100</x>
+      <y>100</y>
+      <width>70</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_71</name>
+      <text>P high</text>
+      <x>10</x>
+      <y>120</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_29</name>
+      <pv_name>$(P):Phigh</pv_name>
+      <x>100</x>
+      <y>120</y>
+      <width>70</width>
     </widget>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Action Button</name>
-    <x>570</x>
+    <x>180</x>
     <y>110</y>
     <width>1</width>
     <height>1</height>
@@ -700,7 +754,7 @@ $(actions)</tooltip>
     </macros>
     <x>690</x>
     <y>118</y>
-    <height>290</height>
+    <height>122</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -765,5 +819,85 @@ $(actions)</tooltip>
       <width>15</width>
       <height>15</height>
     </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>HS /Heaters (mapper/bf)</name>
+    <macros>
+      <P>DQ:BF:MPBF</P>
+    </macros>
+    <x>690</x>
+    <y>250</y>
+    <height>122</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <widget type="label" version="2.0.0">
+      <name>Label_72</name>
+      <text>HS Still</text>
+      <x>10</x>
+      <y>10</y>
+      <width>80</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_73</name>
+      <text>HS MC</text>
+      <x>10</x>
+      <y>30</y>
+      <width>80</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_74</name>
+      <text>Ext</text>
+      <x>10</x>
+      <y>50</y>
+      <width>80</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_75</name>
+      <text>4K Heater</text>
+      <x>10</x>
+      <y>70</y>
+      <width>80</width>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_44</name>
+      <pv_name>$(P):hsStill</pv_name>
+      <x>102</x>
+      <y>10</y>
+      <width>15</width>
+      <height>15</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_45</name>
+      <pv_name>$(P):hsMC</pv_name>
+      <x>102</x>
+      <y>30</y>
+      <width>15</width>
+      <height>15</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_46</name>
+      <pv_name>$(P):hsExt</pv_name>
+      <x>102</x>
+      <y>50</y>
+      <width>15</width>
+      <height>15</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_47</name>
+      <pv_name>$(P):4kHeater</pv_name>
+      <x>102</x>
+      <y>70</y>
+      <width>15</width>
+      <height>15</height>
+    </widget>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank</name>
+    <x>940</x>
+    <y>440</y>
+    <width>0</width>
+    <height>0</height>
   </widget>
 </display>

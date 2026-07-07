@@ -1,5 +1,6 @@
 # Compressor
 
+# Temperatures
 record (bo, "$(P):read"){#Compressor
     field( SCAN, "10 second")
     field (DTYP, "stream")
@@ -12,6 +13,24 @@ record (ai, "$(P):TcoolIn"){
     field (INP,  "@bf.proto processPage(driver.cpa.coolant_in_temperature, %f) $(PORT)")
     field(PREC,2)
     field(EGU,"K")
+    field(FLNK,"$(P):TcoolIn_C")
+}
+
+record (calc, "$(P):TcoolIn_C"){
+    field( SCAN, "Passive")
+    field(INPA,  "$(P):TcoolIn")
+    field(CALC,"A-273.15")
+    field(PREC,2)
+    field(EGU,"ºC")
+
+    field(LOLO,"4")
+    field(LLSV,"MAJOR")
+    field(LOW,"7")
+    field(LSV,"MINOR")
+    field(HIHI,"43")
+    field(HHSV,"MAJOR")
+    field(HIGH,"29")
+    field(HSV,"MINOR")
 }
 
 record (ai, "$(P):TcoolOut"){
@@ -20,7 +39,26 @@ record (ai, "$(P):TcoolOut"){
     field (INP,  "@bf.proto processPage(driver.cpa.coolant_out_temperature, %f) $(PORT)")
     field(PREC,2)
     field(EGU,"K")
+    field(FLNK,"$(P):TcoolOut_C")
 }
+
+record (calc, "$(P):TcoolOut_C"){
+    field( SCAN, "Passive")
+    field(INPA,  "$(P):TcoolOut")
+    field(CALC,"A-273.15")
+    field(PREC,2)
+    field(EGU,"ºC")
+
+    field(LOLO,"4")
+    field(LLSV,"MAJOR")
+    field(LOW,"7")
+    field(LSV,"MINOR")
+    field(HIHI,"52")
+    field(HHSV,"MAJOR")
+    field(HIGH,"43")
+    field(HSV,"MINOR")
+}
+
 
 record (ai, "$(P):TOil"){
     field( SCAN, "I/O Intr")
@@ -28,7 +66,26 @@ record (ai, "$(P):TOil"){
     field (INP,  "@bf.proto processPage(driver.cpa.oil_temperature, %f) $(PORT)")
     field(PREC,2)
     field(EGU,"K")
+    field(FLNK,"$(P):TOil_C")
 }
+
+record (calc, "$(P):TOil_C"){
+    field( SCAN, "Passive")
+    field(INPA,  "$(P):TOil")
+    field(CALC,"A-273.15")
+    field(PREC,2)
+    field(EGU,"ºC")
+
+    field(LOLO,"4")
+    field(LLSV,"MAJOR")
+    field(LOW,"7")
+    field(LSV,"MINOR")
+    field(HIHI,"52")
+    field(HHSV,"MAJOR")
+    field(HIGH,"49")
+    field(HSV,"MINOR")
+}
+
 
 record (ai, "$(P):THe"){
     field( SCAN, "I/O Intr")
@@ -36,4 +93,60 @@ record (ai, "$(P):THe"){
     field (INP,  "@bf.proto processPage(driver.cpa.helium_temperature, %f) $(PORT)")
     field(PREC,2)
     field(EGU,"K")
+    field(FLNK,"$(P):THe_C")
 }
+
+record (calc, "$(P):THe_C"){
+    field( SCAN, "Passive")
+    field(INPA,  "$(P):THe")
+    field(CALC,"A-273.15")
+    field(PREC,2)
+    field(EGU,"ºC")
+
+    field(LOLO,"4")
+    field(LLSV,"MAJOR")
+    field(LOW,"7")
+    field(LSV,"MINOR")
+    field(HIHI,"88")
+    field(HHSV,"MAJOR")
+    field(HIGH,"77")
+    field(HSV,"MINOR")
+}
+
+# Pressures
+record (ai, "$(P):Plow"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.low_pressure, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"Bar")
+
+    field(LOLO,"2.8")
+    field(LLSV,"MAJOR")
+    field(LOW,"3.4")
+    field(LSV,"MINOR")
+    field(HIHI,"17.2")
+    field(HHSV,"MAJOR")
+    field(HIGH,"16.5")
+    field(HSV,"MINOR")
+}
+
+
+record (ai, "$(P):Phigh"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.high_pressure, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"Bar")
+
+    field(LOLO,"10.3")
+    field(LLSV,"MAJOR")
+    field(LOW,"11.7")
+    field(LSV,"MINOR")
+    field(HIHI,"27.6")
+    field(HHSV,"MAJOR")
+    field(HIGH,"25.9")
+    field(HSV,"MINOR")
+}
+
+
