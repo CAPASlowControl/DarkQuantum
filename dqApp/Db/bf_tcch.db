@@ -1,0 +1,43 @@
+# Compressor
+
+record (bi, "$(P):read"){ #Compressor
+    field( SCAN, "10 second")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto getPage(/values/driver.bftc/data/channels/?fields=latest_value) $(PORT)")
+}
+
+record (ai, "$(P):ch7_t"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.channels.channel_7.temperature, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"K")
+}
+
+record (ai, "$(P):ch7_r"){
+    field( SCAN, "I/O Intr")
+    #field( SCAN, "10 second")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.channels.channel_7.resistance, %f) $(PORT)")
+    #field (INP,  "@bf.proto readProcessPage(/values/driver.bftc/data/channels/?fields=latest_value, driver.bftc.data.channels.channel_7.resistance, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"Ohm")
+}
+
+
+record (ai, "$(P):ch8_t"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.channels.channel_8.temperature, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"K")
+}
+
+record (ai, "$(P):ch8_r"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.channels.channel_8.resistance, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"Ohm")
+}
+

@@ -23,10 +23,12 @@ dq_registerRecordDeviceDriver pdbbase
 # Defining differt port avoid parsing all input in every PV (for SCAN=IO Intr.)
 drvAsynIPPortConfigure("bf_mpbf","127.0.0.1:49099",0,0,1)
 drvAsynIPPortConfigure("bf_cpa","127.0.0.1:49099",0,0,1)
+drvAsynIPPortConfigure("bf_tcch","127.0.0.1:49099",0,0,1)
 
 #Load Records
-dbLoadRecords("$(TOP)/dqApp/Db/bf_mpbf.db","P=DQ:BF:MPBF,PORT=bf_mpbf")
-dbLoadRecords("$(TOP)/dqApp/Db/bf_cpa.db","P=DQ:BF:CPA,PORT=bf_cpa")
+dbLoadRecords("$(TOP)/dqApp/Db/bf_mpbf.db","P=DQ:BF:MPBF,PORT=bf_mpbf") # Mapper Bf with main variables.
+dbLoadRecords("$(TOP)/dqApp/Db/bf_cpa.db","P=DQ:BF:CPA,PORT=bf_cpa") # Compressor CPA
+dbLoadRecords("$(TOP)/dqApp/Db/bf_tcch.db","P=DQ:BF:TCCH,PORT=bf_tcch") # Temperature controller channels
 
 
 #cd "${TOP}/iocBoot/${IOC}"

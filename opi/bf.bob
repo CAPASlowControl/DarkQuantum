@@ -603,4 +603,68 @@ $(actions)</tooltip>
       <width>160</width>
     </widget>
   </widget>
+  <widget type="group" version="3.0.0">
+    <name>Temperatures (bftc/channels)</name>
+    <macros>
+      <P>DQ:BF:TCCH</P>
+    </macros>
+    <x>40</x>
+    <y>448</y>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <widget type="label" version="2.0.0">
+      <name>Label_39</name>
+      <text>t7</text>
+      <x>10</x>
+      <y>10</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_15</name>
+      <pv_name>$(P):ch7_t</pv_name>
+      <x>100</x>
+      <y>10</y>
+      <width>160</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_40</name>
+      <text>r7</text>
+      <x>10</x>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_16</name>
+      <pv_name>$(P):ch7_r</pv_name>
+      <x>100</x>
+      <y>30</y>
+      <width>160</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_41</name>
+      <text>t8</text>
+      <x>10</x>
+      <y>50</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_17</name>
+      <pv_name>$(P):ch8_t</pv_name>
+      <x>100</x>
+      <y>50</y>
+      <width>160</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_42</name>
+      <text>r8</text>
+      <x>10</x>
+      <y>70</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_18</name>
+      <pv_name>$(P):ch8_r</pv_name>
+      <x>100</x>
+      <y>70</y>
+      <width>160</width>
+    </widget>
+  </widget>
 </display>

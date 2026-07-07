@@ -2,7 +2,7 @@
 record (bo, "$(P):read"){
     field( SCAN, "10 second")
     field (DTYP, "stream")
-    field (OUT,  "@bf.proto getPage(/values/mapper/bf/?fields=latest_value&key=a441a1c4-4771-4584-b14b-069dce30d0e7) $(PORT)")
+    field (OUT,  "@bf.proto getPage(/values/mapper/bf/?fields=latest_value) $(PORT)")
 }
 
 # Pressures
