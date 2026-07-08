@@ -1,0 +1,87 @@
+# Compressor
+
+# Temperatures
+record (bo, "$(P):read"){#Compressor
+    field( SCAN, "10 second")
+    field (DTYP, "stream")
+    field (OUT,  "@bf.proto getPage(/values/driver.nxds/?fields=latest_value) $(PORT)")
+}
+
+record (ai, "$(P):pump_design_frequency"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.nxds.pump_design_frequency, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"Hz")
+}
+
+
+record (ai, "$(P):rotational_frequency"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.nxds.rotational_frequency, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"Hz")
+}
+
+record (ai, "$(P):pump_temperature"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.nxds.pump_temperature, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"K")
+
+    field(FLNK,"$(P):pump_temperature_C")
+}
+
+record (calc, "$(P):pump_temperature_C"){
+    field( SCAN, "Passive")
+    field(INPA,  "$(P):pump_temperature")
+    field(CALC,"A-273.15")
+    field(PREC,2)
+    field(EGU,"ºC")
+}
+
+record (ai, "$(P):controller_temperature"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.nxds.controller_temperature, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"K")
+    field(FLNK,"$(P):controller_temperature_C")
+}
+
+record (calc, "$(P):controller_temperature_C"){
+    field( SCAN, "Passive")
+    field(INPA,  "$(P):controller_temperature")
+    field(CALC,"A-273.15")
+    field(PREC,2)
+    field(EGU,"ºC")
+}
+
+record (ai, "$(P):link_voltage"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.nxds.link_voltage, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"V")
+}
+
+
+record (ai, "$(P):link_current"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.nxds.link_current, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"A")
+}
+
+
+record (ai, "$(P):link_power"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.nxds.link_power, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"W")
+}
+

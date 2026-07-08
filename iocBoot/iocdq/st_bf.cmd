@@ -24,11 +24,13 @@ dq_registerRecordDeviceDriver pdbbase
 drvAsynIPPortConfigure("bf_mpbf","127.0.0.1:49099",0,0,1)
 drvAsynIPPortConfigure("bf_cpa","127.0.0.1:49099",0,0,1)
 drvAsynIPPortConfigure("bf_tcch","127.0.0.1:49099",0,0,1)
+drvAsynIPPortConfigure("bf_nxds","127.0.0.1:49099",0,0,1)
 
 #Load Records
 dbLoadRecords("$(TOP)/dqApp/Db/bf_mpbf.db","P=DQ:BF:MPBF,PORT=bf_mpbf") # Mapper Bf with main variables.
 dbLoadRecords("$(TOP)/dqApp/Db/bf_cpa.db","P=DQ:BF:CPA,PORT=bf_cpa") # Compressor CPA
 dbLoadRecords("$(TOP)/dqApp/Db/bf_tcch.db","P=DQ:BF:TCCH,PORT=bf_tcch") # Temperature controller channels
+dbLoadRecords("$(TOP)/dqApp/Db/bf_nxds.db","P=DQ:BF:NXDS,PORT=bf_nxds") # xnds: Edwars Scroll Pump (Scroll1)
 
 
 #cd "${TOP}/iocBoot/${IOC}"

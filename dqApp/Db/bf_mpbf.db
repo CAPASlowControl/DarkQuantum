@@ -305,6 +305,15 @@ record (bi, "$(P):compressor"){
 }
 
 
+# PulseTube
+record (bi, "$(P):pulsetube"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(mapper.bf.pulsetube, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
 # Flow
 record (ai, "$(P):flow"){
     field( SCAN, "I/O Intr")
