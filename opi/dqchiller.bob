@@ -41,7 +41,7 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update</name>
       <pv_name>$(P):Tout</pv_name>
-      <x>99</x>
+      <x>80</x>
       <y>11</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
@@ -53,7 +53,7 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_1</name>
       <pv_name>$(P):Tevap</pv_name>
-      <x>99</x>
+      <x>80</x>
       <y>36</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
@@ -65,7 +65,7 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_2</name>
       <pv_name>$(P):Pref_hp</pv_name>
-      <x>99</x>
+      <x>80</x>
       <y>100</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
@@ -77,14 +77,14 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_4</name>
       <pv_name>$(P):Pref_lp</pv_name>
-      <x>99</x>
+      <x>80</x>
       <y>125</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_3</name>
       <pv_name>$(P):TexpV</pv_name>
-      <x>99</x>
+      <x>80</x>
       <y>61</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
@@ -103,7 +103,6 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>SetPoint</name>
-    <x>2</x>
     <y>228</y>
     <width>236</width>
     <height>88</height>
@@ -115,13 +114,27 @@
     <widget type="label" version="2.0.0">
       <name>Label_16</name>
       <text>T Chiller</text>
-      <y>9</y>
+      <y>10</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P):ChSetPoint</pv_name>
+      <x>80</x>
+      <y>10</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>$(P):ChSetPointRB</pv_name>
+      <x>80</x>
+      <y>30</y>
+      <horizontal_alignment>1</horizontal_alignment>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
     <name>Working Hours</name>
-    <x>2</x>
-    <y>322</y>
+    <x>250</x>
+    <y>401</y>
     <width>236</width>
     <height>79</height>
     <font>
@@ -139,10 +152,24 @@
       <text>Water Pump</text>
       <y>5</y>
     </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_11</name>
+      <pv_name>$(P):WaterPumpWH</pv_name>
+      <x>100</x>
+      <y>5</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>$(P):CompWH</pv_name>
+      <x>96</x>
+      <y>26</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
   </widget>
   <widget type="group" version="3.0.0">
     <name>Status Summary</name>
-    <x>251</x>
+    <x>250</x>
     <y>31</y>
     <width>216</width>
     <height>149</height>
@@ -216,7 +243,7 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>Alarms</name>
-    <x>251</x>
+    <x>250</x>
     <y>180</y>
     <width>216</width>
     <height>142</height>
@@ -343,35 +370,6 @@
       <tooltip>$(actions)</tooltip>
     </widget>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_7</name>
-    <pv_name>$(P):ChSetPointRB</pv_name>
-    <x>116</x>
-    <y>282</y>
-    <horizontal_alignment>1</horizontal_alignment>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry</name>
-    <pv_name>$(P):ChSetPoint</pv_name>
-    <x>116</x>
-    <y>255</y>
-    <horizontal_alignment>2</horizontal_alignment>
-    <enabled>false</enabled>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_11</name>
-    <pv_name>$(P):WaterPumpWH</pv_name>
-    <x>116</x>
-    <y>345</y>
-    <horizontal_alignment>1</horizontal_alignment>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_10</name>
-    <pv_name>$(P):CompWH</pv_name>
-    <x>116</x>
-    <y>366</y>
-    <horizontal_alignment>1</horizontal_alignment>
-  </widget>
   <widget type="group" version="3.0.0">
     <name>Stop Chiller</name>
     <x>462</x>
@@ -412,7 +410,7 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>System Services</name>
-    <x>251</x>
+    <x>250</x>
     <y>322</y>
     <width>216</width>
     <height>79</height>
@@ -435,6 +433,124 @@
       <y>8</y>
       <width>151</width>
       <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>AutoSetPoint</name>
+    <y>316</y>
+    <width>236</width>
+    <height>249</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <transparent>true</transparent>
+    <tooltip>The AutoSetPoint sets automatically the Chiller Temperature.
+
+SP1: (currentHour&gt;=h1) and (currentHour&lt;h2) 
+SP2: (currentHour&lt;h1) and (currentHour&gt;=h2)</tooltip>
+    <widget type="label" version="2.0.0">
+      <name>Label_31</name>
+      <text>Auto SP</text>
+      <y>160</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_32</name>
+      <text>Time</text>
+      <y>10</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(P):time</pv_name>
+      <x>50</x>
+      <y>10</y>
+      <width>154</width>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(P):Auto_Calc</pv_name>
+      <x>80</x>
+      <y>160</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_33</name>
+      <text>Current Hour</text>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(P):currentHour</pv_name>
+      <x>80</x>
+      <y>30</y>
+      <width>112</width>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <pv_name>$(P):Auto_h1</pv_name>
+      <x>80</x>
+      <y>60</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_34</name>
+      <text>Hour 1</text>
+      <y>60</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_35</name>
+      <text>Hour 2</text>
+      <y>80</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_3</name>
+      <pv_name>$(P):Auto_h2</pv_name>
+      <x>80</x>
+      <y>80</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_36</name>
+      <text>SP1</text>
+      <y>110</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_4</name>
+      <pv_name>$(P):Auto_SP1</pv_name>
+      <x>80</x>
+      <y>110</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_38</name>
+      <text>Disable AutoSP</text>
+      <y>180</y>
+    </widget>
+    <widget type="checkbox" version="2.0.0">
+      <name>Check Box</name>
+      <pv_name>$(P):Auto_Calc.DISA</pv_name>
+      <label></label>
+      <x>114</x>
+      <y>180</y>
+      <width>20</width>
+      <tooltip>When checked AutoSetPoint is disabled.
+
+$(pv_name)
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_37</name>
+      <text>SP2</text>
+      <y>130</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_5</name>
+      <pv_name>$(P):Auto_SP2</pv_name>
+      <x>80</x>
+      <y>130</y>
+      <horizontal_alignment>1</horizontal_alignment>
     </widget>
   </widget>
 </display>

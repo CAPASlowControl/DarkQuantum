@@ -27,7 +27,7 @@
     <name>Services</name>
     <y>31</y>
     <width>530</width>
-    <height>279</height>
+    <height>359</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -255,6 +255,46 @@
       <width>150</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>BF IOC</text>
+      <y>301</y>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_10</name>
+      <actions>
+        <action type="command">
+          <description>Execute Command</description>
+          <command>mate-terminal --command="sshpass -ppassword ssh user@192.168.100.104 -t 'telnet localhost 4600'"</command>
+        </action>
+      </actions>
+      <text>ssh &amp; telnet</text>
+      <x>145</x>
+      <y>301</y>
+      <width>180</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_11</name>
+      <actions>
+        <action type="command">
+          <description>Execute Command</description>
+          <command>mate-terminal --command="sshpass -ppassword ssh user@192.168.100.104"</command>
+        </action>
+      </actions>
+      <text>ssh user@192.168.100.104</text>
+      <x>145</x>
+      <y>271</y>
+      <width>180</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>SSH BF</text>
+      <y>271</y>
     </widget>
   </widget>
 </display>
