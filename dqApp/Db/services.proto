@@ -1,10 +1,10 @@
 command {
     InTerminator = "";
     OutTerminator = LF;
+    ReadTimeout = 500; # Response Time. Increasse to allow ssh connections to other machines.
     extraInput = Ignore;
     #exec 'system "systemctl is-active archiverrdb"';
     out '\$1';
-    in '%*/\n/%{inactive|active}'
+    in '%*/\n/%{active|inactive|failed}'
     #exec "systemctl is-active archiverrdb";
 }
-

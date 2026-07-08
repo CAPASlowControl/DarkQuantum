@@ -908,11 +908,122 @@ $(actions)</tooltip>
       <height>15</height>
     </widget>
   </widget>
-  <widget type="tank" version="2.0.0">
-    <name>Tank</name>
-    <x>940</x>
-    <y>440</y>
-    <width>1</width>
-    <height>1</height>
+  <widget type="group" version="3.0.0">
+    <name>Scroll 1 (NXDS)</name>
+    <macros>
+      <P>DQ:BF:NXDS</P>
+    </macros>
+    <x>690</x>
+    <y>428</y>
+    <height>192</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <widget type="label" version="2.0.0">
+      <name>Label_53</name>
+      <text>Design Freq.</text>
+      <x>10</x>
+      <y>10</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P):pump_design_frequency</pv_name>
+      <x>133</x>
+      <y>10</y>
+      <width>60</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_54</name>
+      <text>Rot. Freq.</text>
+      <x>10</x>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_20</name>
+      <pv_name>$(P):rotational_frequency</pv_name>
+      <x>133</x>
+      <y>30</y>
+      <width>60</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_55</name>
+      <text>pump_temperature</text>
+      <x>10</x>
+      <y>50</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_21</name>
+      <pv_name>$(P):pump_temperature</pv_name>
+      <x>133</x>
+      <y>50</y>
+      <width>60</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_56</name>
+      <text>controller_temperature</text>
+      <x>10</x>
+      <y>70</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_22</name>
+      <pv_name>$(P):controller_temperature</pv_name>
+      <x>133</x>
+      <y>70</y>
+      <width>60</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_76</name>
+      <text>link_voltage</text>
+      <x>10</x>
+      <y>100</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_34</name>
+      <pv_name>$(P):link_voltage</pv_name>
+      <x>133</x>
+      <y>100</y>
+      <width>70</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_77</name>
+      <text>link_current</text>
+      <x>10</x>
+      <y>120</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_35</name>
+      <pv_name>$(P):link_current</pv_name>
+      <x>133</x>
+      <y>120</y>
+      <width>70</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_85</name>
+      <text>link_power</text>
+      <x>10</x>
+      <y>140</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_46</name>
+      <pv_name>$(P):link_power</pv_name>
+      <x>133</x>
+      <y>140</y>
+      <width>70</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_50</name>
+      <pv_name>$(P):pump_temperature_C</pv_name>
+      <x>203</x>
+      <y>50</y>
+      <width>60</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_51</name>
+      <pv_name>$(P):controller_temperature_C</pv_name>
+      <x>203</x>
+      <y>70</y>
+      <width>60</width>
+    </widget>
   </widget>
 </display>

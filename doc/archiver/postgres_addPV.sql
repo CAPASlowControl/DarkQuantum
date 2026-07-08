@@ -69,18 +69,23 @@
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:scroll2',1,1,9999,10);
 --INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:turbo1',1,1,9999,10);
 
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:Phigh',1,1,9999,10);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:Plow',1,1,9999,10);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:THe_C',1,1,9999,10);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TOil_C',1,1,9999,10);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TcoolIn_C',1,1,9999,10);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TcoolOut_C',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:Phigh',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:Plow',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:THe_C',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TOil_C',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TcoolIn_C',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:CPA:TcoolOut_C',1,1,9999,10);
+--
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:4kHeater',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:hsExt',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:hsMC',1,1,9999,10);
+--INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:hsStill',1,1,9999,10);
 
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:4kHeater',1,1,9999,10);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:hsExt',1,1,9999,10);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:hsMC',1,1,9999,10);
-INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:hsStill',1,1,9999,10);
+-- INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:MPBF:pulsetube',1,1,9999,10);
 
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:NXDS:controller_temperature_C',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:NXDS:pump_temperature_C',1,1,9999,10);
+INSERT INTO channel(name,smpl_mode_id,grp_id,retent_val,smpl_per) VALUES ( 'DQ:BF:NXDS:rotational_frequency',1,1,9999,10);
 
 --UPDATE channel SET smpl_per=1 WHERE channel_id < 100;
 --UPDATE channel SET smpl_mode_id=2 WHERE channel_id < 100;

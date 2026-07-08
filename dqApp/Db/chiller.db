@@ -432,7 +432,7 @@ record(stringin, "$(P):currentHourStr") {
   field(SCAN,"1 second")
   field(DTYP, "Soft Timestamp")
   #field(TSEL, "${P}.Tout CP") #Any PV 
-  field(INP, "@%M")
+  field(INP, "@%H")
   field(FLNK,"$(P):currentHour")
 }
 
@@ -445,11 +445,15 @@ record(longin, "$(P):currentHour") {
 record(longout, "$(P):Auto_h1") {
   field(VAL,"11")
   field(EGU,"h")
+  field(DRVL,"0")
+  field(DRVH,"23")
 }
 
 record(longout, "$(P):Auto_h2") {
   field(VAL,"23")
   field(EGU,"h")
+  field(DRVL,"0")
+  field(DRVH,"23")
 }
 
 record(ao, "$(P):Auto_SP1") {
@@ -491,4 +495,19 @@ record(calcout, "$(P):Auto_Calc"){
 
     field(VAL,15) #Initial value before processing
     field(DISA,1) # Enable=0; Disable=1 proccesing of the PV.
+}
+
+# Test
+record(ao, "$(P):alarmTest") { 
+    field(DESC, "Test PV")
+    field(PREC,0)
+    field(PINI,"NO")
+    field(HIHI,100) 
+    field(HIGH,90)
+    field(LOLO,0)
+    field(LOW,10)
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"MAJOR")
+    field(LSV,"MINOR")
 }

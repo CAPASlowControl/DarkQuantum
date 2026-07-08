@@ -553,4 +553,36 @@ $(pv_value)</tooltip>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
   </widget>
+  <widget type="group" version="3.0.0">
+    <name>Test</name>
+    <x>268</x>
+    <y>514</y>
+    <width>236</width>
+    <height>96</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>AlarmTest</text>
+      <y>5</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_6</name>
+      <pv_name>$(P):alarmTest</pv_name>
+      <x>82</x>
+      <y>5</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_15</name>
+      <pv_name>$(P):alarmTest</pv_name>
+      <x>72</x>
+      <y>33</y>
+      <width>121</width>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
 </display>

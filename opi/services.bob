@@ -193,54 +193,6 @@
       <text>Kafka</text>
       <y>220</y>
     </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED</name>
-      <pv_name>DQ:SYS:DQIOC</pv_name>
-      <x>100</x>
-      <y>10</y>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_1</name>
-      <pv_name>DQ:SYS:Archiver</pv_name>
-      <x>100</x>
-      <y>40</y>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_2</name>
-      <pv_name>DQ:SYS:AlarmServer</pv_name>
-      <x>100</x>
-      <y>70</y>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_3</name>
-      <pv_name>DQ:SYS:AlarmLogger</pv_name>
-      <x>100</x>
-      <y>100</y>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_4</name>
-      <pv_name>DQ:SYS:Terminal</pv_name>
-      <x>100</x>
-      <y>130</y>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_5</name>
-      <pv_name>DQ:SYS:ElasticSearch</pv_name>
-      <x>100</x>
-      <y>160</y>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_6</name>
-      <pv_name>DQ:SYS:ZooKeeper</pv_name>
-      <x>100</x>
-      <y>190</y>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_7</name>
-      <pv_name>DQ:SYS:Kafka</pv_name>
-      <x>100</x>
-      <y>220</y>
-    </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_8</name>
       <actions>
@@ -259,7 +211,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_9</name>
       <text>BF IOC</text>
-      <y>301</y>
+      <y>260</y>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_10</name>
@@ -271,7 +223,7 @@
       </actions>
       <text>ssh &amp; telnet</text>
       <x>145</x>
-      <y>301</y>
+      <y>260</y>
       <width>180</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -286,7 +238,7 @@
       </actions>
       <text>ssh user@192.168.100.104</text>
       <x>145</x>
-      <y>271</y>
+      <y>290</y>
       <width>180</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -294,7 +246,295 @@
     <widget type="label" version="2.0.0">
       <name>Label_10</name>
       <text>SSH BF</text>
-      <y>271</y>
+      <y>290</y>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)</name>
+      <pv_name>DQ:SYS:DQIOC</pv_name>
+      <x>100</x>
+      <y>10</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_1</name>
+      <pv_name>DQ:SYS:Archiver</pv_name>
+      <x>100</x>
+      <y>40</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_2</name>
+      <pv_name>DQ:SYS:AlarmServer</pv_name>
+      <x>100</x>
+      <y>70</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_3</name>
+      <pv_name>DQ:SYS:AlarmLogger</pv_name>
+      <x>100</x>
+      <y>100</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_4</name>
+      <pv_name>DQ:SYS:Terminal</pv_name>
+      <x>100</x>
+      <y>130</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_5</name>
+      <pv_name>DQ:SYS:ElasticSearch</pv_name>
+      <x>100</x>
+      <y>160</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_6</name>
+      <pv_name>DQ:SYS:ZooKeeper</pv_name>
+      <x>100</x>
+      <y>190</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_7</name>
+      <pv_name>DQ:SYS:Kafka</pv_name>
+      <x>100</x>
+      <y>220</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_8</name>
+      <pv_name>DQ:SYS:BFIOC</pv_name>
+      <x>100</x>
+      <y>260</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
     </widget>
   </widget>
 </display>
