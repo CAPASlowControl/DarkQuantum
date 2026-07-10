@@ -33,7 +33,7 @@ asynSetOption("CHILLERPORT",0,"stop","1")
 #asynSetOption("CHILLERPORT",-1,"crtscts","N")
 
 
-modbusInterposeConfig("CHILLERPORT",1,100,5) # modbusInterposeConfig(portName,linkType,timeoutMsec, writeDelayMsec)
+modbusInterposeConfig("CHILLERPORT",1,200,5) # modbusInterposeConfig(portName,linkType,timeoutMsec, writeDelayMsec)
 
 # Modbus Port
 # drvModbusAsynConfigure("portName", "tcpPortName", slaveAddress, modbusFunction, modbusStartAddress, modbusLength, dataType, pollMsec, "plcType")

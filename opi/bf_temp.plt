@@ -7,7 +7,7 @@
   <update_period>5.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-10 hours -50 minutes -18.698 seconds</start>
+  <start>-20 minutes -45.536 seconds</start>
   <end>now</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
@@ -36,8 +36,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>45.7694878529681</min>
-      <max>357.76948785296815</max>
+      <min>0.0013093560793655604</min>
+      <max>0.06550218852772367</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>

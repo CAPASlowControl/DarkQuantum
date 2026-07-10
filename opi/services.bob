@@ -26,7 +26,7 @@
   <widget type="group" version="3.0.0">
     <name>Services</name>
     <y>31</y>
-    <width>530</width>
+    <width>540</width>
     <height>359</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
