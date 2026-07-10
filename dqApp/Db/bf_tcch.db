@@ -1,6 +1,4 @@
-# Compressor
-
-record (bi, "$(P):read"){ #Compressor
+record (bi, "$(P):read"){ 
     field( SCAN, "10 second")
     field (DTYP, "stream")
     field (INP,  "@bf.proto getPage(/values/driver.bftc/data/channels/?fields=latest_value) $(PORT)")

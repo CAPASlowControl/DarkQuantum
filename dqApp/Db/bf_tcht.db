@@ -1,0 +1,107 @@
+# BFTC Heaters
+
+record (bi, "$(P):read"){ 
+    field( SCAN, "10 second")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto getPage(/values/driver.bftc/data/heaters/?fields=latest_value) $(PORT)")
+}
+
+# Power
+record (ai, "$(P):ht1_pw"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_1.power, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"W")
+}
+
+record (ai, "$(P):ht2_pw"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_2.power, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"W")
+}
+
+record (ai, "$(P):ht3_pw"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_3.power, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"W")
+}
+
+record (ai, "$(P):ht4_pw"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_4.power, %f) $(PORT)")
+    field(PREC,2)
+    field(EGU,"W")
+}
+
+# OnOff
+record (bi, "$(P):ht1_active"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_1.active, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):ht1_relay"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_1.relay_status, %b) $(PORT)")
+    field(ZNAM,"On")
+    field(ONAM,"Off")
+}
+
+
+record (bi, "$(P):ht2_active"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_2.active, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):ht2_relay"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_2.relay_status, %b) $(PORT)")
+    field(ZNAM,"On")
+    field(ONAM,"Off")
+}
+
+record (bi, "$(P):ht3_active"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_3.active, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):ht3_relay"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_3.relay_status, %b) $(PORT)")
+    field(ZNAM,"On")
+    field(ONAM,"Off")
+}
+
+record (bi, "$(P):ht4_active"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_4.active, %b) $(PORT)")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+}
+
+record (bi, "$(P):ht4_relay"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.bftc.data.heaters.heater_4.relay_status, %b) $(PORT)")
+    field(ZNAM,"On")
+    field(ONAM,"Off")
+}
+
