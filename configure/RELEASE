@@ -21,27 +21,27 @@
 # so it may ONLY contain definititions of paths to other support
 # modules, variable definitions that are used in module paths,
 # and include statements that pull in other RELEASE files.
-# Variables may be used before their values have been set.
+## Variables may be used before their values have been set.
 # Build variables that are NOT used in paths should be set in
 # the CONFIG_SITE file.
 
 # Variables and paths to dependent modules:
-SUPPORT = /usr/local/epics/support/
+SUPPORT=/usr/local/epics/support/synApps_6_3/
 #MYMODULE = $(MODULES)/my-module
 
 # If using the sequencer, point SNCSEQ at its top directory:
-SNCSEQ = $(SUPPORT)/seq
-CALC = $(SUPPORT)/calc
-#BUSY = $(SUPPORT)/busy
-AUTOSAVE = $(SUPPORT)/autosave
-SSCAN = $(SUPPORT)/sscan
-ASYN = $(SUPPORT)/asyn
-STREAMDEVICE = $(SUPPORT)/StreamDevice
-MODBUS = $(SUPPORT)/modbus
-OPCUA = /usr/local/epics/support/opcua
+SNCSEQ=$(SUPPORT)/sequencer-mirror-R2-2-9
+CALC=$(SUPPORT)/calc-R3-7-5
+BUSY=$(SUPPORT)/busy-R1-7-4
+AUTOSAVE=$(SUPPORT)/autosave-R5-11
+SSCAN=$(SUPPORT)/sscan-R2-11-6
+ASYN=$(SUPPORT)/asyn-R4-44-2
+STREAM=$(SUPPORT)/StreamDevice-2-8-24
+MODBUS=$(SUPPORT)/modbus-R3-3
+#OPCUA = /usr/local/epics/support/opcua
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
-EPICS_BASE = /usr/local/epics/base
+EPICS_BASE=/usr/local/epics/base-7.0.10
 
 # Set RULES here if you want to use build rules from somewhere
 # other than EPICS_BASE:

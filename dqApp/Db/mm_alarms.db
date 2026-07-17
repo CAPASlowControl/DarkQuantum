@@ -1,0 +1,18 @@
+record(stringout,"$(P):test"){
+	field(DTYP,"stream")
+	field(OUT,'@mm_alarms.proto command(python3 /home/darkquantum/epics/IOCs/DarkQuantum/doc/mattermost/request_mm.py "%s") terminal')
+}
+
+record(scalcout,"$(P):alarmTest"){
+	field(DTYP,"stream")
+	field(OUT,'@mm_alarms.proto command(python3 /home/darkquantum/epics/IOCs/DarkQuantum/doc/mattermost/request_mm.py "%s") terminal')
+        field(INPA,"DQ:CHL:alarmTest.SEVR CP")
+        field(INAA,"DQ:CHL:alarmTest.NAME")
+        field(INBB,"DQ:CHL:alarmTest.SEVR")
+        field(CALC,"(A==1) || (A==2)")
+
+	field(OOPT, "When Non-zero")
+
+	field(DOPT,"Use OCAL")
+        field(OCAL,"AA + ' : ' + BB" ) # Alarm SEVR
+}

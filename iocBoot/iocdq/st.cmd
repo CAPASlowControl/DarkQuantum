@@ -81,18 +81,25 @@ drvAsynIPPortConfigure("terminal","localhost:4613",0,0,0)
 dbLoadRecords("$(TOP)/dqApp/Db/services.db","P='DQ:SYS'")
 
 #####################
+##### MM Alarms ######
+#####################
+dbLoadRecords("$(TOP)/dqApp/Db/mm_alarms.db","P='DQ:MM'")
+
+
+
+#####################
 ##### OPCUA Tests ###
 #####################
 
-opcuaSession( "OPC1", "opc.tcp://localhost:53880/")
+#opcuaSession( "OPC1", "opc.tcp://localhost:53880/")
 # <name> <session> <interval ms> [options…]
-opcuaSubscription( "SUB1", "OPC1", "200")
+#opcuaSubscription( "SUB1", "OPC1", "200")
 
 # Switch off security
-opcuaOptions( "OPC1", "sec-mode=None")
+#opcuaOptions( "OPC1", "sec-mode=None")
 
 #Load Records
-dbLoadRecords("$(TOP)/dqApp/Db/opcua.db","P='OPC',SESS='OPC1',SUBS='SUB1'" )
+#dbLoadRecords("$(TOP)/dqApp/Db/opcua.db","P='OPC',SESS='OPC1',SUBS='SUB1'" )
 
 #####################
 ##### DEBUG #########

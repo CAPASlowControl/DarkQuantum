@@ -1,4 +1,4 @@
-# File /etc/systemd/system/alarm_server.service
+# File /etc/systemd/system/dqioc.service
 #
 # After changes
 #   sudo systemctl daemon-reload
@@ -11,20 +11,19 @@
 # Start when computer boots:
 #   sudo systemctl enable alarm_server.service
 #
-# Log file:
-#   less +GF /home/controls/css/phoebus-alarm-server/console.log
-#
 # Console:
-#   telnet localhost 4609
+#   telnet localhost 4611
 
 [Unit]
-Description=ElasticSearch
+Description=Terminal Simulator
 #After=kafka.service
 
 [Service]
 User=darkquantum
 Group=darkquantum
-ExecStart= /usr/local/epics/support/elasticsearch-8.2.3/bin/elasticsearch
+Environment=SERVER=/usr/local/epics/IOCs/DarkQuantum/iocBoot/iocdq/
+Environment=PORT=4613
+ExecStart=/usr/bin/procServ --foreground --noautorestart --name terminal --chdir ${SERVER} --logfile ${SERVER}/terminal.log ${PORT} /bin/sh
 # Systemd stops alarm server by killing the process
 
 [Install]

@@ -1,10 +1,18 @@
 command {
-    InTerminator = "";
+    InTerminator = LF "$";
     OutTerminator = LF;
-    ReadTimeout = 500; # Response Time. Increasse to allow ssh connections to other machines.
     extraInput = Ignore;
-    #exec 'system "systemctl is-active archiverrdb"';
-    out '\$1';
+    out '\$1'; 
     in '%*/\n/%{active|inactive|failed}'
-    #exec "systemctl is-active archiverrdb";
 }
+
+commandSSH {
+    InTerminator = LF "$";
+    OutTerminator = LF;
+    ReadTimeout = 1000; # Time after last byte. Increased for http/ssh connections.
+    extraInput = Ignore;
+    out '\$1'; 
+    in '%*/\n/%{active|inactive|failed}'
+}
+
+

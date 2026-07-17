@@ -1,0 +1,8 @@
+command {
+    InTerminator = LF "$";
+    OutTerminator = LF;
+    extraInput = Ignore;
+    ReadTimeout = 1000; # Time after last byte. Increased for hhtp/ssh connections.
+    out '\$1';
+    in '%*/\n/ok\r'
+}

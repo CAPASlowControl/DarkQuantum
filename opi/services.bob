@@ -43,7 +43,7 @@
       <actions>
         <action type="command">
           <description>Execute Command</description>
-          <command>mate-terminal --command="telnet localhost 4611"</command>
+          <command>gnome-terminal -- telnet localhost 4611</command>
         </action>
       </actions>
       <text>telnet localhost 4611</text>
@@ -63,7 +63,7 @@
       <actions>
         <action type="command">
           <description>Execute Command</description>
-          <command>mate-terminal --command="telnet localhost 4612"</command>
+          <command>gnome-terminal -- telnet localhost 4612</command>
         </action>
       </actions>
       <text>telnet localhost 4612</text>
@@ -78,7 +78,7 @@
       <actions>
         <action type="command">
           <description>Execute Command</description>
-          <command>mate-terminal --command="telnet localhost 4609"</command>
+          <command>gnome-terminal -- telnet localhost 4609</command>
         </action>
       </actions>
       <text>telnet localhost 4609</text>
@@ -103,7 +103,7 @@
       <actions>
         <action type="command">
           <description>Execute Command</description>
-          <command>mate-terminal --command="telnet localhost 4610"</command>
+          <command>gnome-terminal --command="telnet localhost 4610"</command>
         </action>
       </actions>
       <text>telnet localhost 4610</text>
@@ -153,7 +153,7 @@
       <actions>
         <action type="command">
           <description>Execute Command</description>
-          <command>mate-terminal --command="telnet localhost 4613"</command>
+          <command>gnome-terminal -- telnet localhost 4613</command>
         </action>
       </actions>
       <text>telnet localhost 4613</text>
@@ -218,7 +218,7 @@
       <actions>
         <action type="command">
           <description>Execute Command</description>
-          <command>mate-terminal --command="sshpass -ppassword ssh user@192.168.100.104 -t 'telnet localhost 4600'"</command>
+          <command>gnome-terminal -- sshpass -ppassword ssh user@192.168.100.104 -t 'telnet localhost 4600'</command>
         </action>
       </actions>
       <text>ssh &amp; telnet</text>
@@ -233,7 +233,7 @@
       <actions>
         <action type="command">
           <description>Execute Command</description>
-          <command>mate-terminal --command="sshpass -ppassword ssh user@192.168.100.104"</command>
+          <command>gnome-terminal -- sshpass -ppassword ssh user@192.168.100.104</command>
         </action>
       </actions>
       <text>ssh user@192.168.100.104</text>

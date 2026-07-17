@@ -6,9 +6,9 @@
   <grid>true</grid>
   <update_period>5.0</update_period>
   <scroll_step>5</scroll_step>
-  <scroll>true</scroll>
-  <start>-1 hours -28 minutes -6.845 seconds</start>
-  <end>now</end>
+  <scroll>false</scroll>
+  <start>2026-07-10 13:03:22.446</start>
+  <end>2026-07-10 15:04:26.006</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
     <red>0</red>
@@ -36,8 +36,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>0.04643489071198581</min>
-      <max>1.3194552751037927</max>
+      <min>4.024985382377629E-6</min>
+      <max>1.3176819708868608</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>true</log_scale>

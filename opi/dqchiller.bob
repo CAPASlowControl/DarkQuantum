@@ -558,7 +558,7 @@ $(pv_value)</tooltip>
     <x>268</x>
     <y>514</y>
     <width>236</width>
-    <height>96</height>
+    <height>156</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -584,5 +584,18 @@ $(pv_value)</tooltip>
       <width>121</width>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_29</name>
+      <text>DQ:CHL:Pref_hp</text>
+      <y>88</y>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_16</name>
+    <pv_name>archive://DQ:CHL:Pref_hp</pv_name>
+    <x>396</x>
+    <y>620</y>
+    <width>121</width>
+    <horizontal_alignment>1</horizontal_alignment>
   </widget>
 </display>

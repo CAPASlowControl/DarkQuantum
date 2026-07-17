@@ -19,9 +19,9 @@ After=network.target remote-fs.target
 
 [Service]
 Type=simple
-User=usuario
-Group=usuario
-Environment=JAVA_HOME=/lib/jvm/java-17-openjdk-amd64/
+User=darkquantum
+Group=darkquantum
+Environment=JAVA_HOME=/lib/jvm/java-21-openjdk-amd64/
 ExecStart=/usr/local/epics/support/kafka/bin/zookeeper-server-start.sh /usr/local/epics/support/kafka/config/zookeeper.properties
 ExecStop=/usr/local/epics/support/kafka/bin/zookeeper-server-stop.sh
 

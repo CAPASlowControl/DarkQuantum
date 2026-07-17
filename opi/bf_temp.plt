@@ -6,9 +6,9 @@
   <grid>true</grid>
   <update_period>5.0</update_period>
   <scroll_step>5</scroll_step>
-  <scroll>true</scroll>
-  <start>-20 minutes -45.536 seconds</start>
-  <end>now</end>
+  <scroll>false</scroll>
+  <start>2026-07-10 12:42:53.510</start>
+  <end>2026-07-10 16:19:22.398</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
     <red>0</red>
@@ -36,18 +36,31 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>0.0013093560793655604</min>
-      <max>0.06550218852772367</max>
+      <min>-3.837789891354511</min>
+      <max>111.1750098820698</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
     </axis>
   </axes>
   <annotations>
+    <annotation>
+      <pv>3</pv>
+      <time>2026-07-15 14:12:21.756</time>
+      <value>1.082049</value>
+      <offset>
+        <x>20.0</x>
+        <y>20.0</y>
+      </offset>
+      <text>Circulation Begin
+{0}
+{1}, {2}
+{3}</text>
+    </annotation>
   </annotations>
   <pvlist>
     <pv>
-      <display_name>DQ:BF:MPBF:t50k</display_name>
+      <display_name>t50k</display_name>
       <visible>true</visible>
       <name>DQ:BF:MPBF:t50k</name>
       <axis>0</axis>
@@ -72,7 +85,7 @@
       </archive>
     </pv>
     <pv>
-      <display_name>DQ:BF:MPBF:t4k</display_name>
+      <display_name>t4k</display_name>
       <visible>true</visible>
       <name>DQ:BF:MPBF:t4k</name>
       <axis>0</axis>
@@ -97,7 +110,7 @@
       </archive>
     </pv>
     <pv>
-      <display_name>DQ:BF:MPBF:tstill</display_name>
+      <display_name>tstill</display_name>
       <visible>true</visible>
       <name>DQ:BF:MPBF:tstill</name>
       <axis>0</axis>
@@ -122,7 +135,7 @@
       </archive>
     </pv>
     <pv>
-      <display_name>DQ:BF:MPBF:tmixing</display_name>
+      <display_name>tmixing</display_name>
       <visible>true</visible>
       <name>DQ:BF:MPBF:tmixing</name>
       <axis>0</axis>
@@ -130,6 +143,56 @@
         <red>255</red>
         <green>127</green>
         <blue>0</blue>
+      </color>
+      <trace_type>SINGLE_LINE</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>SOLID</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>500</ring_size>
+      <request>OPTIMIZED</request>
+      <archive>
+        <name>Archiver</name>
+        <url>jdbc:postgresql://localhost:5432/archive</url>
+        <key>1</key>
+      </archive>
+    </pv>
+    <pv>
+      <display_name>ch7_t</display_name>
+      <visible>false</visible>
+      <name>DQ:BF:TCCH:ch7_t</name>
+      <axis>0</axis>
+      <color>
+        <red>127</red>
+        <green>0</green>
+        <blue>255</blue>
+      </color>
+      <trace_type>SINGLE_LINE</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>SOLID</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>500</ring_size>
+      <request>OPTIMIZED</request>
+      <archive>
+        <name>Archiver</name>
+        <url>jdbc:postgresql://localhost:5432/archive</url>
+        <key>1</key>
+      </archive>
+    </pv>
+    <pv>
+      <display_name>ch8_t</display_name>
+      <visible>false</visible>
+      <name>DQ:BF:TCCH:ch8_t</name>
+      <axis>0</axis>
+      <color>
+        <red>255</red>
+        <green>0</green>
+        <blue>127</blue>
       </color>
       <trace_type>SINGLE_LINE</trace_type>
       <linewidth>2</linewidth>

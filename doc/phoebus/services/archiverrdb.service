@@ -19,9 +19,9 @@ Description=Phoebus Archiver RDB
 After=postgresql.service
 
 [Service]
-User=usuario
-Group=usuario
-Environment=SERVER=/usr/local/epics/css/phoebus-5.0.2/services/archive-engine
+User=darkquantum
+Group=darkquantum
+Environment=SERVER=/usr/local/epics/phoebus-5.0.5/services/archive-engine
 Environment=PORT=4610
 ExecStart=/usr/bin/procServ --foreground --noautorestart --name archiverrdb --chdir ${SERVER} --logfile ${SERVER}/console.log ${PORT} ./archive-engine.sh -engine Demo -port 4812 -settings ${SERVER}/settings.ini
 # Systemd stops alarm server by killing the process

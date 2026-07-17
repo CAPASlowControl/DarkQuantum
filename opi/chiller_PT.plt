@@ -6,7 +6,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-1 hours</start>
+  <start>-35 minutes -27.202 seconds</start>
   <end>now</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
@@ -35,8 +35,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>20.788253493902168</min>
-      <max>36.48659615079517</max>
+      <min>1.927061512754598</min>
+      <max>36.5335429942361</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -52,8 +52,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>4.371730276276652</min>
-      <max>29.60321175775814</max>
+      <min>11.885345033112584</min>
+      <max>35.731745033112574</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>

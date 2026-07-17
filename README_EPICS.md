@@ -7,9 +7,9 @@ Next some notes and tips for epics installation and IOC preparation are given.
 
 # EPICs Configuration
 ## PC 
-This EPICs IOCs has been tested in a PC with Debian (and WSL2 Ubuntu 26.04) with the following credentials
+This EPICs IOCs has been tested in a PC with Debian 13 with the following credentials
 
- - usuario/Bujaruelo21.
+ - darkquantum/DarkQuantumZgz.
 
 
 
@@ -17,31 +17,35 @@ This EPICs IOCs has been tested in a PC with Debian (and WSL2 Ubuntu 26.04) with
 For EPICs installation add the following packages:
 
 ```bash
- sudo apt-get install gcc
- sudo apt-get install g++
- sudo apt-get install r2c
- sudo apt-get install libpcre2-dev
- sudo apt-get install libtirpc-dev
- sudo apt-get install libcrypt-dev
- sudo apt-get install x11proto-dev
- sudo apt-get install libx11-dev
- sudo apt-get install libxext-dev
- sudo apt-get install libusb-1.0-0-dev
- sudo apt-get install libusb-dev
- sudo apt-get install maven
- sudo apt-get install openjdk-21-jdk 
- sudo apt-get install postgresql-18
- sudo apt-get install libxml2-dev
+sudo apt-get install gcc
+sudo apt-get install g++
+sudo apt-get install make
+sudo apt-get install libpcre2-dev
+sudo apt-get install libcrypt-dev
+sudo apt-get install x11proto-dev
+sudo apt-get install libx11-dev
+sudo apt-get install libxext-dev
+sudo apt-get install libusb-1.0-0-dev
+sudo apt-get install libusb-dev
+sudo apt-get install maven
+sudo apt-get install openjdk-21-jdk 
+sudo apt-get install postgresql-17
+sudo apt-get install libxml2-dev
+sudo apt-get install libtirpc-dev
+sudo apt-get install re2c
+sudo apt-get install procserv
+sudo apt-get install sshpass
 
- sudt apt-get install python3-numpy
- sudo apt-get install python3-matplotlib
- sudo apt-get install python3-pyepics
-
- Install uldaq https://github.com/mccdaq/uldaq/tree/master
- Install pcre (for StreamDevice)
- Add user to dialout for device communication `sudo adduser <user>  dialout`
-
+sud apt-get install python3-numpy
+sudo apt-get install python3-matplotlib
+sudo apt-get install python3-pyepics
 ```
+
+Other task are:
+ - Add user to dialout for device communication `sudo adduser <user>  dialout`
+ - Install uldaq https://github.com/mccdaq/uldaq/tree/master
+ - Install pcre (for StreamDevice)
+
 
 ## Install EPICs
 
@@ -82,7 +86,7 @@ Can be done downloading modules individually or with syncApps (https://github.co
 
 For synApps, edit `configure/RELEASE` and then `make release ` and `make`.
 
-Try to use gcc-13 (apt-get install gcc-13/g++-13 and then update-alternatives). Compilation gives error with gcc14 or gcc15.
+Try to use gcc-13 (apt-get install gcc-13/g++-13 and then update-alternatives). Compilation can give error with gcc14 or gcc15.
 It can be solved for some modules using USR_CFLAGS += -std=c17 and USR_CXXFLAGS += -std=c++17 to CONFIG_SITE. 
 
 
@@ -244,6 +248,8 @@ For the alarms server start-up:
  - `start_kafka.sh`
 	- settings in server.properties	
         - port 9092
+        - listeners=PLAINTEXT://127.0.0.1:9092
+        - advertised.listeners=PLAINTEXT://127.0.0.1:9092
  - `start_alarm_server.sh`
 
 To keep record of the alarms and alarm logger is included based on elasticsearch.

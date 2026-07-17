@@ -22,10 +22,10 @@ Description=Phoebus Alarm Logger
 #After=kafka.service
 
 [Service]
-User=usuario
-Group=usuario
-Environment=JAVA_HOME=/lib/jvm/java-17-openjdk-amd64/
-Environment=SERVER=/usr/local/epics/css/phoebus-5.0.2/services/alarm-logger/
+User=darkquantum
+Group=darkquantum
+Environment=JAVA_HOME=/lib/jvm/java-21-openjdk-amd64/
+Environment=SERVER=/usr/local/epics/phoebus-5.0.5/services/alarm-logger/
 Environment=PORT=4612
 ExecStart=/usr/bin/procServ --foreground --noautorestart --name alarm-logger --chdir ${SERVER} --logfile ${SERVER}/console.log ${PORT} ./alarm-logger.sh 
 # Systemd stops alarm server by killing the process

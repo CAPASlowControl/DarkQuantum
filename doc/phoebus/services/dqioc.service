@@ -19,8 +19,8 @@ Description=DarkQuantum IOC
 #After=kafka.service
 
 [Service]
-User=usuario
-Group=usuario
+User=darkquantum
+Group=darkquantum
 Environment=SERVER=/usr/local/epics/IOCs/DarkQuantum/iocBoot/iocdq/
 Environment=PORT=4611
 ExecStart=/usr/bin/procServ --foreground --noautorestart --name dqioc --chdir ${SERVER} --logfile ${SERVER}/console.log ${PORT} ./st.cmd

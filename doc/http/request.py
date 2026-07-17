@@ -7,7 +7,7 @@ key = 'a441a1c4-4771-4584-b14b-069dce30d0e7'
 url = f"https://192.168.100.104:49098/values/mapper/bf?key={key}"
 
 # A GET request to the API
-response = requests.get(url)
+response = requests.get(url,verify=False)
 
 ## Print the response
 #response_json = response.json()
