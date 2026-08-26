@@ -34,7 +34,7 @@ record(mbbi,"$(P):DQIOC"){
 record(mbbi,"$(P):BFIOC"){
 	field(DESC,"Service Status")
 	field(DTYP,"stream")
-	field(INP,'@services.proto commandSSH(sshpass -ppassword ssh user@192.168.100.104 -t \"systemctl is-active bfioc\") terminal')
+	field(INP,'@services.proto commandSSH(sshpass -ppassword ssh  -o ConnectTimeout=1 user@192.168.100.104 -t \"systemctl is-active bfioc\") terminal')
 	field(SCAN,"5 second")
 
 	field(ZRVL,0)

@@ -2,6 +2,7 @@ command {
     InTerminator = LF "$";
     OutTerminator = LF;
     extraInput = Ignore;
+    #ReadTimeout = 1000; # Time after last byte. Increased for http/ssh connections.
     out '\$1'; 
     in '%*/\n/%{active|inactive|failed}'
 }
@@ -9,7 +10,7 @@ command {
 commandSSH {
     InTerminator = LF "$";
     OutTerminator = LF;
-    ReadTimeout = 1000; # Time after last byte. Increased for http/ssh connections.
+    ReadTimeout = 1200; # Time after last byte. Increased for http/ssh connections.
     extraInput = Ignore;
     out '\$1'; 
     in '%*/\n/%{active|inactive|failed}'
