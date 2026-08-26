@@ -237,6 +237,60 @@ The archiving properties are in `archive_preferences.properties`
 
  - write_period=30, max_repeats=60, etc 
 
+# Archiver Appliance
+
+Follow installation instructions in `https://epicsarchiver.readthedocs.io/en/stable/`. Source code in `https://github.com/archiver-appliance/`, download from `https://github.com/archiver-appliance/epicsarchiverap/releases`.
+
+Firs install mysql:
+
+ - sudo apt-get install mariadb-server mariadb-client
+ - sudo mysql -u root
+ - CREATE DATABASE archappl;
+    GRANT ALL ON archappl.* TO 'archappl' identified by 'archappl';
+
+Download Tomcat 11 (`https://tomcat.apache.org/download-11.cgi`)
+
+Download mysql connector `https://downloads.mysql.com/archives/c-j/`
+
+Add permits to install scripts:
+ - cd ./install_scripts
+ - chmod 777 *
+
+Create database :
+```
+    CREATE TABLE PVTypeInfo ( 
+        pvName VARCHAR(255) NOT NULL PRIMARY KEY,
+        typeInfoJSON MEDIUMTEXT NOT NULL,
+        last_modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB;
+
+    CREATE TABLE PVAliases ( 
+        pvName VARCHAR(255) NOT NULL PRIMARY KEY,
+        realName VARCHAR(256) NOT NULL,
+        last_modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB;
+
+    CREATE TABLE ArchivePVRequests ( 
+        pvName VARCHAR(255) NOT NULL PRIMARY KEY,
+        userParams MEDIUMTEXT NOT NULL,
+        last_modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB;
+
+    CREATE TABLE ExternalDataServers ( 
+        serverid VARCHAR(255) NOT NULL PRIMARY KEY,
+        serverinfo MEDIUMTEXT NOT NULL,
+        last_modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB;
+```
+
+Copy war files in instances folder
+
+Run single_machine_install.sh
+
+After installation modify and install sampleStartup.sh
+
+
+
 # Alarm Server
 
 Phoebues includes an alarm server based on kafka.
@@ -250,6 +304,7 @@ For the alarms server start-up:
         - port 9092
         - listeners=PLAINTEXT://127.0.0.1:9092
         - advertised.listeners=PLAINTEXT://127.0.0.1:9092
+        - NOTE: dont put logs in a /tmp file to keep the configuration upon restart.
  - `start_alarm_server.sh`
 
 To keep record of the alarms and alarm logger is included based on elasticsearch.

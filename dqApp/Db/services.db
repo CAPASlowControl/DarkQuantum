@@ -15,6 +15,22 @@ record(mbbi,"$(P):Archiver"){
 	field(TWSV,"MINOR")
 }
 
+record(mbbi,"$(P):ArchApp"){
+	field(DESC,"Archiver Appliance Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto command(systemctl is-active archapp) terminal')
+	field(SCAN,"5 second")
+
+	field(ZRVL,0)
+	field(ONVL,1)
+	field(TWVL,2)
+	field(ZRST,"active")
+	field(ONST,"inactive")
+	field(TWST,"failed")
+	field(ONSV,"MINOR")
+	field(TWSV,"MINOR")
+}
+
 record(mbbi,"$(P):DQIOC"){
 	field(DESC,"Service Status")
 	field(DTYP,"stream")

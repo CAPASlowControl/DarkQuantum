@@ -27,7 +27,7 @@
     <name>Services</name>
     <y>31</y>
     <width>540</width>
-    <height>359</height>
+    <height>420</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -56,7 +56,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_2</name>
       <text>Alarm Logger</text>
-      <y>100</y>
+      <y>130</y>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_2</name>
@@ -68,7 +68,7 @@
       </actions>
       <text>telnet localhost 4612</text>
       <x>145</x>
-      <y>100</y>
+      <y>130</y>
       <width>180</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -83,7 +83,7 @@
       </actions>
       <text>telnet localhost 4609</text>
       <x>145</x>
-      <y>70</y>
+      <y>100</y>
       <width>180</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -91,12 +91,12 @@
     <widget type="label" version="2.0.0">
       <name>Label_3</name>
       <text>Alarm Server</text>
-      <y>70</y>
+      <y>100</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_4</name>
       <text>Archiver RDB</text>
-      <y>40</y>
+      <y>70</y>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_4</name>
@@ -108,7 +108,7 @@
       </actions>
       <text>telnet localhost 4610</text>
       <x>145</x>
-      <y>40</y>
+      <y>70</y>
       <width>180</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -123,7 +123,7 @@
       </actions>
       <text>http://localhost:4812</text>
       <x>343</x>
-      <y>40</y>
+      <y>70</y>
       <width>150</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -133,12 +133,12 @@
       <actions>
         <action type="open_webpage">
           <description>Open Web Page</description>
-          <url>http://localhost:8080/</url>
+          <url>http://localhost:8080</url>
         </action>
       </actions>
-      <text>http://localhost:8080/</text>
+      <text>http://localhost:8080</text>
       <x>343</x>
-      <y>70</y>
+      <y>100</y>
       <width>150</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -146,7 +146,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_8</name>
       <text>Terminal</text>
-      <y>130</y>
+      <y>160</y>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_7</name>
@@ -158,7 +158,7 @@
       </actions>
       <text>telnet localhost 4613</text>
       <x>145</x>
-      <y>130</y>
+      <y>160</y>
       <width>180</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -166,24 +166,24 @@
     <widget type="label" version="2.0.0">
       <name>Label_5</name>
       <text>ElasticSearch</text>
-      <y>160</y>
+      <y>190</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_7</name>
       <text>Zookeeper</text>
-      <y>190</y>
+      <y>220</y>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_9</name>
       <actions>
         <action type="open_webpage">
           <description>Open Web Page</description>
-          <url>http://localhost:8082/</url>
+          <url>http://localhost:8082</url>
         </action>
       </actions>
-      <text>http://localhost:8082/</text>
+      <text>http://localhost:8082</text>
       <x>343</x>
-      <y>190</y>
+      <y>220</y>
       <width>150</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -191,7 +191,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_6</name>
       <text>Kafka</text>
-      <y>220</y>
+      <y>250</y>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_8</name>
@@ -201,9 +201,9 @@
           <url>http://localhost:9200</url>
         </action>
       </actions>
-      <text>http://localhost:9200/</text>
+      <text>http://localhost:9200</text>
       <x>343</x>
-      <y>160</y>
+      <y>190</y>
       <width>150</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -211,7 +211,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_9</name>
       <text>BF IOC</text>
-      <y>260</y>
+      <y>290</y>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_10</name>
@@ -223,7 +223,7 @@
       </actions>
       <text>ssh &amp; telnet</text>
       <x>145</x>
-      <y>260</y>
+      <y>290</y>
       <width>180</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -238,7 +238,7 @@
       </actions>
       <text>ssh user@192.168.100.104</text>
       <x>145</x>
-      <y>290</y>
+      <y>320</y>
       <width>180</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
@@ -246,7 +246,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_10</name>
       <text>SSH BF</text>
-      <y>290</y>
+      <y>320</y>
     </widget>
     <widget type="multi_state_led" version="2.0.0">
       <name>LED (Multi State)</name>
@@ -284,7 +284,7 @@
       <name>LED (Multi State)_1</name>
       <pv_name>DQ:SYS:Archiver</pv_name>
       <x>100</x>
-      <y>40</y>
+      <y>70</y>
       <states>
         <state>
           <value>0</value>
@@ -316,7 +316,7 @@
       <name>LED (Multi State)_2</name>
       <pv_name>DQ:SYS:AlarmServer</pv_name>
       <x>100</x>
-      <y>70</y>
+      <y>100</y>
       <states>
         <state>
           <value>0</value>
@@ -348,7 +348,7 @@
       <name>LED (Multi State)_3</name>
       <pv_name>DQ:SYS:AlarmLogger</pv_name>
       <x>100</x>
-      <y>100</y>
+      <y>130</y>
       <states>
         <state>
           <value>0</value>
@@ -380,7 +380,7 @@
       <name>LED (Multi State)_4</name>
       <pv_name>DQ:SYS:Terminal</pv_name>
       <x>100</x>
-      <y>130</y>
+      <y>160</y>
       <states>
         <state>
           <value>0</value>
@@ -412,7 +412,7 @@
       <name>LED (Multi State)_5</name>
       <pv_name>DQ:SYS:ElasticSearch</pv_name>
       <x>100</x>
-      <y>160</y>
+      <y>190</y>
       <states>
         <state>
           <value>0</value>
@@ -444,7 +444,7 @@
       <name>LED (Multi State)_6</name>
       <pv_name>DQ:SYS:ZooKeeper</pv_name>
       <x>100</x>
-      <y>190</y>
+      <y>220</y>
       <states>
         <state>
           <value>0</value>
@@ -476,7 +476,7 @@
       <name>LED (Multi State)_7</name>
       <pv_name>DQ:SYS:Kafka</pv_name>
       <x>100</x>
-      <y>220</y>
+      <y>250</y>
       <states>
         <state>
           <value>0</value>
@@ -508,7 +508,7 @@
       <name>LED (Multi State)_8</name>
       <pv_name>DQ:SYS:BFIOC</pv_name>
       <x>100</x>
-      <y>260</y>
+      <y>290</y>
       <states>
         <state>
           <value>0</value>
@@ -535,6 +535,58 @@
           </color>
         </state>
       </states>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>Archiver App</text>
+      <y>40</y>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_9</name>
+      <pv_name>DQ:SYS:ArchApp</pv_name>
+      <x>100</x>
+      <y>40</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_12</name>
+      <actions>
+        <action type="open_webpage">
+          <description>Open Web Page</description>
+          <url>http://localhost:17665/mgmt/ui/index.html</url>
+        </action>
+      </actions>
+      <text>http://localhost:17665/mgmt/ui/index.html</text>
+      <x>343</x>
+      <y>40</y>
+      <width>150</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
     </widget>
   </widget>
 </display>

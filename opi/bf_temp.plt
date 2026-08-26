@@ -7,8 +7,8 @@
   <update_period>5.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>false</scroll>
-  <start>2026-07-10 12:42:53.510</start>
-  <end>2026-07-10 16:19:22.398</end>
+  <start>2026-07-14 16:00:00.000</start>
+  <end>2026-07-15 18:00:00.000</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
     <red>0</red>
@@ -36,8 +36,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-3.837789891354511</min>
-      <max>111.1750098820698</max>
+      <min>-83.26064353312304</min>
+      <max>443.77935646687695</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>

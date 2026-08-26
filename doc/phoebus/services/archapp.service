@@ -1,0 +1,20 @@
+# File /etc/systemd/system/archapp.service
+#
+
+[Unit]
+Description=Aprchiver Appliance
+Documentation=https://epicsarchiver.readthedocs.io/
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target
+
+[Service]
+Type=simple
+User=darkquantum
+Group=darkquantum
+#Environment=JAVA_HOME=/lib/jvm/java-21-openjdk-amd64/
+ExecStart=/usr/local/epics/support/archappl_v2.4.1/instances/sampleStartup.sh start
+ExecStop=/usr/local/epics/support/archappl_v2.4.1/instances/sampleStartup.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
