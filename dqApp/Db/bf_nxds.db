@@ -28,16 +28,7 @@ record (ai, "$(P):pump_temperature"){
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(driver.nxds.pump_temperature, %f) $(PORT)")
     field(PREC,2)
-    field(EGU,"K")
-
-    field(FLNK,"$(P):pump_temperature_C")
-}
-
-record (calc, "$(P):pump_temperature_C"){
-    field( SCAN, "Passive")
-    field(INPA,  "$(P):pump_temperature")
-    field(CALC,"A-273.15")
-    field(PREC,2)
+    field(AOFF,"-273.15")
     field(EGU,"ºC")
 }
 
@@ -46,15 +37,7 @@ record (ai, "$(P):controller_temperature"){
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(driver.nxds.controller_temperature, %f) $(PORT)")
     field(PREC,2)
-    field(EGU,"K")
-    field(FLNK,"$(P):controller_temperature_C")
-}
-
-record (calc, "$(P):controller_temperature_C"){
-    field( SCAN, "Passive")
-    field(INPA,  "$(P):controller_temperature")
-    field(CALC,"A-273.15")
-    field(PREC,2)
+    field(AOFF,"-273.15")
     field(EGU,"ºC")
 }
 

@@ -12,7 +12,8 @@ record (ai, "$(P):p1"){
     field (DTYP, "stream")
     #field (INP,  "@bf.proto testPage(/values/mapper/bf/?fields=latest_value, mapper\.bf\.pressures\.p1, %f) $(PORT)")
     field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p1, %f) $(PORT)")
-    field( EGU, "Bar")
+    field(ASLO,1000) # Bar to mBar
+    field( EGU, "mBar")
     field(PREC,2)
 }
 
@@ -20,7 +21,8 @@ record (ai, "$(P):p2"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p2, %f) $(PORT)")
-    field( EGU, "Bar")
+    field(ASLO,1000) # Bar to mBar
+    field( EGU, "mBar")
     field(PREC,2)
 }
 
@@ -28,7 +30,8 @@ record (ai, "$(P):p3"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p3, %f) $(PORT)")
-    field( EGU, "Bar")
+    field(ASLO,1000) # Bar to mBar
+    field( EGU, "mBar")
     field(PREC,2)
 }
 #
@@ -36,7 +39,8 @@ record (ai, "$(P):p4"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p4, %f) $(PORT)")
-    field( EGU, "Bar")
+    field(ASLO,1000) # Bar to mBar
+    field( EGU, "mBar")
     field(PREC,2)
 }
 
@@ -44,7 +48,8 @@ record (ai, "$(P):p5"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p5, %f) $(PORT)")
-    field( EGU, "Bar")
+    field(ASLO,1000) # Bar to mBar
+    field( EGU, "mBar")
     field(PREC,2)
 }
 
@@ -52,7 +57,8 @@ record (ai, "$(P):p6"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(mapper\.bf\.pressures\.p6, %f) $(PORT)")
-    field( EGU, "Bar")
+    field(ASLO,1E3) # Bar to mBar
+    field( EGU, "mBar")
     field(PREC,2)
 }
 

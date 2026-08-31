@@ -12,15 +12,7 @@ record (ai, "$(P):TcoolIn"){
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(driver.cpa.coolant_in_temperature, %f) $(PORT)")
     field(PREC,2)
-    field(EGU,"K")
-    field(FLNK,"$(P):TcoolIn_C")
-}
-
-record (calc, "$(P):TcoolIn_C"){
-    field( SCAN, "Passive")
-    field(INPA,  "$(P):TcoolIn")
-    field(CALC,"A-273.15")
-    field(PREC,2)
+    field(AOFF,"-273.15")
     field(EGU,"ºC")
 
     field(LOLO,"4")
@@ -38,15 +30,7 @@ record (ai, "$(P):TcoolOut"){
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(driver.cpa.coolant_out_temperature, %f) $(PORT)")
     field(PREC,2)
-    field(EGU,"K")
-    field(FLNK,"$(P):TcoolOut_C")
-}
-
-record (calc, "$(P):TcoolOut_C"){
-    field( SCAN, "Passive")
-    field(INPA,  "$(P):TcoolOut")
-    field(CALC,"A-273.15")
-    field(PREC,2)
+    field(AOFF,"-273.15")
     field(EGU,"ºC")
 
     field(LOLO,"4")
@@ -59,21 +43,12 @@ record (calc, "$(P):TcoolOut_C"){
     field(HSV,"MINOR")
 }
 
-
 record (ai, "$(P):TOil"){
     field( SCAN, "I/O Intr")
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(driver.cpa.oil_temperature, %f) $(PORT)")
     field(PREC,2)
-    field(EGU,"K")
-    field(FLNK,"$(P):TOil_C")
-}
-
-record (calc, "$(P):TOil_C"){
-    field( SCAN, "Passive")
-    field(INPA,  "$(P):TOil")
-    field(CALC,"A-273.15")
-    field(PREC,2)
+    field(AOFF,"-273.15")
     field(EGU,"ºC")
 
     field(LOLO,"4")
@@ -92,15 +67,7 @@ record (ai, "$(P):THe"){
     field (DTYP, "stream")
     field (INP,  "@bf.proto processPage(driver.cpa.helium_temperature, %f) $(PORT)")
     field(PREC,2)
-    field(EGU,"K")
-    field(FLNK,"$(P):THe_C")
-}
-
-record (calc, "$(P):THe_C"){
-    field( SCAN, "Passive")
-    field(INPA,  "$(P):THe")
-    field(CALC,"A-273.15")
-    field(PREC,2)
+    field(AOFF,"-273.15")
     field(EGU,"ºC")
 
     field(LOLO,"4")
