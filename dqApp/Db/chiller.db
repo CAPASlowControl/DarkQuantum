@@ -54,6 +54,26 @@ record(ai, "$(P):Pref_hp") {
     field(LLSV,"MAJOR")
 }
 
+record(acalcout, "$(P):Pref_hp_MaxCalc") {
+    field(DESC, "Ref. Circuit HP. Calc")
+    field(INPA,"$(P):Pref_hp") 
+    field(INAA,"$(P):Pref_hp_MaxCalc.AA") 
+
+    field(CALC,"AA:=CAT(AA[1,3599],A);AMAX(AA)")
+    field(SCAN,"1 second")
+    field(NELM,3600) # 1 hour
+
+    field(PREC,1)
+    field(EGU,"Bar") 
+    field(PINI,"NO")
+
+    field(HIHI,38.5) # Al09 value: 38.8
+    field(HIGH,37.5) # 
+    field(LOLO,5)  # 
+    field(HHSV,"MAJOR")
+    field(LLSV,"MAJOR")
+}
+
 # EXPANSION VALVE PROBES
 
 record(ai, "$(P):TexpV") {
@@ -501,9 +521,10 @@ record(calcout, "$(P):Auto_Calc"){
 record(ao, "$(P):alarmTest") { 
     field(DESC, "Test PV")
     field(PREC,0)
-    field(PINI,"NO")
+    field(PINI,"YES")
     field(HIHI,100) 
     field(HIGH,90)
+    field(VAL,50)
     field(LOLO,0)
     field(LOW,10)
     field(HHSV,"MAJOR")

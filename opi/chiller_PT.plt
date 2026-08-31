@@ -6,7 +6,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-35 minutes -27.202 seconds</start>
+  <start>-29 minutes -51.782 seconds</start>
   <end>now</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
@@ -35,8 +35,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>1.927061512754598</min>
-      <max>36.5335429942361</max>
+      <min>-41.300000000000004</min>
+      <max>34.9</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -52,8 +52,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>11.885345033112584</min>
-      <max>35.731745033112574</max>
+      <min>-3.1</min>
+      <max>71.10000000000001</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -86,6 +86,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>DQ:CHL:Pref_lp</display_name>
@@ -110,6 +115,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
     <pv>
@@ -136,6 +146,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>DQ:CHL:Tevap</display_name>
@@ -160,6 +175,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
     <pv>
@@ -186,6 +206,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>DQ:CHL:ChSetPointRB</display_name>
@@ -210,6 +235,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
   </pvlist>

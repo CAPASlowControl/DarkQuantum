@@ -36,62 +36,76 @@
     <widget type="label" version="2.0.0">
       <name>Label_1</name>
       <text>Tout</text>
-      <y>11</y>
+      <y>10</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update</name>
       <pv_name>$(P):Tout</pv_name>
       <x>80</x>
-      <y>11</y>
+      <y>10</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_2</name>
       <text>Tevap</text>
-      <y>36</y>
+      <y>30</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_1</name>
       <pv_name>$(P):Tevap</pv_name>
       <x>80</x>
-      <y>36</y>
+      <y>30</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_3</name>
       <text>Pref_hp</text>
-      <y>100</y>
+      <y>80</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_2</name>
       <pv_name>$(P):Pref_hp</pv_name>
       <x>80</x>
-      <y>100</y>
+      <y>80</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_6</name>
       <text>Pref_lp</text>
-      <y>125</y>
+      <y>130</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_4</name>
       <pv_name>$(P):Pref_lp</pv_name>
       <x>80</x>
-      <y>125</y>
+      <y>130</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_3</name>
       <pv_name>$(P):TexpV</pv_name>
       <x>80</x>
-      <y>61</y>
+      <y>50</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_5</name>
       <text>TexpV</text>
-      <y>61</y>
+      <y>50</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_5</name>
+      <pv_name>$(P):Pref_hp_MaxCalc</pv_name>
+      <x>80</x>
+      <y>100</y>
+      <horizontal_alignment>1</horizontal_alignment>
+      <tooltip>1h Maximum
+$(pv_name)\n$(pv_value)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Pref_hp (1h)</text>
+      <y>100</y>
     </widget>
   </widget>
   <widget type="meter" version="3.0.0">
@@ -584,18 +598,5 @@ $(pv_value)</tooltip>
       <width>121</width>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_29</name>
-      <text>DQ:CHL:Pref_hp</text>
-      <y>88</y>
-    </widget>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_16</name>
-    <pv_name>archive://DQ:CHL:Pref_hp</pv_name>
-    <x>396</x>
-    <y>620</y>
-    <width>121</width>
-    <horizontal_alignment>1</horizontal_alignment>
   </widget>
 </display>

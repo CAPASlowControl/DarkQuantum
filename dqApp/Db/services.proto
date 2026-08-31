@@ -16,4 +16,12 @@ commandSSH {
     in '%*/\n/%{active|inactive|failed}'
 }
 
+exec {
+    InTerminator = LF "$";
+    OutTerminator = LF;
+    extraInput = Ignore;
+    #ReadTimeout = 1000; # Time after last byte. Increased for http/ssh connections.
+    exec 'system("\$1")'; 
+}
+
 

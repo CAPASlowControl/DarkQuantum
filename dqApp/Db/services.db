@@ -1,20 +1,3 @@
-record(mbbi,"$(P):Archiver"){
-	field(DESC,"Archiver Service Status")
-	field(DTYP,"stream")
-	#field(VAL,"systemctl is-active archiverrdb")
-	field(INP,'@services.proto command(systemctl is-active archiverrdb) terminal')
-	field(SCAN,"5 second")
-
-	field(ZRVL,0)
-	field(ONVL,1)
-	field(TWVL,2)
-	field(ZRST,"active")
-	field(ONST,"inactive")
-	field(TWST,"failed")
-	field(ONSV,"MINOR")
-	field(TWSV,"MINOR")
-}
-
 record(mbbi,"$(P):ArchApp"){
 	field(DESC,"Archiver Appliance Status")
 	field(DTYP,"stream")
@@ -160,4 +143,19 @@ record(mbbi,"$(P):Terminal"){
 	field(ONSV,"MINOR")
 	field(TWSV,"MINOR")
 }
+
+# Mattermost Messages
+record(calcout, "$(P):mm_update"){
+    field(INPA,"DQ:CHL:currentHour CP") # Process PV when this value changes
+
+    field(DTYP,"stream")
+    field(CALC,"A")
+    field(EGU,"h")
+    field(PREC,0)
+
+    field(OUT,'@services.proto exec(python3 ../../opi/alarms/mm_update.py) terminal')
+
+    field(DISA,0) # Enable=0; Disable=1 proccesing of the PV.
+}
+
 

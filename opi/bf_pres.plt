@@ -7,7 +7,7 @@
   <update_period>5.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-1 days -2 hours -5 seconds</start>
+  <start>-4 minutes -31.326 seconds</start>
   <end>now</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
@@ -36,8 +36,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>6.440538544759553E-7</min>
-      <max>2.6728694012020444</max>
+      <min>1.122573350986713E-7</min>
+      <max>9.814798658112522</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>true</log_scale>
@@ -70,6 +70,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>DQ:BF:MPBF:p2</display_name>
@@ -94,6 +99,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
     <pv>
@@ -120,6 +130,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>DQ:BF:MPBF:p4</display_name>
@@ -144,6 +159,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
     <pv>
@@ -170,6 +190,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>DQ:BF:MPBF:p6</display_name>
@@ -194,6 +219,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
   </pvlist>

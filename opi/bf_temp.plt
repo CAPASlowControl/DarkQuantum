@@ -7,8 +7,8 @@
   <update_period>5.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>false</scroll>
-  <start>2026-07-14 16:00:00.000</start>
-  <end>2026-07-15 18:00:00.000</end>
+  <start>2026-08-28 12:56:10.986</start>
+  <end>2026-08-28 16:10:28.085</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
     <red>0</red>
@@ -36,27 +36,14 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-83.26064353312304</min>
-      <max>443.77935646687695</max>
+      <min>-0.05909224720705775</min>
+      <max>0.1951875460620996</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
     </axis>
   </axes>
   <annotations>
-    <annotation>
-      <pv>3</pv>
-      <time>2026-07-15 14:12:21.756</time>
-      <value>1.082049</value>
-      <offset>
-        <x>20.0</x>
-        <y>20.0</y>
-      </offset>
-      <text>Circulation Begin
-{0}
-{1}, {2}
-{3}</text>
-    </annotation>
   </annotations>
   <pvlist>
     <pv>
@@ -83,6 +70,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>t4k</display_name>
@@ -107,6 +99,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
     <pv>
@@ -133,6 +130,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>tmixing</display_name>
@@ -157,6 +159,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
     <pv>
@@ -183,6 +190,11 @@
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
       </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
+      </archive>
     </pv>
     <pv>
       <display_name>ch8_t</display_name>
@@ -207,6 +219,11 @@
         <name>Archiver</name>
         <url>jdbc:postgresql://localhost:5432/archive</url>
         <key>1</key>
+      </archive>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>2</key>
       </archive>
     </pv>
   </pvlist>
