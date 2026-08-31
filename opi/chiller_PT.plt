@@ -6,7 +6,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-29 minutes -51.782 seconds</start>
+  <start>-1 hours -30 minutes -9.811 seconds</start>
   <end>now</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
@@ -35,8 +35,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-41.300000000000004</min>
-      <max>34.9</max>
+      <min>-17.1</min>
+      <max>30.5</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -52,8 +52,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-3.1</min>
-      <max>71.10000000000001</max>
+      <min>14.3</min>
+      <max>26.1</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -120,6 +120,31 @@
         <name>pbraw://localhost:17668/retrieval</name>
         <url>pbraw://localhost:17668/retrieval</url>
         <key>2</key>
+      </archive>
+    </pv>
+    <pv>
+      <display_name>DQ:CHL:Pref_hp_MaxCalc</display_name>
+      <visible>true</visible>
+      <name>DQ:CHL:Pref_hp_MaxCalc</name>
+      <axis>0</axis>
+      <color>
+        <red>102</red>
+        <green>26</green>
+        <blue>51</blue>
+      </color>
+      <trace_type>SINGLE_LINE</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>SOLID</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>500</ring_size>
+      <request>OPTIMIZED</request>
+      <archive>
+        <name>pbraw://localhost:17668/retrieval</name>
+        <url>pbraw://localhost:17668/retrieval</url>
+        <key>1</key>
       </archive>
     </pv>
     <pv>

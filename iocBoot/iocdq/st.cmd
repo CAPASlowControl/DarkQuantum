@@ -23,7 +23,8 @@ dq_registerRecordDeviceDriver pdbbase
 #####################
 
 # Serial Port
-drvAsynSerialPortConfigure("CHILLERPORT","/dev/ttyUSB0",0,0,0)
+#drvAsynSerialPortConfigure("CHILLERPORT","/dev/ttyUSB0",0,0,0)
+drvAsynSerialPortConfigure("CHILLERPORT","/dev/CHILLER_MTA",0,0,0)
 
 asynSetOption("CHILLERPORT",0,"baud","9600")
 asynSetOption("CHILLERPORT",0,"bits","8")

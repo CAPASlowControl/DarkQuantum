@@ -81,34 +81,6 @@
       <y>70</y>
       <width>60</width>
     </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_24</name>
-      <pv_name>$(P):TcoolIn_C</pv_name>
-      <x>180</x>
-      <y>10</y>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_25</name>
-      <pv_name>$(P):TcoolOut_C</pv_name>
-      <x>180</x>
-      <y>30</y>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_26</name>
-      <pv_name>$(P):TOil_C</pv_name>
-      <x>180</x>
-      <y>50</y>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_27</name>
-      <pv_name>$(P):THe_C</pv_name>
-      <x>180</x>
-      <y>70</y>
-      <width>60</width>
-    </widget>
     <widget type="label" version="2.0.0">
       <name>Label_70</name>
       <text>P low</text>
@@ -195,7 +167,6 @@
       <x>100</x>
       <y>50</y>
       <width>160</width>
-      <format>2</format>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_10</name>
@@ -209,7 +180,6 @@
       <x>100</x>
       <y>70</y>
       <width>160</width>
-      <format>2</format>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_11</name>
@@ -223,7 +193,6 @@
       <x>100</x>
       <y>90</y>
       <width>160</width>
-      <format>2</format>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_12</name>
@@ -237,7 +206,6 @@
       <x>100</x>
       <y>110</y>
       <width>160</width>
-      <format>2</format>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -1010,20 +978,6 @@ $(actions)</tooltip>
       <x>133</x>
       <y>140</y>
       <width>70</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_50</name>
-      <pv_name>$(P):pump_temperature_C</pv_name>
-      <x>203</x>
-      <y>50</y>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_51</name>
-      <pv_name>$(P):controller_temperature_C</pv_name>
-      <x>203</x>
-      <y>70</y>
-      <width>60</width>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">

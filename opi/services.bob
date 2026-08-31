@@ -186,7 +186,7 @@
           <command>gnome-terminal -- sshpass -ppassword ssh user@192.168.100.104 -t 'telnet localhost 4600'</command>
         </action>
       </actions>
-      <text>ssh &amp; telnet</text>
+      <text>ssh &amp; telnet 4600</text>
       <x>145</x>
       <y>260</y>
       <width>180</width>
