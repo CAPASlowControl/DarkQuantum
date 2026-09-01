@@ -1144,4 +1144,66 @@ $(actions)</tooltip>
       </on_color>
     </widget>
   </widget>
+  <widget type="group" version="3.0.0">
+    <name>Turbo 1 (HiPACE tc400)</name>
+    <macros>
+      <P>DQ:BF:TC400</P>
+    </macros>
+    <x>690</x>
+    <y>630</y>
+    <height>110</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <widget type="label" version="2.0.0">
+      <name>Label_58</name>
+      <text>Rot. Speed</text>
+      <x>10</x>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_25</name>
+      <pv_name>$(P):active_rotational_speed</pv_name>
+      <x>130</x>
+      <y>30</y>
+      <width>60</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_59</name>
+      <text>Drive Power</text>
+      <x>10</x>
+      <y>50</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_26</name>
+      <pv_name>$(P):drive_power</pv_name>
+      <x>130</x>
+      <y>50</y>
+      <width>60</width>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_35</name>
+      <pv_name>$(P):standby</pv_name>
+      <x>150</x>
+      <y>10</y>
+      <width>15</width>
+      <height>15</height>
+      <off_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </on_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_87</name>
+      <text>Standby</text>
+      <x>10</x>
+      <y>10</y>
+      <width>72</width>
+    </widget>
+  </widget>
 </display>
