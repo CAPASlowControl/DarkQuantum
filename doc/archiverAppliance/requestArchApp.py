@@ -4,6 +4,8 @@ import numpy as np
 #import urllib
 import json
 import matplotlib.pyplot as plt
+import datetime
+import pytz
 
 
 url = f"http://127.0.0.1:17668/retrieval/data/getData.json?pv=DQ:CHL:Pref_hp&from=2026-08-28T10:00:00.000Z&to=2026-08-28T15:00:00.000Z"
@@ -24,7 +26,12 @@ nanos = np.array(nanos)
 vals = np.array(vals)
 
 tt = secs+nanos*1E-9 
-dt = tt.astype('datetime64[s]') 
+
+tz = pytz.timezone("CET")
+dt = [datetime.datetime.fromtimestamp(t,tz=tz) for t in tt]
+
+
+
 
 plt.plot(dt, vals, "r-")
 plt.show()
