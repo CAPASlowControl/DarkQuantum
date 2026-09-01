@@ -289,6 +289,9 @@ Run single_machine_install.sh
 
 After installation modify and install sampleStartup.sh
 
+For data retrieval can be done directly in phoebus or by accessing the retrieval engine e.g. `http://127.0.0.1:17668/retrieval/data/getData.json?pv=DQ:CHL:Pref_hp&from=2026-08-28T10:00:00.000Z&to=2026-08-28T15:00:00.000Z
+
+The data is saved in binary pb format. For direct manipulation of the files install caarchive tools `pip install "epicsarchiver-retrieval-client[all]"` and then `arch-retrieval read-pb <file.pb>`
 
 
 # Alarm Server
