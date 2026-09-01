@@ -1,0 +1,33 @@
+# Compressor
+
+# Temperatures
+record (bo, "$(P):read"){#Compressor
+    field( SCAN, "10 second")
+    field (DTYP, "stream")
+    field (OUT,  "@bf.proto getPage(/values/driver.tc400/?fields=latest_value) $(PORT)")
+}
+
+record (ai, "$(P):active_rotational_speed"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.tc400.active_rotational_speed, %f) $(PORT)")
+    field(PREC,0)
+    field(EGU,"Hz")
+}
+
+record (ai, "$(P):drive_power"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.tc400.drive_power, %f) $(PORT)")
+    field(PREC,0)
+    field(EGU,"W")
+}
+
+record (bi, "$(P):standby"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.tc400.standby, %b) $(PORT)")
+
+    field(ZNAM,"On")
+    field(ONAM,"Standby")
+}
