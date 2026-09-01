@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
+  <width>850</width>
+  <height>700</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
     <text>Bluefors LD250</text>
     <x use_class="true">0</x>
     <y use_class="true">0</y>
-    <width>550</width>
+    <width>270</width>
     <height>31</height>
     <font use_class="true">
       <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
@@ -23,8 +25,9 @@
     <macros>
       <P>DQ:BF:CPA</P>
     </macros>
-    <x>350</x>
-    <y>30</y>
+    <x>300</x>
+    <y>100</y>
+    <width>260</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -123,6 +126,7 @@
     </macros>
     <x>30</x>
     <y>30</y>
+    <width>260</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -138,7 +142,6 @@
       <pv_name>$(P):p1</pv_name>
       <x>100</x>
       <y>10</y>
-      <width>160</width>
       <format>2</format>
     </widget>
     <widget type="label" version="2.0.0">
@@ -152,7 +155,6 @@
       <pv_name>$(P):p2</pv_name>
       <x>100</x>
       <y>30</y>
-      <width>160</width>
       <format>2</format>
     </widget>
     <widget type="label" version="2.0.0">
@@ -166,7 +168,6 @@
       <pv_name>$(P):p3</pv_name>
       <x>100</x>
       <y>50</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_10</name>
@@ -179,7 +180,6 @@
       <pv_name>$(P):p4</pv_name>
       <x>100</x>
       <y>70</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_11</name>
@@ -192,7 +192,6 @@
       <pv_name>$(P):p5</pv_name>
       <x>100</x>
       <y>90</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_12</name>
@@ -205,7 +204,6 @@
       <pv_name>$(P):p6</pv_name>
       <x>100</x>
       <y>110</y>
-      <width>160</width>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -213,8 +211,9 @@
     <macros>
       <P>DQ:BF:MPBF</P>
     </macros>
-    <x>350</x>
-    <y>240</y>
+    <x>300</x>
+    <y>310</y>
+    <width>260</width>
     <height>290</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -553,8 +552,8 @@
   </widget>
   <widget type="symbol" version="2.0.0">
     <name>Symbol</name>
-    <x>490</x>
-    <y>280</y>
+    <x>440</x>
+    <y>350</y>
     <width>1</width>
     <height>1</height>
     <tooltip>$(pv_name)
@@ -568,6 +567,8 @@ $(actions)</tooltip>
     </macros>
     <x>30</x>
     <y>240</y>
+    <width>260</width>
+    <height>160</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -583,7 +584,6 @@ $(actions)</tooltip>
       <pv_name>$(P):t50k</pv_name>
       <x>100</x>
       <y>10</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_36</name>
@@ -596,7 +596,6 @@ $(actions)</tooltip>
       <pv_name>$(P):t4k</pv_name>
       <x>100</x>
       <y>30</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_37</name>
@@ -609,7 +608,6 @@ $(actions)</tooltip>
       <pv_name>$(P):tstill</pv_name>
       <x>100</x>
       <y>50</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_38</name>
@@ -622,7 +620,6 @@ $(actions)</tooltip>
       <pv_name>$(P):tmixing</pv_name>
       <x>100</x>
       <y>70</y>
-      <width>160</width>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -631,7 +628,9 @@ $(actions)</tooltip>
       <P>DQ:BF:TCCH</P>
     </macros>
     <x>30</x>
-    <y>448</y>
+    <y>400</y>
+    <width>260</width>
+    <height>140</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -647,7 +646,6 @@ $(actions)</tooltip>
       <pv_name>$(P):ch7_t</pv_name>
       <x>100</x>
       <y>10</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_40</name>
@@ -660,7 +658,6 @@ $(actions)</tooltip>
       <pv_name>$(P):ch7_r</pv_name>
       <x>100</x>
       <y>30</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_41</name>
@@ -673,7 +670,6 @@ $(actions)</tooltip>
       <pv_name>$(P):ch8_t</pv_name>
       <x>100</x>
       <y>50</y>
-      <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_42</name>
@@ -686,7 +682,6 @@ $(actions)</tooltip>
       <pv_name>$(P):ch8_r</pv_name>
       <x>100</x>
       <y>70</y>
-      <width>160</width>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -694,8 +689,9 @@ $(actions)</tooltip>
     <macros>
       <P>DQ:BF:MPBF</P>
     </macros>
-    <x>690</x>
+    <x>300</x>
     <y>30</y>
+    <width>260</width>
     <height>68</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -712,7 +708,6 @@ $(actions)</tooltip>
       <pv_name>$(P):flow</pv_name>
       <x>100</x>
       <y>10</y>
-      <width>160</width>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -720,8 +715,9 @@ $(actions)</tooltip>
     <macros>
       <P>DQ:BF:MPBF</P>
     </macros>
-    <x>690</x>
-    <y>118</y>
+    <x>560</x>
+    <y>30</y>
+    <width>260</width>
     <height>150</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -808,8 +804,9 @@ $(actions)</tooltip>
     <macros>
       <P>DQ:BF:MPBF</P>
     </macros>
-    <x>690</x>
-    <y>285</y>
+    <x>560</x>
+    <y>197</y>
+    <width>260</width>
     <height>122</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -881,8 +878,9 @@ $(actions)</tooltip>
     <macros>
       <P>DQ:BF:NXDS</P>
     </macros>
-    <x>690</x>
-    <y>428</y>
+    <x>560</x>
+    <y>340</y>
+    <width>260</width>
     <height>192</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -986,7 +984,9 @@ $(actions)</tooltip>
       <P>DQ:BF:TCHT</P>
     </macros>
     <x>30</x>
-    <y>670</y>
+    <y>540</y>
+    <width>260</width>
+    <height>160</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -1002,7 +1002,7 @@ $(actions)</tooltip>
       <pv_name>$(P):ht1_pw</pv_name>
       <x>140</x>
       <y>10</y>
-      <width>120</width>
+      <width>80</width>
       <format>2</format>
     </widget>
     <widget type="label" version="2.0.0">
@@ -1016,7 +1016,7 @@ $(actions)</tooltip>
       <pv_name>$(P):ht2_pw</pv_name>
       <x>140</x>
       <y>30</y>
-      <width>120</width>
+      <width>80</width>
       <format>2</format>
     </widget>
     <widget type="label" version="2.0.0">
@@ -1030,7 +1030,7 @@ $(actions)</tooltip>
       <pv_name>$(P):ht3_pw</pv_name>
       <x>140</x>
       <y>50</y>
-      <width>120</width>
+      <width>80</width>
       <format>2</format>
     </widget>
     <widget type="label" version="2.0.0">
@@ -1044,7 +1044,7 @@ $(actions)</tooltip>
       <pv_name>$(P):ht4_pw</pv_name>
       <x>140</x>
       <y>70</y>
-      <width>120</width>
+      <width>80</width>
       <format>2</format>
     </widget>
     <widget type="led" version="2.0.0">
@@ -1149,8 +1149,9 @@ $(actions)</tooltip>
     <macros>
       <P>DQ:BF:TC400</P>
     </macros>
-    <x>690</x>
-    <y>630</y>
+    <x>560</x>
+    <y>542</y>
+    <width>260</width>
     <height>110</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -1200,10 +1201,10 @@ $(actions)</tooltip>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_87</name>
-      <text>Standby</text>
+      <text>Standby / On</text>
       <x>10</x>
       <y>10</y>
-      <width>72</width>
+      <width>120</width>
     </widget>
   </widget>
 </display>
