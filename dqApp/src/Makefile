@@ -31,6 +31,8 @@ dq_DBD += stream.dbd
 dq_DBD += modbusSupport.dbd
 #dq_DBD += opcua.dbd
 dq_DBD += system.dbd
+dq_DBD += PVAServerRegister.dbd
+dq_DBD += qsrv.dbd
 
 # Add all the support libraries needed by this IOC
 dq_LIBS += calc
@@ -41,6 +43,9 @@ dq_LIBS += sscan
 dq_LIBS += asyn
 dq_LIBS += stream
 dq_LIBS += modbus
+dq_LIBS += qsrv
+dq_LIBS += $(EPICS_BASE_PVA_CORE_LIBS)
+dq_LIBS += $(EPICS_BASE_IOC_LIBS)
 #dq_LIBS += opcua
 
 
