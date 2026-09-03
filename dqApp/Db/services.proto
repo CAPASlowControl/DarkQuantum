@@ -24,4 +24,12 @@ exec {
     exec 'system("\$1")'; 
 }
 
+nodered {
+    InTerminator = LF "$";
+    OutTerminator = LF;
+    extraInput = Ignore;
+    #ReadTimeout = 1000; # Time after last byte. Increased for http/ssh connections.
+    out '\$1'; 
+    in '%*/\n/%{closed|open}' 
+}
 

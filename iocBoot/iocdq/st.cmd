@@ -87,6 +87,13 @@ dbLoadRecords("$(TOP)/dqApp/Db/services.db","P='DQ:SYS'")
 dbLoadRecords("$(TOP)/dqApp/Db/mm_alarms.db","P='DQ:MM'")
 
 
+#####################
+##### ALPHACAMM SoftIOC ###
+#####################
+dbLoadRecords("$(TOP)/dqApp/Db/alphacamm.db","P='ACAMM'")
+
+
+
 
 #####################
 ##### OPCUA Tests ###
@@ -113,6 +120,19 @@ dbLoadRecords("$(TOP)/dqApp/Db/mm_alarms.db","P='DQ:MM'")
 #enable debug output
 #var streamDebug 1
 
+#####################
+##### AUTOSAVE #########
+#####################
+set_savefile_path("$(TOP)/iocBoot/$(IOC)/")
+set_requestfile_path("$(TOP)/iocBoot/$(IOC)/")
+
+set_pass0_restoreFile("autosave.sav")
+
+save_restoreSet_NumSeqFiles(0)  # Number of backup files
+save_restoreSet_DatedBackupFiles(0)
+
+
+
 
 #####################
 ##### IOCINIT #######
@@ -121,6 +141,9 @@ dbLoadRecords("$(TOP)/dqApp/Db/mm_alarms.db","P='DQ:MM'")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
+
+#Autosave
+create_monitor_set("autosave.req", 60) # File, period, prefixes
 
 ## Start any sequence programs
 #seq sncxxx,"user=user"

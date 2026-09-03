@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <macros>
+    <P>ACAMM</P>
+  </macros>
+  <width>950</width>
+  <height>850</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>AlphaCAMM</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>System</name>
+    <y>31</y>
+    <width>320</width>
+    <height>197</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Memory</text>
+      <y>40</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P):SYS:memory</pv_name>
+      <x>80</x>
+      <y>40</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_14</name>
+      <text>Nodered</text>
+      <y>10</y>
+      <width>138</width>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_10</name>
+      <pv_name>$(P):SYS:nodered</pv_name>
+      <x>80</x>
+      <y>10</y>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="Off" red="60" green="100" blue="60">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_13</name>
+      <actions>
+        <action type="open_webpage">
+          <description>Open Web Page</description>
+          <url>http://155.210.140.135:18800</url>
+        </action>
+      </actions>
+      <text>http://155.210.140.135:18800/</text>
+      <x>130</x>
+      <y>10</y>
+      <width>150</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+</display>

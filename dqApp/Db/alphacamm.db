@@ -1,0 +1,29 @@
+# ./testApp/Db/test.db
+# PROBES
+record(ai, "$(P):SYS:memory") { 
+    field(DESC, "Alphacamm Nodered Memory")
+    field(SCAN, "Passive")
+    field(PREC,1)
+    field(EGU,"MB") 
+
+    field(HIGH,500)
+    field(HSV,"MINOR")
+    field(HIHI,800)
+    field(HHSV,"MAJOR")
+}
+
+# Alphcamm Nodered
+record(mbbi,"$(P):SYS:nodered"){
+	field(DESC,"Service Status")
+	field(DTYP,"stream")
+	field(INP,'@services.proto nodered(nmap  -PN -p 18800 155.210.140.135  | grep 1880| cut -d" " -f2) terminal')
+	field(SCAN,"5 second")
+
+	field(ZRVL,0)
+	field(ONVL,1)
+	field(ZRST,"inactive")
+	field(ONST,"active")
+	field(ZRSV,"MINOR")
+}
+
+
