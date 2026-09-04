@@ -319,6 +319,17 @@ For the alarm logger start-up:
  - `alarm_logger.sh`
    - Port 8080 (reconfigured in settings.in in settings.ini)
 
+# PVAccess
+
+EPICs 7 using pvAccess (pvget, pvput) instead of Channel Access (caget, caput).
+
+PVAccess is supposed to be more efficient than channel acces.
+Two implementations of PVAccess are available, core-pva using qsrv, and PVXS module.
+
+QSRV implementation does not allow communication through firewalls (or routers with port forwarding) since it uses dynamically assigned UDP Ports.
+PVXS allows communication through firewalls (port forwarding).
+
+
 # OTHER NOTES
 For running wsl in background:
 

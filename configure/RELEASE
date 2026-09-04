@@ -38,6 +38,7 @@ SSCAN=$(SUPPORT)/sscan-R2-11-6
 ASYN=$(SUPPORT)/asyn-R4-44-2
 STREAM=$(SUPPORT)/StreamDevice-2-8-24
 MODBUS=$(SUPPORT)/modbus-R3-3
+PVXS=$(SUPPORT)/../pvxs/
 #OPCUA = /usr/local/epics/support/opcua
 
 # EPICS_BASE should appear last so earlier modules can override stuff:

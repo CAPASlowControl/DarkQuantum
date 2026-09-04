@@ -12,6 +12,9 @@
 cd "${TOP}"
 epicsEnvSet(STREAM_PROTOCOL_PATH,"$(TOP)/dqApp/Db")
 
+epicsEnvSet(EPICS_PVAS_SERVER_PORT,5075)
+epicsEnvSet(EPICS_PVAS_BROADCAST_PORT,5076)
+
 
 ## Register all support components
 dbLoadDatabase "dbd/dq.dbd"
