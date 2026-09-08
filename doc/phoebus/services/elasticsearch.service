@@ -24,7 +24,7 @@ Description=ElasticSearch
 [Service]
 User=darkquantum
 Group=darkquantum
-ExecStart= /usr/local/epics/support/elasticsearch-8.2.3/bin/elasticsearch
+ExecStart= /home/darkquantum/epics/support/elasticsearch-8.2.3/bin/elasticsearch
 # Systemd stops alarm server by killing the process
 
 [Install]

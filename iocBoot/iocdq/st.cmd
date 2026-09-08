@@ -14,6 +14,8 @@ epicsEnvSet(STREAM_PROTOCOL_PATH,"$(TOP)/dqApp/Db")
 
 epicsEnvSet(EPICS_PVAS_SERVER_PORT,5075)
 epicsEnvSet(EPICS_PVAS_BROADCAST_PORT,5076)
+epicsEnvSet(EPICS_PVAS_BEACON_ADDR_LIST,"192.168.100.255") 
+epicsEnvSet(EPICS_PVAS_AUTO_BEACON_ADDR_LIST,"NO")
 
 
 ## Register all support components

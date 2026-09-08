@@ -25,7 +25,7 @@ After=kafka.service
 User=darkquantum
 Group=darkquantum
 Environment=JAVA_HOME=/lib/jvm/java-21-openjdk-amd64/
-Environment=SERVER=/usr/local/epics/phoebus-5.0.5/services/alarm-server/
+Environment=SERVER=/home/darkquantum/epics/phoebus-5.0.5/services/alarm-server/
 Environment=PORT=4609
 Environment=CONFIG=Accelerator
 Environment=PATH=${JAVA_HOME}/bin:/usr/bin

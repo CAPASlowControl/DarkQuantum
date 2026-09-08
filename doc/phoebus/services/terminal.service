@@ -21,7 +21,7 @@ Description=Terminal Simulator
 [Service]
 User=darkquantum
 Group=darkquantum
-Environment=SERVER=/usr/local/epics/IOCs/DarkQuantum/iocBoot/iocdq/
+Environment=SERVER=/home/darkquantum/epics/IOCs/DarkQuantum/iocBoot/iocdq/
 Environment=PORT=4613
 ExecStart=/usr/bin/procServ --foreground --noautorestart --name terminal --chdir ${SERVER} --logfile ${SERVER}/terminal.log ${PORT} /bin/sh
 # Systemd stops alarm server by killing the process

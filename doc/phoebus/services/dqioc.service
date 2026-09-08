@@ -16,13 +16,17 @@
 
 [Unit]
 Description=DarkQuantum IOC
+Wants=network.target network-online.target remote-fs.target sys-subsystem-net-devices-eno1.device
+After=network.target network-oline.target remote-fs.target sys-subsystem-net-devices-eno1.device
 #After=kafka.service
 
 [Service]
 User=darkquantum
 Group=darkquantum
-Environment=SERVER=/usr/local/epics/IOCs/DarkQuantum/iocBoot/iocdq/
+Environment=SERVER=/home/darkquantum/epics/IOCs/DarkQuantum/iocBoot/iocdq/
 Environment=PORT=4611
+ExecStartPre=/bin/sleep 5
+
 ExecStart=/usr/bin/procServ --foreground --noautorestart --name dqioc --chdir ${SERVER} --logfile ${SERVER}/console.log ${PORT} ./st.cmd
 # Systemd stops alarm server by killing the process
 

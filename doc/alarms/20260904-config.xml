@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config name="Accelerator">
+  <component name="AlphaCAMM">
+    <pv name="ACAMM:SYS:memory">
+      <description>ACAMM:SYS:memory</description>
+      <enabled>true</enabled>
+      <latching>true</latching>
+      <annunciating>true</annunciating>
+      <delay>30</delay>
+    </pv>
+    <pv name="ACAMM:SYS:nodered">
+      <description>ACAMM:SYS:nodered</description>
+      <enabled>true</enabled>
+      <latching>true</latching>
+      <annunciating>true</annunciating>
+      <delay>30</delay>
+    </pv>
+  </component>
   <component name="Bluefors">
     <pv name="DQ:BF:CPA:Phigh">
       <description>DQ:BF:CPA:Phigh</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:BF:CPA:Plow">
       <description>DQ:BF:CPA:Plow</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-    </pv>
-    <pv name="DQ:BF:CPA:THe_C">
-      <description>DQ:BF:CPA:THe_C</description>
-      <enabled>true</enabled>
-      <latching>true</latching>
-      <annunciating>true</annunciating>
-    </pv>
-    <pv name="DQ:BF:CPA:TOil_C">
-      <description>DQ:BF:CPA:TOil_C</description>
-      <enabled>true</enabled>
-      <latching>true</latching>
-      <annunciating>true</annunciating>
-    </pv>
-    <pv name="DQ:BF:CPA:TcoolIn_C">
-      <description>DQ:BF:CPA:TcoolIn_C</description>
-      <enabled>true</enabled>
-      <latching>true</latching>
-      <annunciating>true</annunciating>
-    </pv>
-    <pv name="DQ:BF:CPA:TcoolOut_C">
-      <description>DQ:BF:CPA:TcoolOut_C</description>
-      <enabled>true</enabled>
-      <latching>true</latching>
-      <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
   </component>
   <component name="Chiller">
@@ -45,70 +39,70 @@
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm2">
         <description>DQ:CHL:Alarm2</description>
         <enabled>true</enabled>
         <latching>true</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm3">
         <description>DQ:CHL:Alarm3</description>
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm4">
         <description>DQ:CHL:Alarm4</description>
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm5">
         <description>DQ:CHL:Alarm5</description>
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm6">
         <description>DQ:CHL:Alarm6</description>
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm7">
         <description>DQ:CHL:Alarm7</description>
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm8">
         <description>DQ:CHL:Alarm8</description>
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm9">
         <description>DQ:CHL:Alarm9</description>
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
       <pv name="DQ:CHL:Alarm10">
         <description>DQ:CHL:Alarm10</description>
         <enabled>true</enabled>
         <latching>false</latching>
         <annunciating>true</annunciating>
-        <delay>10</delay>
+        <delay>30</delay>
       </pv>
     </component>
     <pv name="DQ:CHL:ChSetPoint">
@@ -116,20 +110,21 @@
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>5</delay>
     </pv>
     <pv name="DQ:CHL:ChSetPointRB">
       <description>DQ:CHL:ChSetPointRB</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:CHL:MachineStatus_Standby">
       <description>DQ:CHL:MachineStatus_Standby</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
       <automated_action>
         <title>Mattermost</title>
         <details>cmd:python3 /home/darkquantum/epics/IOCs/DarkQuantum/opi/alarms/mm_alarm.py *</details>
@@ -141,21 +136,31 @@
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
+      <automated_action>
+        <title>Mattermost</title>
+        <details>cmd:python3 /home/darkquantum/epics/IOCs/DarkQuantum/opi/alarms/mm_alarm.py *</details>
+        <delay>0</delay>
+      </automated_action>
     </pv>
     <pv name="DQ:CHL:Pref_lp">
       <description>DQ:CHL:Pref_lp</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
+      <automated_action>
+        <title></title>
+        <details>cmd:python3 /home/darkquantum/epics/IOCs/DarkQuantum/opi/alarms/mm_alarm.py *</details>
+        <delay>0</delay>
+      </automated_action>
     </pv>
     <pv name="DQ:CHL:RelayStatus1_Alarm">
       <description>DQ:CHL:RelayStatus1_Alarm</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
       <automated_action>
         <title>Mattermost</title>
         <details>cmd:python3 /home/darkquantum/epics/IOCs/DarkQuantum/opi/alarms/mm_alarm.py *</details>
@@ -167,7 +172,7 @@
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
       <automated_action>
         <title>Mattermost</title>
         <details>cmd:python3 /home/darkquantum/epics/IOCs/DarkQuantum/opi/alarms/mm_alarm.py *</details>
@@ -179,48 +184,49 @@
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:CHL:RelayStatus7_Compressor">
       <description>DQ:CHL:RelayStatus7_Compressor</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:CHL:Tevap">
       <description>DQ:CHL:Tevap</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:CHL:TexpV">
       <description>DQ:CHL:TexpV</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:CHL:Tout">
       <description>DQ:CHL:Tout</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:CHL:WaterPumpWH">
       <description>DQ:CHL:WaterPumpWH</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
-      <delay>10</delay>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:CHL:alarmTest">
       <description>DQ:CHL:alarmTest</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>5</delay>
       <automated_action>
         <title>Mattermost</title>
         <details>cmd:python3 /home/darkquantum/epics/IOCs/DarkQuantum/opi/alarms/mm_alarm.py *</details>
@@ -234,54 +240,70 @@
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:SYS:AlarmServer">
       <description>DQ:SYS:AlarmServer</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:SYS:ArchApp">
       <description>DQ:SYS:ArchApp</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:SYS:BFIOC">
       <description>DQ:SYS:BFIOC</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:SYS:DQIOC">
       <description>DQ:SYS:DQIOC</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:SYS:ElasticSearch">
       <description>DQ:SYS:ElasticSearch</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:SYS:Kafka">
       <description>DQ:SYS:Kafka</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:SYS:Terminal">
       <description>DQ:SYS:Terminal</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
     <pv name="DQ:SYS:ZooKeeper">
       <description>DQ:SYS:ZooKeeper</description>
       <enabled>true</enabled>
       <latching>true</latching>
       <annunciating>true</annunciating>
+      <delay>30</delay>
+    </pv>
+    <pv name="DQ:SYS:mm_update">
+      <description>DQ:SYS:mm_update</description>
+      <enabled>true</enabled>
+      <latching>true</latching>
+      <annunciating>true</annunciating>
+      <delay>30</delay>
     </pv>
   </component>
 </config>

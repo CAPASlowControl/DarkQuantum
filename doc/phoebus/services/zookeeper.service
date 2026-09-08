@@ -14,16 +14,16 @@
 [Unit]
 Description=Apache Zookeeper server (Kafka)
 Documentation=http://zookeeper.apache.org
-Requires=network.target remote-fs.target
-After=network.target remote-fs.target
+Wants=network.target network-online.target remote-fs.target
+After=network.target network-online.target remote-fs.target dqioc.service
 
 [Service]
 Type=simple
 User=darkquantum
 Group=darkquantum
 Environment=JAVA_HOME=/lib/jvm/java-21-openjdk-amd64/
-ExecStart=/usr/local/epics/support/kafka/bin/zookeeper-server-start.sh /usr/local/epics/support/kafka/config/zookeeper.properties
-ExecStop=/usr/local/epics/support/kafka/bin/zookeeper-server-stop.sh
+ExecStart=/home/darkquantum/epics/support/kafka/bin/zookeeper-server-start.sh /home/darkquantum/epics/support/kafka/config/zookeeper.properties
+ExecStop=/home/darkquantum/epics/support/kafka/bin/zookeeper-server-stop.sh
 
 [Install]
 WantedBy=multi-user.target
