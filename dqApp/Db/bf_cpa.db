@@ -116,4 +116,65 @@ record (ai, "$(P):Phigh"){
     field(HSV,"MINOR")
 }
 
+#Status
+
+record (ai, "$(P):compressor_running_status"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.compressor_running_status, %f) $(PORT)")
+}
+
+record (ai, "$(P):operating_state"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.operating_state, %f) $(PORT)")
+}
+
+
+
+# Alarms
+record (ai, "$(P):warning_state"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.warning_state, %f) $(PORT)")
+ 
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
+}
+
+#record (stringin, "$(P):warning_state_text"){
+#    field( SCAN, "I/O Intr")
+#    field (DTYP, "stream")
+#    field (INP,  "@bf.proto processPage(driver.cpa.warning_state_text, %s) $(PORT)")
+#}
+
+record (ai, "$(P):alarm_state"){
+    field( SCAN, "I/O Intr")
+    field (DTYP, "stream")
+    field (INP,  "@bf.proto processPage(driver.cpa.alarm_state, %f) $(PORT)")
+
+    field(HIHI,"1")
+    field(HHSV,"MAJOR")
+}
+
+#record (stringin, "$(P):alarm_state_text"){
+#    field( SCAN, "I/O Intr")
+#    field (DTYP, "stream")
+#    field (INP,  "@bf.proto processPage(driver.cpa.alarm_state_text, %s) $(PORT)")
+#}
+
+
+# Mattermost Messages
+#record(calcout, "$(P):mm_update"){
+#    field(INPA,"DQ:CHL:currentHourStr CP") # Process PV when this value changes
+#
+#    field(DTYP,"stream")
+#    field(CALC,"A")
+#    field(EGU,"h")
+#    field(PREC,0)
+#
+#    field(OUT,"@services.proto exec(python3 ./opi/alarms/mm_update.py) $(PORT)")
+#
+#    field(DISA,0) # Enable=0; Disable=1 proccesing of the PV.
+#}
 

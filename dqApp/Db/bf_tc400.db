@@ -23,11 +23,11 @@ record (ai, "$(P):drive_power"){
     field(EGU,"W")
 }
 
-record (bi, "$(P):standby"){
-    field( SCAN, "I/O Intr")
-    field (DTYP, "stream")
-    field (INP,  "@bf.proto processPage(driver.tc400.standby, %b) $(PORT)")
-
-    field(ZNAM,"On")
-    field(ONAM,"Standby")
-}
+#record (bi, "$(P):standby"){
+#    field( SCAN, "I/O Intr")
+#    field (DTYP, "stream")
+#    field (INP,  "@bf.proto processPage(driver.tc400.standby, %b) $(PORT)")
+#
+#    field(ZNAM,"On")
+#    field(ONAM,"Standby")
+#}

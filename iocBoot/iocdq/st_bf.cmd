@@ -34,7 +34,7 @@ dbLoadRecords("$(TOP)/dqApp/Db/bf_cpa.db","P=DQ:BF:CPA,PORT=bf_cpa") # Compresso
 dbLoadRecords("$(TOP)/dqApp/Db/bf_tcch.db","P=DQ:BF:TCCH,PORT=bf_tcch") # Temperature controller channels
 dbLoadRecords("$(TOP)/dqApp/Db/bf_tcht.db","P=DQ:BF:TCHT,PORT=bf_tcht") # Temperature controller Heaters
 dbLoadRecords("$(TOP)/dqApp/Db/bf_nxds.db","P=DQ:BF:NXDS,PORT=bf_nxds") # xnds: Edwars Scroll Pump (Scroll1)
-dbLoadRecords("$(TOP)/dqApp/Db/bf_tc400.db","P=DQ:BF:TC400,PORT=bf_nxds") # Peiffer HiPACE TC400 (TURBO 1)
+dbLoadRecords("$(TOP)/dqApp/Db/bf_tc400.db","P=DQ:BF:TC400,PORT=bf_tc400") # Peiffer HiPACE TC400 (TURBO 1)
 
 
 #cd "${TOP}/iocBoot/${IOC}"
