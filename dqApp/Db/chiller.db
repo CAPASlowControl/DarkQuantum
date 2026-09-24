@@ -453,13 +453,6 @@ record(stringin, "$(P):currentHourStr") {
   field(DTYP, "Soft Timestamp")
   #field(TSEL, "${P}.Tout CP") #Any PV 
   field(INP, "@%H")
-  field(FLNK,"$(P):currentHour")
-}
-
-record(longin, "$(P):currentHour") {
-  field(SCAN,"Passive")
-  field(INP, "$(P):currentHourStr")
-  field(EGU,"h")
 }
 
 record(longout, "$(P):Auto_h1") {
@@ -498,7 +491,7 @@ record(ao, "$(P):Auto_SP2") {
 }
 
 record(calcout, "$(P):Auto_Calc"){
-    field(INPA,"$(P):currentHour CP") # Process PV when this value changes
+    field(INPA,"$(P):currentHourStr CP") # Process PV when this value changes
     field(INPB,"$(P):Auto_h1")
     field(INPC,"$(P):Auto_h2")
     field(INPD,"$(P):Auto_SP1")

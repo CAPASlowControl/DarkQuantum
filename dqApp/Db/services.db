@@ -146,7 +146,7 @@ record(mbbi,"$(P):Terminal"){
 
 # Mattermost Messages
 record(calcout, "$(P):mm_update"){
-    field(INPA,"DQ:CHL:currentHour CP") # Process PV when this value changes
+    field(INPA,"DQ:CHL:currentHourStr CP") # Process PV when this value changes
 
     field(DTYP,"stream")
     field(CALC,"A")

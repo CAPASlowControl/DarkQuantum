@@ -5,9 +5,9 @@
   <grid>true</grid>
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
-  <scroll>true</scroll>
-  <start>-1 hours -30 minutes -9.811 seconds</start>
-  <end>now</end>
+  <scroll>false</scroll>
+  <start>2026-07-22 07:15:24.371</start>
+  <end>2026-09-13 20:31:53.989</end>
   <archive_rescale>NONE</archive_rescale>
   <foreground>
     <red>0</red>
@@ -35,8 +35,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-17.1</min>
-      <max>30.5</max>
+      <min>-43.6</min>
+      <max>36.9</max>
       <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -52,8 +52,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>14.3</min>
-      <max>26.1</max>
+      <min>-3.1</min>
+      <max>71.10000000000001</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -142,9 +142,14 @@
       <ring_size>500</ring_size>
       <request>OPTIMIZED</request>
       <archive>
+        <name>Archiver</name>
+        <url>jdbc:postgresql://localhost:5432/archive</url>
+        <key>1</key>
+      </archive>
+      <archive>
         <name>pbraw://localhost:17668/retrieval</name>
         <url>pbraw://localhost:17668/retrieval</url>
-        <key>1</key>
+        <key>2</key>
       </archive>
     </pv>
     <pv>

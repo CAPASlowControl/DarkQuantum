@@ -10,6 +10,8 @@ record(ai, "$(P):SYS:memory") {
     field(HSV,"MINOR")
     field(HIHI,800)
     field(HHSV,"MAJOR")
+
+     info(Q:group, {  "$(P):SYS":{"memory": {+channel:"VAL",+putorder:0,+trigger:"*" }}} )
 }
 
 # Alphcamm Nodered
@@ -24,6 +26,8 @@ record(mbbi,"$(P):SYS:nodered"){
 	field(ZRST,"inactive")
 	field(ONST,"active")
 	field(ZRSV,"MINOR")
+
+        info(Q:group, {  "$(P):SYS":{"nodered": {+channel:"VAL",+putorder:0,+trigger:"*"}}}  )
 }
 
 

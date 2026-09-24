@@ -95,7 +95,7 @@ dbLoadRecords("$(TOP)/dqApp/Db/mm_alarms.db","P='DQ:MM'")
 #####################
 ##### ALPHACAMM SoftIOC ###
 #####################
-dbLoadRecords("$(TOP)/dqApp/Db/alphacamm.db","P='ACAMM'")
+#dbLoadRecords("$(TOP)/dqApp/Db/alphacamm.db","P='ACAMM'")
 
 
 

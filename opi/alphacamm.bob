@@ -90,5 +90,30 @@
       <height>20</height>
       <tooltip>$(actions)</tooltip>
     </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>pva://$(P):SYS/memory</pv_name>
+      <x>80</x>
+      <y>91</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>pva://$(P):SYS/memory</pv_name>
+      <x>72</x>
+      <y>131</y>
+    </widget>
+    <widget type="checkbox" version="2.0.0">
+      <name>Check Box</name>
+      <pv_name>$(P):SYS:nodered.DISA</pv_name>
+      <label></label>
+      <x>107</x>
+      <y>10</y>
+      <width>20</width>
+      <tooltip>When checked PV is disabled.
+
+$(pv_name)
+$(pv_value)</tooltip>
+    </widget>
   </widget>
 </display>

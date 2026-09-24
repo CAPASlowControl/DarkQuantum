@@ -26,8 +26,9 @@
       <P>DQ:BF:CPA</P>
     </macros>
     <x>300</x>
-    <y>100</y>
+    <y>98</y>
     <width>260</width>
+    <height>289</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -108,6 +109,59 @@
       <pv_name>$(P):Phigh</pv_name>
       <x>100</x>
       <y>120</y>
+      <width>70</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_78</name>
+      <text>Runnning</text>
+      <x>10</x>
+      <y>150</y>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_36</name>
+      <pv_name>$(P):compressor_running_status</pv_name>
+      <x>126</x>
+      <y>150</y>
+      <width>15</width>
+      <height>15</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_79</name>
+      <text>Op. State</text>
+      <x>10</x>
+      <y>170</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_33</name>
+      <pv_name>$(P):operating_state</pv_name>
+      <x>100</x>
+      <y>170</y>
+      <width>70</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_80</name>
+      <text>Alarm</text>
+      <x>10</x>
+      <y>190</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_81</name>
+      <text>Warning</text>
+      <x>9</x>
+      <y>210</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_38</name>
+      <pv_name>$(P):alarm_state</pv_name>
+      <x>100</x>
+      <y>190</y>
+      <width>70</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_39</name>
+      <pv_name>$(P):warning_state</pv_name>
+      <x>100</x>
+      <y>210</y>
       <width>70</width>
     </widget>
   </widget>
@@ -212,7 +266,7 @@
       <P>DQ:BF:MPBF</P>
     </macros>
     <x>300</x>
-    <y>310</y>
+    <y>426</y>
     <width>260</width>
     <height>290</height>
     <font>
@@ -1161,50 +1215,27 @@ $(actions)</tooltip>
       <name>Label_58</name>
       <text>Rot. Speed</text>
       <x>10</x>
-      <y>30</y>
+      <y>10</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_25</name>
       <pv_name>$(P):active_rotational_speed</pv_name>
       <x>130</x>
-      <y>30</y>
+      <y>10</y>
       <width>60</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_59</name>
       <text>Drive Power</text>
       <x>10</x>
-      <y>50</y>
+      <y>30</y>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_26</name>
       <pv_name>$(P):drive_power</pv_name>
       <x>130</x>
-      <y>50</y>
+      <y>30</y>
       <width>60</width>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_35</name>
-      <pv_name>$(P):standby</pv_name>
-      <x>150</x>
-      <y>10</y>
-      <width>15</width>
-      <height>15</height>
-      <off_color>
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </off_color>
-      <on_color>
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </on_color>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_87</name>
-      <text>Standby / On</text>
-      <x>10</x>
-      <y>10</y>
-      <width>120</width>
     </widget>
   </widget>
 </display>
